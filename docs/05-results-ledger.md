@@ -108,6 +108,10 @@
 | H2 shortcut (initial argmax = DROP) | 0.0833 < 0.40 threshold → shortcut does not exist | idem | [E] |
 | H2 zero-shot closed loop on DROP-HAVE | 0.5833 (7/12) → real zero-shot planning | idem | [X] |
 | Dimensioning gap | executed n_test = 12/family vs frozen 800/family; 2000 vs 4000 updates | `results/json/p2-ablation-closed-loop-erratum.json` | [N] |
+| Ablation v02 (72 cells: 2 families × A/B/D × 12 seeds, 4000 updates) | per-arm means over both families: A 62.2 % · B 66.3 % · D 71.5 % → **D−A = +9.4 pp** | `results/json/p2-ablation-v02-confirmation.json` | [X] |
+| v02 frozen convention (bootstrap seed-cluster signed sum) | CI excludes 0, point ≥5 pp → level-1 GO *under that convention* | `results/json/p2-ablation-v02-verdict-erratum.json` | [X] |
+| v02 sensitivity | paired t and z conventions FAIL (CI-low −0.5 / −0.0); D−B +5.2 pp non-significant after Holm; B>C not measurable (arm C removed) | idem | [N] |
+| v02 final closure | **NON-CONFIRMATORY** (re-uses v01 seeds/data); D−A exploratory (p = 0.047 one-sided permutation, carried by saturated DROP-AT; DROP-HAVE p = 0.0625); **validity does not enter the canon** | `docs/ERRATUM-ABLATION-V02-VERDICT-2026-09-25.md` (archive) | [N] |
 
 ## 5. S5 — product line and abstention
 
@@ -125,26 +129,33 @@
 
 \* Established as an internal, synthetic demonstration with a labelled stub; not an end-to-end product measurement.
 
-## 6. Real-software compiler probe
+## 6. The software bridge
 
 | Claim | Value | Artifact | Status |
 |---|---|---|---|
-| Coverage on 4 real pages | **5.86 %** (30/512 actionable) vs bar ≥90 % | `results/json/web-compiler-probe.json` | [N] |
-| Forms decomposition | 100 % of their own elements (2/2 fields+submit) | idem | [X] |
-| Denominator driver | hyperlinks 476/512 on a tutorial page (no LINK action pre-compiled) | idem | [E] |
-| Blockers recorded | closed P2 vocabulary (`view` ∉ TGK), collate width D_IN 21 vs 7, duplicate DOM ids (`fname`×2) | idem | [E] |
-| Consequence | switch rule triggers: in-context/D1 line un-frozen as candidate for the web layer | `archive/docs/passation-*` | [E] |
+| v1 probe baseline (frozen actionability definition) | **5.86 %** (30/512 actionable) vs bar ≥90 % | `results/json/web-compiler-probe.json` | [N] historical |
+| Compiler v2 on calibrated snapshots | **100 % per page** (4/4, 1/1, 5/5, 494/494 = 504/504); v1 parity reproduced exactly (512/30/5.86 %) | `results/json/web-compiler-v2-report.json` | [E] |
+| v2 blockers treated | closed web vocabulary + LINK action; deterministic DOM-id de-dup (`fname_2`, `lname_2/_3`); href resolution 8 kinds | idem | [E] |
+| v2 live validation | real refetch of the 4 pages; **100 % everywhere, 504/504 live**; HTML persisted as evidence; GO ≥95 % PASS | `results/json/web-compiler-v2-live.json` | [E] |
+| v2 tests | 21 tests (id collisions, href kinds, form nesting, v1 parity, vocabulary rejection, hermetic regeneration, artifact reproducibility) | `code/tests/test_web_compiler.py` | [E] |
+| E2E smoke 1 (real page) | 31 actionables, 32 candidates, correct STOP (VIEW already satisfied), decision 11.233 ms | `results/json/web-e2e-smoke1.json` | [X] |
+| E2E smoke 2 (real httpbin form) | 4 actionables, 3 fields compiled (`custtel`, `custemail`, `comments`), injected SET goal → **STOP = calibrated refusal** (training world ≠ compiled pages) | `results/json/web-e2e-smoke2.json` | [X] |
+| E2E mechanics | compile → decide → execute through a real browser daemon + extension; shims traced (link→button, SELECT via option click, NAVIGATE via tool) | idem + working repo `ucm/web/e2e_bridge.py` | [X] |
+| Web executor decision | **not established** — requires an execution corpus of compiled pages (planned 300–400; both training set and benchmark) | — | [N] |
+| Daemon quirk | `navigate` returns HTTP 500 while navigating; traced for the daemon side (audit note b) | working repo `artifacts/web-probe/e2e/` | [E] |
 
 ## 7. Instrument-level facts
 
 | Fact | Value |
 |---|---|
-| Commits / days | 423 / 4 (2026-09-22→25) |
-| Python LOC / tests | 35 205 / 560 |
-| Artifacts (working repo) | 451 JSON, 500 NPZ, ~1.7 GB |
-| Errata / incidents | 13 / 5 |
+| Commits / days | 435 / 4 (2026-09-22→25) |
+| Python LOC / tests | 37 007 / 581 (21 web-compiler tests) |
+| Artifacts (working repo) | 451+ JSON, 500 NPZ, ~1.7 GB; +72 ablation-v02 cells, +web-probe-v2/live-v2/e2e |
+| Errata / incidents | 14 / 5 (+1 audit note for the browser daemon quirk) |
 | V0 interceptions before contamination | 7 (≈1 h total cost) |
 | Sealed-campaign freezes | v4 → v10 |
 | Raw rows published before aggregation (V1-bis) | 72 000 |
+| Joint cell table (V1-bis) | 122 rows; 10 adaptations share 5 canonical sources (dependency clusters exposed) |
 | DSL closure coverage | ≥10 000 states/world; 3/3 mutations detected |
 | Anti-leak tests | supervision/provenance cannot change tensors (bit-identity) |
+| Web compiler parity | v1 definition replayed on snapshots: 512/30/5.86 % reproduced exactly |

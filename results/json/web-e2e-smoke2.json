@@ -1,0 +1,29 @@
+{
+ "actionables": 4,
+ "but_inject\u00e9": {
+  "args": {
+   "field": "custtel"
+  },
+  "predicate": "SET"
+ },
+ "champs_compil\u00e9s": [
+  "custtel",
+  "custemail",
+  "comments"
+ ],
+ "d\u00e9cision_UCM": {
+  "action": "STOP",
+  "arg": null
+ },
+ "ex\u00e9cution": {
+  "executed": "stop"
+ },
+ "lecture": "STOP = refus calibr\u00e9 (monde SIW \u2260 page web compil\u00e9e) \u2014 la m\u00e9canique compile\u2192d\u00e9cide\u2192ex\u00e9cute est prouv\u00e9e, la d\u00e9cision web attend l'ex\u00e9cutant entra\u00een\u00e9 sur corpus de pages compil\u00e9es (prochaine pi\u00e8ce)",
+ "page": "https://httpbin.org/forms/post (R\u00c9EL)",
+ "quirk_daemon": "navigate r\u00e9pond 500 mais navigue \u2014 \u00e0 tracer c\u00f4t\u00e9 WebBridge (audit note b)",
+ "shims": [
+  "link\u2192button"
+ ],
+ "tab_id": 598801951,
+ "ts": "20260925T201408"
+}

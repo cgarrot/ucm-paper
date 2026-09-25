@@ -107,3 +107,31 @@ Diagnostics: `optimal_action_rate`, `prob_mass_on_optimal`. Optimizer defaults: 
 | `gate5-report/*` | A/B144/B160/B192 | election, promotion, cost protocols |
 | `s5-demo/s5-full-ckpt-20260925T121754.npz` | SIW B144 | product-line executor |
 | V0 `s5`–`s9` artifact dirs | **d=192, not 144** | never loaded by any run (runtime shape filter); incident closed without re-execution |
+
+## 11. The web layer (compiler v2 + end-to-end bridge)
+
+*Source: `code/ucm/web/` (`vocabulary.py`, `compiler_v2.py`, `make_snapshots.py`, `e2e_bridge.py`), `code/tests/test_web_compiler.py` (21 tests).*
+
+```
+HTML / live DOM ──> compiler_v2.parse_dom ──> entities + relations + candidates
+                        │                        (strict web/2.0 schema)
+                        ├─ id allocator: deterministic suffix _2, _3 … (renames traced)
+                        ├─ href resolver: relative | site-root | absolute | scheme |
+                        │                  anchor | same_page | other_scheme | unresolvable
+                        └─ validate_policy_input (closed vocab; raises on violation)
+                                   │
+        e2e_bridge: shim link→button ──> SIW tensorizer ──> s5-full policy ──> candidate
+                                   │                                      │
+                        WebBridge snapshot (live DOM)          native tools click/fill/navigate
+```
+
+Design decisions:
+
+- **Closed web vocabulary** `web/2.0`: entity types `view, form, field, button, select, option, link`; predicates `on_view, part_of, option_of, submits`; actions `TYPE, CLICK, SELECT, NAVIGATE, STOP` with strict argument typing (`TYPE→field`, `CLICK→button`, `SELECT→option`, `NAVIGATE→link`, `STOP→None`). The vocabulary is independent of the TGK/SIW vocabularies: the compiler owns its schema, the model consumer owns tensorization.
+- **Actionability definition frozen from v1** (`compiler_probe.py`, commit `90a303a`): text-like inputs, textareas, buttons/submit, selects, `<a href>` — so v1↔v2 parity is mechanically verifiable (v1 replayed on the snapshots reproduces 512 actionable / 30 covered / 5.86 % exactly).
+- **Deterministic de-duplication** of DOM ids (first occurrence keeps the bare id; later ones `_2`, `_3`; renames in stats).
+- **Links as first-class entities** with resolved href kind and `NAVIGATE` candidates — the v1 coverage hole (476/512 actionables on the tutorial page).
+- **Declared non-coverage**: JavaScript/SPA rendering, iframes/shadow DOM, disabled/hidden state, event handlers beyond `submits`, ARIA, and tensorization.
+- **End-to-end shims are explicit and traced in artifacts**: `link → button` (closed SIW vocabulary), `SELECT` executed as a click on the `<option>`, `NAVIGATE` executed via the daemon's navigate tool; the voice layer is labelled transcripts (Muse external, not exercised) and Jev is a labelled stub.
+
+The end-to-end run's result — a calibrated STOP/refusal on a real web form — is the abstention channel doing its job under distribution shift; the missing piece is an execution corpus of compiled pages (both training set and benchmark), not a better refusal.

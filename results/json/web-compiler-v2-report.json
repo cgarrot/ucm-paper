@@ -1,0 +1,218 @@
+{
+ "actionability_definition": "EXACTEMENT v1 (commit 90a303a): dénominateur = inputs type∈{text,email,password,tel,number,search,url,date} + textareas + <button>/input submit|button|reset + selects + <a href>; options = couverts non actionnables",
+ "baseline_v1": {
+  "artifact": "artifacts/web-probe/compiler-probe-20260925T152416.json",
+  "overall_completeness": 0.0586,
+  "pages": {
+   "example": {
+    "actionable": 1,
+    "completeness": 0.0,
+    "covered": 0
+   },
+   "httpbin": {
+    "actionable": 5,
+    "completeness": 0.0,
+    "covered": 0
+   },
+   "httpbin-post": {
+    "actionable": 2,
+    "completeness": 1.0,
+    "covered": 2
+   },
+   "w3schools-forms": {
+    "actionable": 504,
+    "completeness": 0.0556,
+    "covered": 28
+   }
+  },
+  "totals": {
+   "actionable": 512,
+   "covered": 30
+  }
+ },
+ "blockers_treated": {
+  "1_vocabulaire_ferme": "vocabulaire web/2.0 fermé propre (ucm/web/vocabulary.py): types view/form/field/button/select/option/link + actions TYPE/CLICK/SELECT/NAVIGATE/STOP; validation systématique validate_policy_input (JSON strict). 'view' et 'link' ne passent plus par le vocab TGK fermé.",
+  "2_largeur_collate": "HORS périmètre compilateur: v2 sort du JSON strictement typé; la tensorisation (D_IN 21 vs 7) est la responsabilité du consommateur — documenté dans ucm/web/README.md.",
+  "3_ids_dupliques": "dédup déterministe par suffixe _N (première occurrence garde l'id nu): httpbin-post: aucun renommage; example: aucun renommage; httpbin: aucun renommage; w3schools-forms: lname->lname_2, fname->fname_2, lname->lname_3",
+  "liens_representation": "chaque <a href> = entité link {href_raw, href_resolved, href_kind, text} + on_view (+part_of si imbriqué) + candidat NAVIGATE; résolution relative/absolue/racine-site/protocol-relative/ancre/same_page/other_scheme via urljoin."
+ },
+ "compiler": "ucm/web/compiler_v2.py (web/2.0)",
+ "policy_inputs_dir": "policy-inputs/",
+ "snapshots_sha256": {
+  "example.html": "b72a97a82e2f59fe06b9c0e1e87e65e98296772124de3451dc5a2cfb78b0be38",
+  "httpbin-post.html": "b21f606940074894d9a565e8a7b5afa04b60508ca13fd88e6edb39dd09aa625b",
+  "httpbin.html": "b515cac6c1e18cb72873f5d81237aadfa7127774e0ac4af6ed18bf965ca56b94",
+  "w3schools-forms.html": "23629d5fafde08a150709bc506c0f860e8041fa5fcfc1247131ff2889e4bc43b"
+ },
+ "source": "snapshots statiques hors-ligne artifacts/web-probe-v2/pages/ — reconstructions DÉTERMINISTES calibrées sur les compteurs v1 (l'HTML original n'a pas été persisté par la sonde v1; pas de réseau per contrat). Étiquette: pas via page-agent live.",
+ "ts": "20260925T160526",
+ "v1_recomputed_on_snapshots": {
+  "overall_completeness": 0.0586,
+  "pages": {
+   "example": {
+    "actionable": 1,
+    "completeness": 0.0,
+    "covered": 0
+   },
+   "httpbin": {
+    "actionable": 5,
+    "completeness": 0.0,
+    "covered": 0
+   },
+   "httpbin-post": {
+    "actionable": 2,
+    "completeness": 1.0,
+    "covered": 2
+   },
+   "w3schools-forms": {
+    "actionable": 504,
+    "completeness": 0.0556,
+    "covered": 28
+   }
+  },
+  "totals": {
+   "actionable": 512,
+   "covered": 30
+  }
+ },
+ "v2": {
+  "go_completeness_ge_90_overall": true,
+  "go_completeness_ge_90_per_page": true,
+  "overall_completeness": 1.0,
+  "per_page": {
+   "example": {
+    "actionable": 1,
+    "categories": {
+     "buttons": 0,
+     "fields": 0,
+     "forms": 0,
+     "links": 1,
+     "options": 0,
+     "selects": 0
+    },
+    "completeness": 1.0,
+    "covered": 1,
+    "dedup_renames": [],
+    "go_ge_90": true,
+    "href_kinds": {
+     "absolute": 1
+    },
+    "n_candidates": 1,
+    "n_entities": 2,
+    "n_relations": 1,
+    "schema_valid": true,
+    "url": "https://example.com/",
+    "v1_baseline_completeness": 0.0,
+    "v1_recomputed_actionable": 1,
+    "v1_recomputed_covered": 0
+   },
+   "httpbin": {
+    "actionable": 5,
+    "categories": {
+     "buttons": 0,
+     "fields": 0,
+     "forms": 0,
+     "links": 5,
+     "options": 0,
+     "selects": 0
+    },
+    "completeness": 1.0,
+    "covered": 5,
+    "dedup_renames": [],
+    "go_ge_90": true,
+    "href_kinds": {
+     "absolute": 1,
+     "anchor": 1,
+     "site_root_relative": 3
+    },
+    "n_candidates": 5,
+    "n_entities": 6,
+    "n_relations": 5,
+    "schema_valid": true,
+    "url": "https://httpbin.org/",
+    "v1_baseline_completeness": 0.0,
+    "v1_recomputed_actionable": 5,
+    "v1_recomputed_covered": 0
+   },
+   "httpbin-post": {
+    "actionable": 2,
+    "categories": {
+     "buttons": 1,
+     "fields": 1,
+     "forms": 1,
+     "links": 0,
+     "options": 0,
+     "selects": 0
+    },
+    "completeness": 1.0,
+    "covered": 2,
+    "dedup_renames": [],
+    "go_ge_90": true,
+    "href_kinds": {},
+    "n_candidates": 2,
+    "n_entities": 4,
+    "n_relations": 6,
+    "schema_valid": true,
+    "url": "https://httpbin.org/forms/post",
+    "v1_baseline_completeness": 1.0,
+    "v1_recomputed_actionable": 2,
+    "v1_recomputed_covered": 2
+   },
+   "w3schools-forms": {
+    "actionable": 504,
+    "categories": {
+     "buttons": 12,
+     "fields": 16,
+     "forms": 6,
+     "links": 476,
+     "options": 0,
+     "selects": 0
+    },
+    "completeness": 1.0,
+    "covered": 504,
+    "dedup_renames": [
+     {
+      "from": "lname",
+      "to": "lname_2"
+     },
+     {
+      "from": "fname",
+      "to": "fname_2"
+     },
+     {
+      "from": "lname",
+      "to": "lname_3"
+     }
+    ],
+    "go_ge_90": true,
+    "href_kinds": {
+     "absolute": 7,
+     "anchor": 11,
+     "other_scheme": 2,
+     "relative": 368,
+     "scheme_relative": 2,
+     "site_root_relative": 86
+    },
+    "n_candidates": 504,
+    "n_entities": 511,
+    "n_relations": 532,
+    "schema_valid": true,
+    "url": "https://www.w3schools.com/html/html_forms.asp",
+    "v1_baseline_completeness": 0.0556,
+    "v1_recomputed_actionable": 504,
+    "v1_recomputed_covered": 28
+   }
+  },
+  "totals": {
+   "actionable": 512,
+   "covered": 512
+  }
+ },
+ "written": {
+  "example": "artifacts/web-probe-v2/policy-inputs/example.json",
+  "httpbin": "artifacts/web-probe-v2/policy-inputs/httpbin.json",
+  "httpbin-post": "artifacts/web-probe-v2/policy-inputs/httpbin-post.json",
+  "report": "artifacts/web-probe-v2/completeness-report.json",
+  "w3schools-forms": "artifacts/web-probe-v2/policy-inputs/w3schools-forms.json"
+ }
+}

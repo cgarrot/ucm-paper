@@ -4,7 +4,9 @@
 
 This repository is the research-readable companion to the UCM project: a scientific paper, detailed architecture and environment documentation, curated result artifacts, and a frozen source-code snapshot. It is the "paper repo" — the working repository (full history, all 1.7 GB of artifacts) is separate.
 
-> **Status (2026-09-25, private / pre-publication).** The paper reports both what is **established** (pre-registered, GO) and what is **not established** (failed or inconclusive experiments, errata). We consider the negative results and the research-integrity machinery first-class contributions. Nothing here is a claim of general intelligence; UCM is an execution layer, not a brain.
+> **Status (2026-09-25, second refresh — evening, private / pre-publication).** The paper reports both what is **established** (pre-registered, GO) and what is **not established** (failed or inconclusive experiments, errata). We consider the negative results and the research-integrity machinery first-class contributions. Nothing here is a claim of general intelligence; UCM is an execution layer, not a brain.
+>
+> Latest window (16:28 → 20:14): the **web compiler v2** reaches **100 % (504/504)** coverage on four real pages (live-validated, v1 parity 5.86 % verified); the **browser end-to-end assembly** proves compile → decide → execute and exhibits an expected calibrated refusal on compiled pages; the auxiliary-target **ablation v02 closed non-confirmatory** (exploratory D−A only; validity target not admitted to the canon); the V1-bis **joint cell table** (122 rows, 5 shared sources) documents the dependency structure behind the 120-cell campaign.
 
 ---
 
@@ -43,6 +45,8 @@ Both worlds are re-expressed as instances of a **verified DSL interpreter**, so 
 | Interface controls collapse without goal / candidates structure / relations | **0.0** success for all three; counterfactual goal 0.960; permutation invariance 200/200 | `results/json/v0-m3-controls.json` |
 | Cost and latency | **~1.04 ms** p95 per decision (sustained, interleaved CPU), 16–38× margin under the 20 ms envelope; 694 513 parameters | `docs/05-results-ledger.md` |
 | Product-line demo (synthetic, simulated comprehension layer) | execution **44/44** and **32/32** on two held-out suites; p95 **1.146 ms**; **1120×** cheaper than a 1 200 ms/decision stub; refusal recall **40/40**, false refusals **0/40** | `results/json/s5-full-budget.json`, `results/json/s5-real-demo-simulated.json` |
+| Web compiler v2 | **100 % element coverage (504/504)** on four real pages, live refetch, under the v1 actionability definition frozen verbatim (v1 parity 5.86 % verified by replay); closed web vocabulary + LINK action + deterministic DOM-id de-dup; 21 tests | `results/json/web-compiler-v2-report.json`, `results/json/web-compiler-v2-live.json` |
+| Browser end-to-end mechanics | live DOM → compiler → executor (11.2 ms) → native click/fill/navigate; 31-actionable smoke and a real httpbin form with 3 fields; expected calibrated refusal on out-of-distribution compiled pages | `results/json/web-e2e-smoke1.json`, `results/json/web-e2e-smoke2.json` |
 | Verified DSL layer | differential equality over ≥10 000 states per world; 3 injected interpreter mutations detected | `docs/03-verified-dsl.md` |
 | V1-bis instrument repair | the "goal reached without STOP" pathology is **eliminated (0 / 72 000 episodes)**, vs 29–44 % in V1 | `results/json/v1bis-stage-b-metrics.json` |
 
@@ -53,9 +57,9 @@ Both worlds are re-expressed as instances of a **verified DSL interpreter**, so 
 | Does TGK pretraining transfer ≥5 pp to SIW after supervised adaptation? | **Not demonstrated** in the tested regime (k = 64/128/256 episodes; SIW-small is ~97–99 % saturated, so the maximum possible effect was ≤ +0.73 pp at k = 256 — an instrument limitation, not evidence of absence) |
 | Does a recurrent refinement block (T = 32) beat the one-pass model on deep plans? | **KILL** (−7.7 pp vs the frozen +15.8 pp threshold; conservative test, base frozen) |
 | Does short in-context history improve decisions? | **Not testable by construction** in the executed design; what was measured is a *presence* distraction (−8.3 pp). Content reading not established |
-| Does the auxiliary effect head double the family success (initial +34 pp)? | **Not replicated** by the controlled ablation (B−A = +5.6 pp, CI ∋ 0; a *simple* validity/termination target did better); verdict INDETERMINATE |
+| Does the auxiliary effect head double the family success (initial +34 pp)? | **Not replicated** by the controlled ablation (B−A = +5.6 pp, CI ∋ 0; a *simple* validity/termination target did better); the pre-registered **v02 re-run closed non-confirmatory** (same seeds/data as v01 — exploratory D−A +9.4 pp, p = 0.047 one-sided, carried by a saturated family; validity target not admitted to the canon) |
 | Strict inter-signature compositional transfer | **0.0 %** on one held-out signature (exploratory, factors not disentangled); intra-band transfer GO (97.0 %) |
-| Web DOM → policy compiler on 4 real pages | **5.86 % coverage** (forms: 100 % of their fields/buttons; denominator dominated by `<a>` links); switch rule triggered: the compiler needs its own vocabulary, tensorizer and DOM id de-duplication |
+| Web execution (DOM → policy decision) | **not established**: compiler reaches 100 % coverage, and the end-to-end smoke produces a calibrated STOP (refusal) on compiled pages outside the executor's training world; the missing piece is an execution corpus of compiled pages (training set + benchmark) |
 
 ## The model in 30 seconds
 
@@ -99,15 +103,16 @@ python3 -m venv .venv && .venv/bin/pip install matplotlib
 bash tools/build_pdf.sh                    # writes paper/PAPER.pdf
 
 # Tests of the snapshot (requires mlx, numpy — see code/README.md)
-cd code && python -m pytest -q             # 560 tests
+cd code && python -m pytest -q             # 581 tests (21 for the web compiler)
 ```
 
 ## Snapshot provenance
 
-- Working repository snapshot: commit **`a47f7b7c36daa87a33fb3aa12506799d27024187`** (2026-09-25 15:41), 423 commits, 2026-09-22 → 2026-09-25.
-- Code: 35 205 lines of Python, 560 tests, MLX 0.32.2 / Python 3.12.13 / Apple M5 32 GB (CPU + GPU).
-- Artifacts referenced: 451 JSON files (~1.7 GB) in the working repo; only curated, small result JSONs are mirrored here under `results/json/`.
+- Working repository snapshot: commit **`635ba3c2ea0f92708974bcf5199a8a3be8ed586b`** (2026-09-25 20:14), 435 commits, 2026-09-22 → 2026-09-25.
+- Code: 36 802 lines of Python (snapshot), 581 tests (21 for the web compiler), MLX 0.32.2 / Python 3.12.13 / Apple M5 32 GB (CPU + GPU).
+- Artifacts referenced: 451+ JSON files (~1.7 GB) in the working repo; only curated, small result JSONs are mirrored here under `results/json/`.
 - The `archive/` directory preserves the original French research documents (vision, spec, protocols, reports, errata, incidents, external reviews) unchanged, for provenance and auditability.
+- This is the second refresh of the paper repo; the first snapshot was commit `a47f7b7`.
 
 ## Citation and license
 

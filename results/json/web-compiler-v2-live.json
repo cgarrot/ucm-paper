@@ -1,0 +1,32 @@
+{
+ "go_ge_95": true,
+ "overall_completeness": 1.0,
+ "pages": {
+  "example": {
+   "actionable": 1,
+   "completeness": 1.0,
+   "covered": 1
+  },
+  "httpbin": {
+   "actionable": 5,
+   "completeness": 1.0,
+   "covered": 5
+  },
+  "httpbin-post": {
+   "actionable": 4,
+   "completeness": 1.0,
+   "covered": 4
+  },
+  "w3schools-forms": {
+   "actionable": 494,
+   "completeness": 1.0,
+   "covered": 494
+  }
+ },
+ "source": "REFETCH LIVE r\u00e9el des 4 pages (urllib, UA Mozilla) \u2014 PAS les snapshots; compilateur v2 (8158cb6)",
+ "totals": {
+  "actionable": 504,
+  "covered": 504
+ },
+ "ts": "20260925T163016"
+}

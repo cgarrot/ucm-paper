@@ -1,0 +1,17 @@
+{
+ "decision": {
+  "action": "STOP",
+  "arg": null
+ },
+ "decision_ms": 11.233,
+ "execution": {
+  "executed": "stop"
+ },
+ "n_candidates": 32,
+ "page_actionables": 31,
+ "shims": [
+  "link\u2192button (vocab SIW)"
+ ],
+ "tab_id": 598801823,
+ "ts": "20260925T200951"
+}

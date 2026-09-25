@@ -1,0 +1,43 @@
+{
+  "calcul": "depuis les COMPTES (n_success/n_test), pas les décimales",
+  "hold": "erratum, v01 et v02 jamais réédités",
+  "limitation": "2 familles disponibles (dataset P2 n'en contient que 2, pas les 4 du design gelé)",
+  "manifest_sha256": "c22773017e200d29f93d2db21e5b250bf7940c66ea35cd56969407a0c8914212",
+  "methode_preregistree": "BOOTSTRAP seed-cluster somme signée (convention V1-bis, gelée matin)",
+  "resultats": {
+    "B_vs_C": "NON MESURABLE (bras C absent de v02 — retiré car D>C de 22.9pp au v01)",
+    "D_minus_A": {
+      "methode_1_bootstrap_gelé": {
+        "ci_exclut_0": true,
+        "ic": [
+          2.0,
+          17.0
+        ],
+        "verdict": "GO"
+      },
+      "methode_2_t_pairé_sensibilité": {
+        "ci_low_pp": -0.5,
+        "df": 23,
+        "t": 1.956,
+        "verdict": "FAIL (ci_low < 0, bilatéral standard)"
+      },
+      "methode_3_z_sensibilité": {
+        "ci_low_pp": -0.0,
+        "verdict": "FAIL"
+      },
+      "n_pairs": 24,
+      "point_pp": 9.4
+    },
+    "D_minus_B": {
+      "holm_significatif": false,
+      "p_holm": 0.159,
+      "p_raw": 0.053,
+      "point_pp": 5.2,
+      "t": 1.934
+    }
+  },
+  "schema": "ucm-ablation-v02-verdict-erratum/0.1",
+  "sensibilité_honnête": "test figé (permutation seed-blocs unilatéral): p=0,047 (porté par DROP-AT saturée; DROP-HAVE seul p=0,0625) — NON CONFIRMATOIRE",
+  "verdict_final": "NON CONFIRMATOIRE — v02 ré-exécute les données de v01. D−A reste exploratoire (+9,4 pp, p=0,047 unilatéral permutation seed-blocs, porté par DROP-AT saturée). La validité n'entre pas dans le canon.",
+  "what": "erratum verdict v02 — convention gelée appliquée (lead 19:44)"
+}

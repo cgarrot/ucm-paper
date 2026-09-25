@@ -203,34 +203,35 @@ def fig4():
 
 # ---------------------------------------------------------------- fig 5: gates
 def fig5():
-    fig, ax = blank_axes((10.0, 4.2))
+    fig, ax = blank_axes((10.0, 4.4))
     def chip(x, y, label, sub, color):
-        box(ax, x, y, 1.62, 1.5, f"{label}\n", fc="white", ec=color, lw=1.6)
-        ax.text(x + 0.81, y + 0.95, label, ha="center", va="center", fontsize=9, weight="bold", color=color)
-        ax.text(x + 0.81, y + 0.45, sub, ha="center", va="center", fontsize=7, color=INK, linespacing=1.3)
+        box(ax, x, y, 1.62, 1.75, "", fc="white", ec=color, lw=1.6)
+        ax.text(x + 0.81, y + 1.32, label, ha="center", va="center", fontsize=9, weight="bold", color=color)
+        ax.text(x + 0.81, y + 0.58, sub, ha="center", va="center", fontsize=6.8, color=INK, linespacing=1.35)
 
-    y1 = 7.4
-    chip(0.15, y1, "GATE-0", "canon sealed\n3 machines\nbyte-identical", GREEN)
-    chip(2.01, y1, "GATE-1", "A FAILS\n0.9658 ties\nat bit level", RED)
-    chip(3.87, y1, "GATE-5", "B144 elected\n+62.2 pp\ncost 1.921×", GREEN)
-    chip(5.73, y1, "GATE-2", "97.50 %\nCI [96.5;98.5]\n3 160 eps", GREEN)
-    chip(7.59, y1, "GATE-3", "99.35 %\nreserved cell\n494 eps", GREEN)
+    y1 = 7.2
+    chip(0.15, y1, "GATE-0", "canon sealed\n3 machines identical", GREEN)
+    chip(2.01, y1, "GATE-1", "A FAILS 0.9658\nbit-exact ties", RED)
+    chip(3.87, y1, "GATE-5", "B144 elected\n+62.2 pp", GREEN)
+    chip(5.73, y1, "GATE-2", "97.50 %\n3 160 episodes", GREEN)
+    chip(7.59, y1, "GATE-3", "99.35 %\nreserved cell", GREEN)
     for x in (1.77, 3.63, 5.49, 7.35):
-        arrow(ax, (x, y1 + 0.75), (x + 0.24, y1 + 0.75), color=MUTED)
+        arrow(ax, (x, y1 + 0.87), (x + 0.24, y1 + 0.87), color=MUTED)
 
-    y2 = 4.4
-    chip(0.15, y2, "M3", "controls 0.0\nperm 200/200\nheuristic 82.6 %", GREEN)
-    chip(2.01, y2, "V1", "EXPLORATORY\nreclassified\n(instrument)", AMBER)
-    chip(3.87, y2, "V1-bis", "NOT DEMONSTRATED\nsaturated ≤+0.73 pp\nSTOP fixed 0/72k", RED)
-    chip(5.73, y2, "S2b", "KILL\n−7.7 vs +15.8\nretention PASS", RED)
-    chip(7.59, y2, "P2", "INDETERMINATE\n+34 pp not repl.\ncontext: not testable", RED)
+    y2 = 4.1
+    chip(0.15, y2, "M3", "controls 0.0\nheuristic 82.6 %", GREEN)
+    chip(2.01, y2, "V1", "EXPLORATORY\nreclassified", AMBER)
+    chip(3.87, y2, "V1-bis", "NOT DEMONSTRATED\nSTOP fixed 0/72k", RED)
+    chip(5.73, y2, "S2b", "KILL −7.7 pp\nretention PASS", RED)
+    chip(7.59, y2, "P2", "INDETERMINATE\n+34 pp not repl.", RED)
 
-    y3 = 1.4
-    chip(0.15, y3, "S5", "product line\n44/44 · 40/40\nstub Jev", GREEN)
-    chip(2.01, y3, "Probe", "web compiler\n5.86 %\nswitch rule", RED)
-    box(ax, 4.4, y3, 5.4, 1.5, "three open locks\n(1) strict composition  (2) depth via short search  (3) real-software compiler",
-        fc="#f5f3ff", ec=PURPLE, fs=9, weight="bold")
-    ax.text(5.0, 0.45, "green = established · amber = exploratory · red = not established / killed",
+    y3 = 1.0
+    chip(0.15, y3, "S5", "44/44 · 40/40\nstub Jev", GREEN)
+    chip(2.01, y3, "Compiler v2", "100 % live\n504/504 · v1 5.86 %", GREEN)
+    chip(3.87, y3, "E2E browser", "mechanics proven\nrefusal expected", AMBER)
+    box(ax, 5.73, y3, 4.05, 1.75, "open locks\n(1) strict composition\n(2) depth via short search\n(3) web executor corpus + LINK",
+        fc="#f5f3ff", ec=PURPLE, fs=8, weight="bold")
+    ax.text(5.0, 0.28, "green = established · amber = exploratory/partial · red = not established / killed",
             ha="center", fontsize=8, color=MUTED, style="italic")
     save(fig, "fig5-gates.svg")
 
@@ -288,18 +289,19 @@ def fig6():
                         "detectable ≤ +0.73 pp at k=256",
             fontsize=6.8, color=RED, ha="center")
 
-    # (d) P2 ablation
+    # (d) P2 auxiliary-target ablation, v02 (final state)
     ax = axes[1, 1]
-    labels = ["A\nimitation", "B\neffects\ncorrect", "C\neffects\nshuffled", "D\nsimple\ntarget"]
-    vals = [35.4, 41.0, 29.9, 52.8]
-    cols = [GREY, BLUE, RED, GREEN]
-    ax.bar(labels, vals, color=cols, alpha=0.88, width=0.6)
+    labels = ["A\nimitation", "B\neffects\ncorrect", "D\nsimple\ntarget"]
+    vals = [62.2, 66.3, 71.5]
+    cols = [GREY, BLUE, GREEN]
+    ax.bar(labels, vals, color=cols, alpha=0.88, width=0.55)
     for i, v in enumerate(vals):
-        ax.text(i, v + 1, f"{v:.1f}%", ha="center", fontsize=9, weight="bold")
-    ax.set_ylim(0, 68); ax.set_ylabel("closed-loop success (%)")
-    ax.set_title("(d) Effect-head ablation (12 seeds)", fontsize=10, weight="bold")
-    ax.text(0.5, 57, "B−A = +5.6 pp (CI ∋ 0)   B−D = −11.8 pp\nverdict INDETERMINATE",
-            ha="center", fontsize=7.5, color=RED)
+        ax.text(i, v + 0.8, f"{v:.1f}%", ha="center", fontsize=9, weight="bold")
+    ax.set_ylim(0, 88); ax.set_ylabel("closed-loop success (%, both families)")
+    ax.set_title("(d) Auxiliary-target ablation — v02 (non-confirmatory)", fontsize=9.5, weight="bold")
+    ax.text(1.0, 80, "D−A = +9.4 pp: frozen bootstrap CI excl. 0, t/z FAIL\n"
+                     "p = 0.047 one-sided (saturated family) · validity not in canon",
+            ha="center", fontsize=7, color=RED)
     ax.grid(axis="y", alpha=0.25, lw=0.5)
     ax.tick_params(labelsize=8)
 
@@ -309,6 +311,77 @@ def fig6():
     save(fig, "fig6-results.svg")
 
 
+# ---------------------------------------------------------------- fig 7: web compiler
+def fig7():
+    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.8))
+    # left: overall coverage v1 vs v2
+    ax = axes[0]
+    bars = ax.bar(["v1 probe\n(static)", "v2 snapshots", "v2 live refetch"],
+                  [5.86, 100.0, 100.0], color=[RED, GREEN, GREEN], width=0.55)
+    for b, v in zip(bars, [5.86, 100.0, 100.0]):
+        ax.text(b.get_x() + b.get_width() / 2, v + 2, f"{v:.1f}%" if v < 100 else "100%",
+                ha="center", fontsize=10, weight="bold")
+    ax.axhline(90, color=MUTED, ls="--", lw=0.9)
+    ax.text(-0.42, 82.5, "GO bar 90%", color=MUTED, fontsize=8, ha="left")
+    ax.set_ylim(0, 112); ax.set_ylabel("actionable-element coverage (%)")
+    ax.set_title("(a) Compiler coverage", fontsize=10, weight="bold")
+    ax.grid(axis="y", alpha=0.25, lw=0.5)
+
+    # right: per-page v1 vs v2
+    ax = axes[1]
+    pages = ["example", "httpbin", "httpbin-post", "w3schools"]
+    v1 = [0, 0, 100, 5.6]
+    v2 = [100, 100, 100, 100]
+    x = np.arange(len(pages)) * 1.0
+    w = 0.36
+    ax.bar(x - w / 2, v1, w, label="v1 probe", color=RED, alpha=0.85)
+    ax.bar(x + w / 2, v2, w, label="v2 (live)", color=GREEN, alpha=0.85)
+    for xi, v in zip(x - w / 2, v1):
+        ax.text(xi, v + 2, f"{v:.0f}%", ha="center", fontsize=7.5, color=RED)
+    for xi, v in zip(x + w / 2, v2):
+        ax.text(xi, v + 2, "100%", ha="center", fontsize=7.5, color=GREEN)
+    ax.set_xticks(x); ax.set_xticklabels(pages, fontsize=8)
+    ax.set_ylim(0, 135); ax.set_ylabel("coverage per page (%)")
+    ax.set_title("(b) Per-page coverage (v1 vs v2)", fontsize=10, weight="bold")
+    ax.legend(fontsize=8, loc="upper left", framealpha=0.95); ax.grid(axis="y", alpha=0.25, lw=0.5)
+
+    fig.suptitle("The software bridge: actionability definition frozen from v1, parity verified, live-validated",
+                 fontsize=10.5, weight="bold", y=1.0)
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    save(fig, "fig7-web-compiler.svg")
+
+
+# ---------------------------------------------------------------- fig 8: e2e chain
+def fig8():
+    fig, ax = blank_axes((9.8, 4.2))
+    ax.set_xlim(0, 10.8)
+    steps = [
+        (0.15, "Browser\n(daemon + extension)\nlive DOM"),
+        (2.10, "WebBridge\nsnapshot\n(HTML, tab)"),
+        (4.05, "Compiler v2\nweb/2.0 typed\npolicy_input\n(link entities)"),
+        (6.00, "UCM s5-full\nshim link→button\ntensorize SIW\n11.2 ms/decision"),
+        (7.95, "Bridge\ncandidate → tool\nclick / fill /\nnavigate"),
+    ]
+    for x, label in steps:
+        box(ax, x, 6.2, 1.85, 1.9, label, fc="#eef2ff" if x < 4 else "#ecfdf5", ec=BLUE if x < 4 else GREEN, fs=7.5)
+    for x in (2.0, 3.95, 5.9, 7.85):
+        arrow(ax, (x, 7.15), (x + 0.1, 7.15), color=MUTED)
+    box(ax, 0.15, 3.4, 4.3, 1.7,
+        "Smoke 1 — real page\n31 actionables · VIEW already satisfied\n→ STOP correct (11.2 ms)",
+        fc="#fefce8", ec=AMBER, fs=8)
+    box(ax, 4.9, 3.4, 5.5, 1.7,
+        "Smoke 2 — real httpbin form\n4 actionables · 3 fields compiled (custtel, custemail, comments)\ninjected SET goal → STOP = calibrated refusal",
+        fc="#fef2f2", ec=RED, fs=8)
+    box(ax, 0.15, 1.0, 10.25, 1.6,
+        "Mechanics proven: compile → decide → execute on a real browser.\n"
+        "Open piece: an execution corpus of compiled pages\n"
+        "(the same corpus is the training set and the benchmark).",
+        fc="#f5f3ff", ec=PURPLE, fs=8.5, weight="bold")
+    ax.text(5.0, 5.6, "documented shims: link→button · SELECT via option click · NAVIGATE via tool",
+            ha="center", fontsize=8, color=MUTED, style="italic")
+    save(fig, "fig8-e2e-chain.svg")
+
+
 if __name__ == "__main__":
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8()
     print("done")

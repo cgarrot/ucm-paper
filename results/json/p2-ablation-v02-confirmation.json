@@ -1,0 +1,5007 @@
+{
+  "design_frozen": "c0ea1df",
+  "hold": "report-only",
+  "manifest_sha256": "415ce5ac2b17caf7266b74e70415913f111cffddaafa8d170775546eaebc6ff0",
+  "preregistered_primary": "D\u2212A (cible simple vs imitation)",
+  "producer": {
+    "code_commit": "1bf4a85c4ad7ddf874b8c0606c2fe1cd88598f19"
+  },
+  "results": {
+    "DROP-AT-d2-12|A_imitation": [
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 98.8,
+        "train_loss_last": 4.356354475021362e-05,
+        "train_wall_s": 95.1
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 92.0,
+        "train_loss_last": 4.606693983078003e-05,
+        "train_wall_s": 88.6
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.3,
+        "train_loss_last": 2.687796950340271e-05,
+        "train_wall_s": 87.9
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 91.4,
+        "train_loss_last": 4.4912099838256836e-05,
+        "train_wall_s": 87.9
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.4,
+        "train_loss_last": 2.9403716325759888e-05,
+        "train_wall_s": 88.0
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 7,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.7,
+        "train_loss_last": 1.982925459742546e-05,
+        "train_wall_s": 88.3
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 91.5,
+        "train_loss_last": 5.932897329330444e-05,
+        "train_wall_s": 88.0
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.3,
+        "train_loss_last": 3.0003488063812256e-05,
+        "train_wall_s": 87.9
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.1,
+        "train_loss_last": 4.338845610618591e-05,
+        "train_wall_s": 87.7
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 91.4,
+        "train_loss_last": 2.2217631340026855e-05,
+        "train_wall_s": 87.9
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.8,
+        "train_loss_last": 4.616379737854004e-05,
+        "train_wall_s": 88.3
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 7,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 91.4,
+        "train_loss_last": 2.4195760488510132e-05,
+        "train_wall_s": 87.9
+      }
+    ],
+    "DROP-AT-d2-12|B_correct": [
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 96.4,
+        "train_loss_last": 0.04647083953022957,
+        "train_wall_s": 92.9
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 107.1,
+        "train_loss_last": 0.043374475091695786,
+        "train_wall_s": 103.6
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 107.7,
+        "train_loss_last": 0.03874635696411133,
+        "train_wall_s": 103.9
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 109.1,
+        "train_loss_last": 0.032606091350317,
+        "train_wall_s": 104.8
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 105.0,
+        "train_loss_last": 0.03564679995179176,
+        "train_wall_s": 100.8
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 117.0,
+        "train_loss_last": 0.038725174963474274,
+        "train_wall_s": 113.1
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 7,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 99.4,
+        "train_loss_last": 0.041882287710905075,
+        "train_wall_s": 95.7
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 101.8,
+        "train_loss_last": 0.04180872067809105,
+        "train_wall_s": 98.3
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 106.5,
+        "train_loss_last": 0.0465032123029232,
+        "train_wall_s": 102.8
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 100.9,
+        "train_loss_last": 0.040264882147312164,
+        "train_wall_s": 97.0
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 101.1,
+        "train_loss_last": 0.04650389403104782,
+        "train_wall_s": 97.5
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 102.5,
+        "train_loss_last": 0.0418224111199379,
+        "train_wall_s": 99.0
+      }
+    ],
+    "DROP-AT-d2-12|D_simple": [
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 100.5,
+        "train_loss_last": 0.046471916139125824,
+        "train_wall_s": 96.8
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 101.4,
+        "train_loss_last": 0.04345923662185669,
+        "train_wall_s": 97.9
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 98.6,
+        "train_loss_last": 0.038714244961738586,
+        "train_wall_s": 95.0
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 99.2,
+        "train_loss_last": 0.03253587707877159,
+        "train_wall_s": 95.7
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 97.9,
+        "train_loss_last": 0.03561274707317352,
+        "train_wall_s": 94.3
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 98.7,
+        "train_loss_last": 0.03871798515319824,
+        "train_wall_s": 95.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 98.8,
+        "train_loss_last": 0.061038415879011154,
+        "train_wall_s": 95.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 98.7,
+        "train_loss_last": 0.04180983081459999,
+        "train_wall_s": 95.0
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 104.3,
+        "train_loss_last": 0.046469878405332565,
+        "train_wall_s": 100.6
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 107.9,
+        "train_loss_last": 0.04025682806968689,
+        "train_wall_s": 104.2
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 102.0,
+        "train_loss_last": 0.04649198427796364,
+        "train_wall_s": 98.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-AT-d2-12",
+        "n_records": 228,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0048",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-AT-20260924-0049",
+            "family": "DROP-AT-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 12,
+            "cell_arm": "D0",
+            "d_star": 11,
+            "episode_id": "p2-DROP-AT-20260924-0050",
+            "family": "DROP-AT-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0051",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 6,
+            "cell_arm": "D0",
+            "d_star": 5,
+            "episode_id": "p2-DROP-AT-20260924-0052",
+            "family": "DROP-AT-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 117.2,
+        "train_loss_last": 0.041811417788267136,
+        "train_wall_s": 113.3
+      }
+    ],
+    "DROP-HAVE-d2-12|A_imitation": [
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 4,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.3333333333333333,
+        "total_wall_s": 118.9,
+        "train_loss_last": 3.914535045623779e-05,
+        "train_wall_s": 115.9
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 1,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.25,
+        "total_wall_s": 103.3,
+        "train_loss_last": 6.588920950889587e-05,
+        "train_wall_s": 100.2
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.25,
+        "total_wall_s": 104.4,
+        "train_loss_last": 3.00481915473938e-05,
+        "train_wall_s": 101.6
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 4,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.3333333333333333,
+        "total_wall_s": 111.5,
+        "train_loss_last": 4.861503839492798e-05,
+        "train_wall_s": 108.5
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 6,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.5,
+        "total_wall_s": 97.7,
+        "train_loss_last": 2.9787421226501465e-05,
+        "train_wall_s": 95.1
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 5,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.4166666666666667,
+        "total_wall_s": 99.4,
+        "train_loss_last": 4.175305366516113e-05,
+        "train_wall_s": 96.7
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 6,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.5,
+        "total_wall_s": 96.4,
+        "train_loss_last": 7.859990000724792e-05,
+        "train_wall_s": 93.7
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.25,
+        "total_wall_s": 101.8,
+        "train_loss_last": 4.684552550315857e-05,
+        "train_wall_s": 99.0
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.25,
+        "total_wall_s": 100.7,
+        "train_loss_last": 4.0687620639801025e-05,
+        "train_wall_s": 98.2
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.25,
+        "total_wall_s": 104.6,
+        "train_loss_last": 5.306117236614227e-05,
+        "train_wall_s": 101.7
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 7,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.5833333333333334,
+        "total_wall_s": 93.5,
+        "train_loss_last": 3.8176774978637695e-05,
+        "train_wall_s": 91.0
+      },
+      {
+        "arm": "A_imitation",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.25,
+        "total_wall_s": 91.3,
+        "train_loss_last": 2.5570392608642578e-05,
+        "train_wall_s": 88.7
+      }
+    ],
+    "DROP-HAVE-d2-12|B_correct": [
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 8,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 1,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.6666666666666666,
+        "total_wall_s": 97.7,
+        "train_loss_last": 0.05266280844807625,
+        "train_wall_s": 95.5
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 4,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.3333333333333333,
+        "total_wall_s": 101.9,
+        "train_loss_last": 0.06562058627605438,
+        "train_wall_s": 99.3
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.25,
+        "total_wall_s": 107.3,
+        "train_loss_last": 0.04645587131381035,
+        "train_wall_s": 104.7
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.25,
+        "total_wall_s": 110.5,
+        "train_loss_last": 0.05266006663441658,
+        "train_wall_s": 107.9
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 6,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.5,
+        "total_wall_s": 105.2,
+        "train_loss_last": 0.03893111273646355,
+        "train_wall_s": 102.5
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.25,
+        "total_wall_s": 105.4,
+        "train_loss_last": 0.04956352338194847,
+        "train_wall_s": 102.9
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 105.9,
+        "train_loss_last": 0.04812844842672348,
+        "train_wall_s": 103.4
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.25,
+        "total_wall_s": 106.8,
+        "train_loss_last": 0.04801468923687935,
+        "train_wall_s": 104.1
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 1,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.25,
+        "total_wall_s": 105.9,
+        "train_loss_last": 0.055755794048309326,
+        "train_wall_s": 103.1
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 101.8,
+        "train_loss_last": 0.04804813489317894,
+        "train_wall_s": 99.4
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 1,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.25,
+        "total_wall_s": 104.1,
+        "train_loss_last": 0.04338153451681137,
+        "train_wall_s": 101.6
+      },
+      {
+        "arm": "B_correct",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.25,
+        "total_wall_s": 131.1,
+        "train_loss_last": 0.03870665282011032,
+        "train_wall_s": 128.3
+      }
+    ],
+    "DROP-HAVE-d2-12|D_simple": [
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 0,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 134.4,
+        "train_loss_last": 0.052656613290309906,
+        "train_wall_s": 131.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 1,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 120.8,
+        "train_loss_last": 0.06509794294834137,
+        "train_wall_s": 117.8
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 2,
+        "success_rate": 0.25,
+        "total_wall_s": 115.0,
+        "train_loss_last": 0.04645084589719772,
+        "train_wall_s": 112.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 4,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 3,
+        "success_rate": 0.3333333333333333,
+        "total_wall_s": 115.1,
+        "train_loss_last": 0.052662067115306854,
+        "train_wall_s": 112.2
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 6,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 63,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 4,
+        "success_rate": 0.5,
+        "total_wall_s": 115.6,
+        "train_loss_last": 0.03870467096567154,
+        "train_wall_s": 112.7
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 5,
+        "success_rate": 0.25,
+        "total_wall_s": 115.2,
+        "train_loss_last": 0.04955565929412842,
+        "train_wall_s": 112.3
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 10,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 6,
+        "success_rate": 0.8333333333333334,
+        "total_wall_s": 111.9,
+        "train_loss_last": 0.04802973195910454,
+        "train_wall_s": 109.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 7,
+        "success_rate": 0.25,
+        "total_wall_s": 96.1,
+        "train_loss_last": 0.04801768437027931,
+        "train_wall_s": 93.5
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 8,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 8,
+        "success_rate": 0.6666666666666666,
+        "total_wall_s": 97.2,
+        "train_loss_last": 0.055762648582458496,
+        "train_wall_s": 94.9
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 11,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 4,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 8,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          }
+        ],
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "total_wall_s": 106.3,
+        "train_loss_last": 0.04802080988883972,
+        "train_wall_s": 103.9
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 64,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 10,
+        "success_rate": 0.25,
+        "total_wall_s": 117.9,
+        "train_loss_last": 0.04336737468838692,
+        "train_wall_s": 115.1
+      },
+      {
+        "arm": "D_simple",
+        "family": "DROP-HAVE-d2-12",
+        "n_records": 176,
+        "n_success": 3,
+        "n_test": 12,
+        "raws_sample": [
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0048",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 4,
+            "cell_arm": "D0",
+            "d_star": 3,
+            "episode_id": "p2-DROP-HAVE-20260924-0049",
+            "family": "DROP-HAVE-d2-12",
+            "length": 64,
+            "n_invalid": 0,
+            "outcome": "timeout",
+            "success": false
+          },
+          {
+            "L_star": 8,
+            "cell_arm": "D0",
+            "d_star": 7,
+            "episode_id": "p2-DROP-HAVE-20260924-0050",
+            "family": "DROP-HAVE-d2-12",
+            "length": 6,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          },
+          {
+            "L_star": 3,
+            "cell_arm": "D0",
+            "d_star": 2,
+            "episode_id": "p2-DROP-HAVE-20260924-0051",
+            "family": "DROP-HAVE-d2-12",
+            "length": 3,
+            "n_invalid": 0,
+            "outcome": "success",
+            "success": true
+          },
+          {
+            "L_star": 5,
+            "cell_arm": "D0",
+            "d_star": 4,
+            "episode_id": "p2-DROP-HAVE-20260924-0052",
+            "family": "DROP-HAVE-d2-12",
+            "length": 2,
+            "n_invalid": 0,
+            "outcome": "premature_stop",
+            "success": false
+          }
+        ],
+        "seed": 11,
+        "success_rate": 0.25,
+        "total_wall_s": 113.3,
+        "train_loss_last": 0.03872619569301605,
+        "train_wall_s": 110.5
+      }
+    ]
+  },
+  "schema": "ucm-ablation-v02-confirmation/0.1",
+  "setup": {
+    "arms": [
+      "A_imitation",
+      "B_correct",
+      "D_simple"
+    ],
+    "families": [
+      "DROP-HAVE-d2-12",
+      "DROP-AT-d2-12"
+    ],
+    "note_familles": "dataset P2 contient 2 familles (pas 4) \u2014 limitation document\u00e9e",
+    "seeds": 12,
+    "updates": 4000
+  },
+  "what": "confirmation v02 \u2014 3 bras \u00d7 12 seeds \u00d7 familles disponibles \u00d7 4000 updates"
+}

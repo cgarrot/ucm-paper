@@ -1,6 +1,6 @@
 # Results — curated artifacts
 
-This directory contains the **curated result artifacts** cited by the paper and the ledger. Every file is copied verbatim from the working repository's `artifacts/` tree (no re-computation). Full raw data (451 JSON, 500 checkpoints, ~1.7 GB) lives in the working repository.
+This directory contains the **curated result artifacts** cited by the paper and the ledger (40 files). Every file is copied verbatim from the working repository's `artifacts/` tree (no re-computation). Full raw data (451 JSON, 500 checkpoints, ~1.7 GB) lives in the working repository.
 
 ## Files and the claims they support
 
@@ -25,14 +25,21 @@ This directory contains the **curated result artifacts** cited by the paper and 
 | `json/p2-q4-effect-head.json` | Paper §8.7 — Q4 discriminant (native vs P2 vs run4 arms) |
 | `json/p2-ablation-controlled-full.json` | Paper §8.7 — 4 arms × 12 seeds training convergence |
 | `json/p2-ablation-controlled-rapid-v01.json` | Ledger §4 — rapid pilot of the ablation |
-| `json/p2-ablation-closed-loop.json` | Paper §8.7 — closed-loop verdict (A/B/C/D) |
+| `json/p2-ablation-closed-loop.json` | Paper §8.7 — v01 closed-loop verdict (A/B/C/D) |
 | `json/p2-ablation-closed-loop-erratum.json` | Paper §8.7 — post-hoc statistics and design-deviation record |
+| `json/p2-ablation-v02-confirmation.json` | Paper §8.7 — v02 re-run, 72 cells, per-arm means (A 62.2 / B 66.3 / D 71.5) |
+| `json/p2-ablation-v02-verdict-erratum.json` | Paper §8.7 — v02 convention, sensitivity table, non-confirmatory closure |
 | `json/p2-h1-h2-probes.json` | Paper §8.7 — H1 strata, H2 shortcut and zero-shot rate |
 | `json/s5-full-budget.json` | Paper §8.8 — 44/44, p95 1.146 ms, 1 120×, false refusals 0/40 |
 | `json/s5-refusal-calibration-v2.json` | Paper §8.8 — calibration design and results |
 | `json/s5-escalation-recall.json` | Paper §8.8 — first remediation (recall 1.0, false 0.675) |
 | `json/s5-real-demo-simulated.json` | Paper §8.8 — 32/32 demo with labelled stub |
-| `json/web-compiler-probe.json` | Paper §8.9 — 5.86 % coverage, per-page decomposition |
+| `json/web-compiler-probe.json` | Paper §8.9 — v1 baseline (5.86 %, 30/512) |
+| `json/web-compiler-v2-report.json` | Paper §8.9 — v2 snapshots, 100 % per page, v1 parity, blockers treated |
+| `json/web-compiler-v2-live.json` | Paper §8.9 — v2 live refetch validation (504/504) |
+| `json/web-e2e-smoke1.json` | Paper §8.9 — real-page E2E smoke (31 actionables, 11.2 ms, correct STOP) |
+| `json/web-e2e-smoke2.json` | Paper §8.9 — httpbin form E2E (3 fields, calibrated refusal) |
+| `json/v1bis-jointure-cells.json` | Paper §11 — joint cell table (122 rows; 10 adaptations share 5 sources) |
 
 ## Provenance rule
 

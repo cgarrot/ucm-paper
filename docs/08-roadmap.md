@@ -1,6 +1,6 @@
 # 08 — Roadmap and Open Locks
 
-*Where the project stands at snapshot `a47f7b7` (2026-09-25) and what would falsify the next steps.*
+*Where the project stands at snapshot `635ba3c` (2026-09-25, evening) and what would falsify the next steps.*
 
 ## 1. State summary
 
@@ -10,12 +10,13 @@
 | V0 TGK generalization / composition | **established** (97.5 % / 99.4 %) |
 | V0 cost / latency | established (~1 ms, 1.921× vs 1-hop gate) |
 | Verified DSL layer | established (differential ≥10k states, 3 mutations detected) |
-| V1-bis transfer TGK→SIW | **not demonstrated** (saturated regime; bound ≤ +0.73 pp) |
+| V1-bis transfer TGK→SIW | **not demonstrated** (saturated regime; bound ≤ +0.73 pp); joint cell table published |
 | S2b recurrence | **KILL** (−7.7 pp vs +15.8); retention passes |
 | P2 context | **not testable as designed**; presence-distraction measured |
-| P2 effect head | **not replicated**; INDETERMINATE at executed power |
+| Auxiliary-target line (v01 + v02) | **not established**: +34 pp not replicated; v02 non-confirmatory; validity target outside the canon |
 | S5 product line | internal criteria met in synthetic demo (44/44, 32/32; stub) |
-| Real-software compiler | **5.86 %** probe; layer missing |
+| Web compiler v2 | **established on the probe**: 100 % (504/504) live, v1 parity 5.86 % verified, 21 tests |
+| Browser end-to-end | **mechanics proven**; calibrated refusal on compiled pages (executor not trained on them) |
 | Strict inter-signature composition | **0 %** on one exploratory point; intra-band GO |
 
 ## 2. The three locks (priority order)
@@ -38,21 +39,23 @@
 
 **Falsifier.** No gain over the reactive policy at equal budget on d* ∈ [13,24].
 
-### Lock 3 — Real-software compiler
+### Lock 3 — Web executor and its corpus (compiler side done)
 
-**Question.** Can DOM→policy_input compilation reach ≥90 % actionable-element coverage with a vocabulary and tensorizer that match real pages?
+**Question.** Once an executor is trained on compiled pages, does it act correctly on real web tasks — and does the calibrated refusal survive on web goals?
 
-**Needed pieces (identified by the probe).** A LINK action signature (hyperlinks are new signatures to learn, not to "compile away"); a web vocabulary + tensorizer (D_IN beyond the closed P2 set); DOM id de-duplication; a live page-agent path (the probe is static); and a decision on the in-context line (re-opened by the switch rule) with an information-value gate (≥2× Δ_min) this time.
+**State.** The compiler side is **done for static pages** on the probe: compiler v2 reaches **100 % (504/504)** live under the v1 actionability definition frozen verbatim (v1 parity 5.86 % reproduced by replay), with a closed web vocabulary, LINK action, deterministic id de-dup, and 21 tests. The browser end-to-end assembly proves compile → decide → execute with traced shims; the executor currently **refuses** (calibrated STOP) because its training world is SIW, not compiled pages.
 
-**Falsifier.** Coverage stays <90 % with a correct compiler, or coverage ≥90 % but closed-loop execution does not transfer.
+**Needed pieces.** (1) an **execution corpus of compiled pages** (planned 300–400 pages; the corpus is both training set and benchmark); (2) the consumer's tensorizer (web vocabulary, D_IN) and a LINK action in the policy's action space; (3) re-measure refusal calibration on web tasks after training; (4) extend coverage beyond static HTML (JavaScript/SPA, iframes/shadow DOM) with an explicit boundary; (5) the in-context line stays gated behind a value-of-information test (≥2× Δ_min) if it is revisited at all.
+
+**Falsifier.** With a corpus and tensorizer in place, web-task execution stays near zero outside refusal, or refusal calibration on web tasks cannot be recovered to ≥90 % recall at ≤5 % false refusals.
 
 ## 3. Secondary work items
 
-1. **Effect head decision** (three options on the table): re-run the v02 design at planned power (4 families, 800/family, 12 paired seeds), standardize the simple validity/termination auxiliary target, or drop the head and reallocate to the locks. Recommendation in the record: do not publish +34 pp; if kept, use the v02 design.
-2. **In-context re-entry gate:** latent per-episode effects, discriminability shown before training, value-of-information ≥ 2× Δ_min, and a shuffled-target control that cannot be vacuous.
-3. **Attribution-scale transfer:** the V1-bis instruments are sound; a harder target family (or a shorter budget regime with headroom, e.g. k ≤ 32 on a genuinely difficult family) is the way to make any transfer claim falsifiable.
+1. **Auxiliary-target line (effect head): close it or re-open with fresh data.** v02 executed the planned arms at 4 000 updates but re-used v01 seeds/data and closed **non-confirmatory**; the +34 pp never replicated and the validity target is outside the canon. Options: drop the head (the decision path does not need it), or run a *fresh-data* prospective design at planned power (4 families, 800 tests/family, new seeds) if the auxiliary-signal question still matters.
+2. **In-context re-entry gate:** latent per-episode effects, discriminability shown before training, value-of-information ≥ 2× Δ_min, and a shuffled-target control that cannot be vacuous. The web switch rule re-opened this line, but only behind the gate.
+3. **Attribution-scale transfer:** the V1-bis instruments are sound; a harder target family (or a shorter budget regime with headroom, e.g. k ≤ 32 on a genuinely difficult family) is the way to make any transfer claim falsifiable. Keep the joint cell table updated so dependency clusters are never averaged away.
 4. **Unreachable-goal generator parity:** the S5 impossible-goal construction is now part of the DSL toolkit; keep it as a first-class generator with oracle verification.
-5. **Product:** replace the stub with real voice and the real comprehension model; measure the economic comparison instead of modelling it.
+5. **Product:** train the executor on the compiled-page corpus; replace the stub with real voice and the real comprehension model; measure the economic comparison instead of modelling it.
 
 ## 4. What would make the paper obsolete (in a good way)
 

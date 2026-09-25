@@ -25,7 +25,7 @@ A four-day program at this scope is only auditable if the machine enforces the p
 - Journal tails that fail validation are refused; a human must investigate.
 - Stage-B evaluation refuses to run without the sealed test and an explicit GO token.
 
-## 3. Errata ledger (13)
+## 3. Errata ledger (14)
 
 | # | Erratum | What was wrong | Correction |
 |---|---|---|---|
@@ -42,14 +42,16 @@ A four-day program at this scope is only auditable if the machine enforces the p
 | E11 | Cycle over-claims | 4 over-statements (incl. VISION 4/4, §13.4 GO) | VISION corrected then re-earned on correct base; §13.4 "not tested"; strict-composition factors not disentangled |
 | E12 | Cycle epistemic | exploratory test cited as pre-registered | intra-band GO pre-registered, strict KILL exploratory; post-freeze tests never cite the frozen design |
 | E13 | P2 closed-loop ablation | +34 pp presented as discovery; dimensioning gap | not replicated; INDETERMINATE; n_test 12 vs design 800 documented |
+| E14 | Ablation v02 verdict | First presented as GO under an unnamed convention; v02 re-uses v01 seeds/data | **non-confirmatory**; D−A exploratory (+9.4 pp, p = 0.047 one-sided permutation, carried by saturated DROP-AT); D−B non-significant after Holm; sensitivity table (bootstrap GO / t FAIL / z FAIL) published; validity target not admitted to the canon |
 
-## 4. Incidents (5)
+## 4. Incidents (5 + 1 audit note)
 
 | # | Incident | Impact | Closure |
 |---|---|---|---|
 | I1 | V1 sealed-read incident | one-read violated (11 opens), provenance hash duplicated, raw not persisted | campaign reclassified EXPLORATORY; V1-bis instrumented |
 | I2–I4 | Manifest read v1–v3 | read-protocol violations during manifest checks | strict one-read instruments, intent-before-open logging |
 | I5 | Checkpoint reconciliation | s5–s9 artifact dirs are width 192, not 144 | runtime shape filter verified no run ever loaded them; incident closed **without re-execution** |
+| note (b) | Browser daemon quirk | `navigate` returns HTTP 500 while navigating | traced as an audit note for the daemon side (workaround: new/existing tab) |
 
 ## 5. Seven interceptions before contamination (V0)
 
@@ -67,12 +69,12 @@ Cumulative cost ≈1 hour; each interception is documented in `archive/docs/PLAN
 
 | Item | Location |
 |---|---|
-| Code (frozen) | `code/` (snapshot of working repo commit `a47f7b7`) |
-| Curated result JSONs | `results/json/` (33 files) |
+| Code (frozen) | `code/` (snapshot of working repo commit `635ba3c`) |
+| Curated result JSONs | `results/json/` (40 files) |
 | Original French reports/protocols/errata | `archive/docs/`, `archive/spec/` |
-| Full artifacts (451 JSON, 500 NPZ, 1.7 GB) | working repository (private) |
+| Full artifacts (451+ JSON, 500 NPZ, 1.7 GB) | working repository (private) |
 | Environment | Python 3.12.13, MLX 0.32.2, numpy 2.5.3, macOS 26.6.2, Apple M5 32 GB; CPU-only equivalence tests; optional RTX 3070 second backend documented but not required |
-| Determinism | canon byte-identical on M5 / Debian XMG / auditor replay; seeds and RNG schemes fixed per campaign (10k/20k/30k/40k + seed for eval) |
+| Determinism | canon byte-identical on M5 / Debian XMG / auditor replay; web compiler reproducibility test on committed artifacts; seeds and RNG schemes fixed per campaign (10k/20k/30k/40k + seed for eval) |
 
 ## 7. Known gaps (declared)
 
