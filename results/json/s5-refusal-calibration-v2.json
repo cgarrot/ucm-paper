@@ -1,0 +1,20 @@
+{
+ "escalation_recall_test40": 1.0,
+ "false_escalations_ctrl40": 0.0,
+ "go4_ge_90": true,
+ "pre_registered_v2": {
+  "cal_seed": 20260925,
+  "design": "paires discriminantes 1:1 (refus + faisable-appari\u00e9 M\u00caME layout) + 50% refus non-initiaux (1-4 pas)",
+  "dev_records": 874,
+  "faisable_apparie_records": 80,
+  "fraction_pairs_sur_total": 0.1547,
+  "n_train_pairs": 80,
+  "refus_records": 80,
+  "updates": 4000
+ },
+ "ts": "20260925T083534",
+ "v1_reference": {
+  "false_esc": 0.675,
+  "recall": 1.0
+ }
+}

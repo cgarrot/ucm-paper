@@ -1,0 +1,179 @@
+{
+  "gate": "GATE-5 OFFICIAL v2 (multi-seed, audit wave-3 fixes)",
+  "canon": {
+    "path": "artifacts/data/m0-transitions.jsonl",
+    "split": "train",
+    "episodes": 100,
+    "skipped_dedup_merged": 0,
+    "tie_episodes": 9,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "criterion_1_stratum_closed_loop_success": {
+    "n_episodes_per_seed": 61,
+    "success_A": 0.8721311475409836,
+    "success_B": 0.9672131147540983,
+    "diff_pts": 9.508196721311467,
+    "paired_bootstrap_B_minus_A": {
+      "point_diff": 0.09508196721311475,
+      "ci_low": 0.05980066445182719,
+      "ci_high": 0.13468013468013462,
+      "level": 0.95,
+      "ci_excludes_zero": true,
+      "n_pairs": 305,
+      "n_seeds": 5,
+      "n_seed_layout_clusters": 240
+    },
+    "PASS": true
+  },
+  "criterion_2_safe_d_le_2": {
+    "success_A": 1.0,
+    "success_B": 1.0,
+    "loss_pts": 0.0,
+    "PASS": true
+  },
+  "criterion_3_cost": {
+    "p95_A_ms": 0.352,
+    "p95_B_ms": 0.74,
+    "p95_B_compiled_ms": 0.622,
+    "ratio_best_B_vs_A": 1.7670454545454546,
+    "PASS": true
+  },
+  "criterion_4_tie_separability": {
+    "test_ids": [
+      "tests/test_model.py::TestTieSeparability::test_A_ties_bitexactly_on_symmetric_pair",
+      "tests/test_model.py::TestTieSeparability::test_B_representations_separate_symmetric_pair"
+    ],
+    "executed": {
+      "command": "pytest tests/test_model.py::TestTieSeparability -v",
+      "node_ids": [],
+      "raw_tail": [
+        "..                                                                       [100%]",
+        "2 passed in 0.15s"
+      ],
+      "exit_code": 0
+    },
+    "PASS": true
+  },
+  "secondary_oa_diagnostic_per_transition": {
+    "A": {
+      "all": {
+        "rate": 0.9703872437357631,
+        "n": 439,
+        "unit": "per-transition"
+      },
+      "nontrivial_d_gt_0": {
+        "rate": 0.9695550351288056,
+        "n": 427,
+        "unit": "per-transition"
+      }
+    },
+    "B": {
+      "all": {
+        "rate": 1.0,
+        "n": 439,
+        "unit": "per-transition"
+      },
+      "nontrivial_d_gt_0": {
+        "rate": 1.0,
+        "n": 427,
+        "unit": "per-transition"
+      }
+    },
+    "unit": "per-transition (episode strata by initial d*)"
+  },
+  "per_seed": {
+    "0": {
+      "A": {
+        "success": 0.92,
+        "OA_nontrivial": 0.9672131147540983
+      },
+      "B": {
+        "success": 0.98,
+        "OA_nontrivial": 1.0
+      }
+    },
+    "1": {
+      "A": {
+        "success": 0.93,
+        "OA_nontrivial": 0.9695550351288056
+      },
+      "B": {
+        "success": 0.98,
+        "OA_nontrivial": 1.0
+      }
+    },
+    "2": {
+      "A": {
+        "success": 0.93,
+        "OA_nontrivial": 0.9672131147540983
+      },
+      "B": {
+        "success": 0.98,
+        "OA_nontrivial": 1.0
+      }
+    },
+    "3": {
+      "A": {
+        "success": 0.92,
+        "OA_nontrivial": 0.9695550351288056
+      },
+      "B": {
+        "success": 0.98,
+        "OA_nontrivial": 1.0
+      }
+    },
+    "4": {
+      "A": {
+        "success": 0.91,
+        "OA_nontrivial": 0.9695550351288056
+      },
+      "B": {
+        "success": 0.98,
+        "OA_nontrivial": 1.0
+      }
+    }
+  },
+  "per_seed_runs": {
+    "0": {
+      "A": "artifacts/20260922-133049-gate5v2-A-s0",
+      "B": "artifacts/20260922-133241-gate5v2-B-s0"
+    },
+    "1": {
+      "A": "artifacts/20260922-133812-gate5v2-A-s1",
+      "B": "artifacts/20260922-134003-gate5v2-B-s1"
+    },
+    "2": {
+      "A": "artifacts/20260922-134548-gate5v2-A-s2",
+      "B": "artifacts/20260922-134739-gate5v2-B-s2"
+    },
+    "3": {
+      "A": "artifacts/20260922-135245-gate5v2-A-s3",
+      "B": "artifacts/20260922-135430-gate5v2-B-s3"
+    },
+    "4": {
+      "A": "artifacts/20260922-135941-gate5v2-A-s4",
+      "B": "artifacts/20260922-140127-gate5v2-B-s4"
+    }
+  },
+  "transparency": {
+    "seen_before_freeze": "dev numbers generator-0.2.1 seed 2001 (artifacts/gate5-report/gate5-dev-gen021.json)",
+    "why_reformulation_is_spec_conformant": "spec \u00a79.2 sets the PRIMARY metric to full-episode closed-loop success with STOP; the original criterion anchored the threshold on OA, which \u00a79.2 lists as a diagnostic. The re-formulation restores the spec's own formulation; the OA stratum is reported as a secondary diagnostic with its ceiling documented.",
+    "frozen_by": "tagi-1 12:13 message (m_mucin6tw), before any official run"
+  },
+  "m4_disclosure": "comparison pool = the frozen diagnostic (train split, overfit design, as specified at freeze); canon val is layout-disjoint and REPORTED at M2 selection only \u2014 test_* cells are never read by this runner",
+  "provenance_source_mapping": {
+    "fix_commits": [
+      "cddacfa (M6/M7 fix)",
+      "840ac2b (B160 + fixes)",
+      "837adb0 (interleaved cost)"
+    ],
+    "train_py_blob_sha1": "9dc51de5b43df9122730a13ae96370ddb678a3e1",
+    "note": "config.json git_rev = HEAD at run start (42ddcae) predates the fixes; the executed code is identified by the blob hash above (working tree == committed at 840ac2b)"
+  }
+}

@@ -1,0 +1,27 @@
+{
+ "GO": true,
+ "GO_ALL": true,
+ "checkpoint": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/s5-demo/s5-full-ckpt-20260925T121754.npz",
+ "cost_ratio_stat": {
+  "formula": "ratio = (JEV_MS \u00d7 n_decisions) / \u03a3(latence_moyenne_par_\u00e9pisode \u00d7 d\u00e9cisions) \u2014 d\u00e9nominateur = temps UCm r\u00e9el mesur\u00e9 sur les 44 t\u00e2ches, M\u00caME checkpoint",
+  "jev_ms_per_decision_model": 1200.0,
+  "n_decisions": 147,
+  "ratio": 1120.0,
+  "ucm_total_ms": 157.5
+ },
+ "exec_success": 1.0,
+ "false_refusals_ctrl": 0.0,
+ "go_exec_ge_97": true,
+ "go_false_refus_le_5": true,
+ "n_tasks": 44,
+ "p95_ms_per_decision": 1.146,
+ "pre_registered": {
+  "adapt_distribution": "layouts S5 frais (dialogs inclus)",
+  "calibration": "paires v2 gel\u00e9es (80+80)",
+  "go_exec": 0.97,
+  "go_false_refus": 0.05,
+  "n_adapt": 512,
+  "updates": 6000
+ },
+ "ts": "20260925T121754"
+}

@@ -1,0 +1,316 @@
+{
+  "analysis": {
+    "A": 0.354,
+    "B": 0.41,
+    "B_minus_A_pp": 5.6,
+    "B_minus_C_pp": 11.1,
+    "B_minus_D_pp": -11.8,
+    "C": 0.299,
+    "D": 0.528
+  },
+  "hold": "report-only",
+  "manifest_sha256": "281d446aa61877fd06f84da40f615bdc3b19b110f06c623f471e28caa8e4aac2",
+  "producer": {
+    "code_commit": "ce4d2f0a2d63354e9ec314b2310e9cabf6009d13"
+  },
+  "results": {
+    "A_imitation": [
+      {
+        "n_test": 12,
+        "seed": 0,
+        "success_rate": 0.25,
+        "wall_s": 60.1
+      },
+      {
+        "n_test": 12,
+        "seed": 1,
+        "success_rate": 0.25,
+        "wall_s": 56.6
+      },
+      {
+        "n_test": 12,
+        "seed": 2,
+        "success_rate": 0.25,
+        "wall_s": 55.8
+      },
+      {
+        "n_test": 12,
+        "seed": 3,
+        "success_rate": 0.3333333333333333,
+        "wall_s": 55.9
+      },
+      {
+        "n_test": 12,
+        "seed": 4,
+        "success_rate": 0.5833333333333334,
+        "wall_s": 56.2
+      },
+      {
+        "n_test": 12,
+        "seed": 5,
+        "success_rate": 0.4166666666666667,
+        "wall_s": 56.2
+      },
+      {
+        "n_test": 12,
+        "seed": 6,
+        "success_rate": 0.5833333333333334,
+        "wall_s": 55.8
+      },
+      {
+        "n_test": 12,
+        "seed": 7,
+        "success_rate": 0.25,
+        "wall_s": 56.0
+      },
+      {
+        "n_test": 12,
+        "seed": 8,
+        "success_rate": 0.25,
+        "wall_s": 55.7
+      },
+      {
+        "n_test": 12,
+        "seed": 9,
+        "success_rate": 0.25,
+        "wall_s": 56.1
+      },
+      {
+        "n_test": 12,
+        "seed": 10,
+        "success_rate": 0.5833333333333334,
+        "wall_s": 55.8
+      },
+      {
+        "n_test": 12,
+        "seed": 11,
+        "success_rate": 0.25,
+        "wall_s": 55.7
+      }
+    ],
+    "B_correct": [
+      {
+        "n_test": 12,
+        "seed": 0,
+        "success_rate": 0.6666666666666666,
+        "wall_s": 58.3
+      },
+      {
+        "n_test": 12,
+        "seed": 1,
+        "success_rate": 0.25,
+        "wall_s": 58.6
+      },
+      {
+        "n_test": 12,
+        "seed": 2,
+        "success_rate": 0.25,
+        "wall_s": 58.4
+      },
+      {
+        "n_test": 12,
+        "seed": 3,
+        "success_rate": 0.25,
+        "wall_s": 58.6
+      },
+      {
+        "n_test": 12,
+        "seed": 4,
+        "success_rate": 0.5,
+        "wall_s": 58.5
+      },
+      {
+        "n_test": 12,
+        "seed": 5,
+        "success_rate": 0.25,
+        "wall_s": 58.6
+      },
+      {
+        "n_test": 12,
+        "seed": 6,
+        "success_rate": 0.8333333333333334,
+        "wall_s": 58.7
+      },
+      {
+        "n_test": 12,
+        "seed": 7,
+        "success_rate": 0.25,
+        "wall_s": 58.8
+      },
+      {
+        "n_test": 12,
+        "seed": 8,
+        "success_rate": 0.25,
+        "wall_s": 58.7
+      },
+      {
+        "n_test": 12,
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "wall_s": 58.6
+      },
+      {
+        "n_test": 12,
+        "seed": 10,
+        "success_rate": 0.25,
+        "wall_s": 58.4
+      },
+      {
+        "n_test": 12,
+        "seed": 11,
+        "success_rate": 0.25,
+        "wall_s": 58.5
+      }
+    ],
+    "C_shuffled": [
+      {
+        "n_test": 12,
+        "seed": 0,
+        "success_rate": 0.5,
+        "wall_s": 59.0
+      },
+      {
+        "n_test": 12,
+        "seed": 1,
+        "success_rate": 0.16666666666666666,
+        "wall_s": 59.2
+      },
+      {
+        "n_test": 12,
+        "seed": 2,
+        "success_rate": 0.3333333333333333,
+        "wall_s": 74.3
+      },
+      {
+        "n_test": 12,
+        "seed": 3,
+        "success_rate": 0.25,
+        "wall_s": 68.3
+      },
+      {
+        "n_test": 12,
+        "seed": 4,
+        "success_rate": 0.25,
+        "wall_s": 61.9
+      },
+      {
+        "n_test": 12,
+        "seed": 5,
+        "success_rate": 0.25,
+        "wall_s": 61.0
+      },
+      {
+        "n_test": 12,
+        "seed": 6,
+        "success_rate": 0.3333333333333333,
+        "wall_s": 59.7
+      },
+      {
+        "n_test": 12,
+        "seed": 7,
+        "success_rate": 0.25,
+        "wall_s": 59.6
+      },
+      {
+        "n_test": 12,
+        "seed": 8,
+        "success_rate": 0.25,
+        "wall_s": 59.3
+      },
+      {
+        "n_test": 12,
+        "seed": 9,
+        "success_rate": 0.4166666666666667,
+        "wall_s": 59.1
+      },
+      {
+        "n_test": 12,
+        "seed": 10,
+        "success_rate": 0.25,
+        "wall_s": 59.4
+      },
+      {
+        "n_test": 12,
+        "seed": 11,
+        "success_rate": 0.3333333333333333,
+        "wall_s": 59.1
+      }
+    ],
+    "D_simple": [
+      {
+        "n_test": 12,
+        "seed": 0,
+        "success_rate": 0.8333333333333334,
+        "wall_s": 58.6
+      },
+      {
+        "n_test": 12,
+        "seed": 1,
+        "success_rate": 0.8333333333333334,
+        "wall_s": 58.7
+      },
+      {
+        "n_test": 12,
+        "seed": 2,
+        "success_rate": 0.4166666666666667,
+        "wall_s": 58.4
+      },
+      {
+        "n_test": 12,
+        "seed": 3,
+        "success_rate": 0.3333333333333333,
+        "wall_s": 58.5
+      },
+      {
+        "n_test": 12,
+        "seed": 4,
+        "success_rate": 0.5,
+        "wall_s": 58.3
+      },
+      {
+        "n_test": 12,
+        "seed": 5,
+        "success_rate": 0.25,
+        "wall_s": 58.3
+      },
+      {
+        "n_test": 12,
+        "seed": 6,
+        "success_rate": 0.8333333333333334,
+        "wall_s": 58.4
+      },
+      {
+        "n_test": 12,
+        "seed": 7,
+        "success_rate": 0.25,
+        "wall_s": 58.5
+      },
+      {
+        "n_test": 12,
+        "seed": 8,
+        "success_rate": 0.6666666666666666,
+        "wall_s": 58.4
+      },
+      {
+        "n_test": 12,
+        "seed": 9,
+        "success_rate": 0.9166666666666666,
+        "wall_s": 58.3
+      },
+      {
+        "n_test": 12,
+        "seed": 10,
+        "success_rate": 0.25,
+        "wall_s": 59.5
+      },
+      {
+        "n_test": 12,
+        "seed": 11,
+        "success_rate": 0.25,
+        "wall_s": 53.2
+      }
+    ]
+  },
+  "schema": "ucm-ablation-closed-loop/0.1",
+  "what": "ablation contr\u00f4l\u00e9e CLOSED-LOOP verdict causal"
+}

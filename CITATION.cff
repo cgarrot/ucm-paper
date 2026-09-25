@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below. Private pre-publication repository (2026-09-25)."
+title: "UCM — A Compact Relational Controller for Structured Execution"
+abstract: >-
+  Technical report on the Universal Control Model (UCM): a ~0.7 M-parameter
+  relational policy for fast, cheap structured execution with calibrated
+  abstention, evaluated in two exactly solvable worlds (TinyGraphKey and SIW)
+  under a pre-registered, sealed, single-read evaluation discipline.
+authors:
+  - family-names: "cgarrot"
+    alias: "cgarrot"
+version: "1.0.0"
+date-released: "2026-09-25"
+license: "NOASSERTION"
+keywords:
+  - compact controllers
+  - relational policies
+  - behavioural cloning
+  - pre-registration
+  - interactive environments
+  - software agents

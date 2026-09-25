@@ -1,0 +1,292 @@
+{
+ "bands": {
+  "g1_d0_8": {
+   "cells": {
+    "b144-oracle": {
+     "mean_success_rate": 0.992,
+     "n_eval_per_seed": 600,
+     "per_seed": [
+      0.985,
+      0.9933333333333333,
+      0.9983333333333333,
+      0.99,
+      0.9933333333333333
+     ]
+    },
+    "b144-recovery": {
+     "mean_success_rate": 0.9896666666666667,
+     "n_eval_per_seed": 600,
+     "per_seed": [
+      0.9833333333333333,
+      0.9866666666666667,
+      0.9983333333333333,
+      0.9916666666666667,
+      0.9883333333333333
+     ]
+    },
+    "rec-oracle": {
+     "mean_success_rate": 0.9926666666666666,
+     "n_eval_per_seed": 600,
+     "per_seed": [
+      0.9966666666666667,
+      0.9816666666666667,
+      0.9933333333333333,
+      0.995,
+      0.9966666666666667
+     ]
+    },
+    "rec-recovery": {
+     "mean_success_rate": 0.9936666666666667,
+     "n_eval_per_seed": 600,
+     "per_seed": [
+      0.9933333333333333,
+      0.9916666666666667,
+      0.995,
+      0.9966666666666667,
+      0.9916666666666667
+     ]
+    }
+   },
+   "episodes": 600,
+   "retention_vs_canon": {
+    "b144-oracle": {
+     "diff_pp": -0.53,
+     "retained": true
+    },
+    "b144-recovery": {
+     "diff_pp": -0.3,
+     "retained": true
+    },
+    "rec-oracle": {
+     "diff_pp": -0.6,
+     "retained": true
+    },
+    "rec-recovery": {
+     "diff_pp": -0.7,
+     "retained": true
+    }
+   }
+  },
+  "g1_prime": {
+   "cells": {
+    "b144-oracle": {
+     "mean_success_rate": 0.9822784810126584,
+     "n_eval_per_seed": 632,
+     "per_seed": [
+      0.9762658227848101,
+      0.9825949367088608,
+      0.9889240506329114,
+      0.9825949367088608,
+      0.9810126582278481
+     ]
+    },
+    "b144-recovery": {
+     "mean_success_rate": 0.9787974683544304,
+     "n_eval_per_seed": 632,
+     "per_seed": [
+      0.9683544303797469,
+      0.9746835443037974,
+      0.9889240506329114,
+      0.9841772151898734,
+      0.9778481012658228
+     ]
+    },
+    "rec-oracle": {
+     "mean_success_rate": 0.9838607594936709,
+     "n_eval_per_seed": 632,
+     "per_seed": [
+      0.9889240506329114,
+      0.9715189873417721,
+      0.9841772151898734,
+      0.9857594936708861,
+      0.9889240506329114
+     ]
+    },
+    "rec-recovery": {
+     "mean_success_rate": 0.9835443037974685,
+     "n_eval_per_seed": 632,
+     "per_seed": [
+      0.9841772151898734,
+      0.9746835443037974,
+      0.9889240506329114,
+      0.9873417721518988,
+      0.9825949367088608
+     ]
+    }
+   },
+   "episodes": 632,
+   "retention_vs_canon": {
+    "b144-oracle": {
+     "diff_pp": -0.76,
+     "retained": true
+    },
+    "b144-recovery": {
+     "diff_pp": -0.41,
+     "retained": true
+    },
+    "rec-oracle": {
+     "diff_pp": -0.92,
+     "retained": true
+    },
+    "rec-recovery": {
+     "diff_pp": -0.89,
+     "retained": true
+    }
+   }
+  },
+  "g4_13_24": {
+   "cells": {
+    "b144-oracle": {
+     "mean_success_rate": 0.45242718446601937,
+     "n_eval_per_seed": 103,
+     "per_seed": [
+      0.46601941747572817,
+      0.4077669902912621,
+      0.4077669902912621,
+      0.5242718446601942,
+      0.4563106796116505
+     ]
+    },
+    "b144-recovery": {
+     "mean_success_rate": 0.3825242718446602,
+     "n_eval_per_seed": 103,
+     "per_seed": [
+      0.36893203883495146,
+      0.3106796116504854,
+      0.3592233009708738,
+      0.39805825242718446,
+      0.47572815533980584
+     ]
+    },
+    "rec-oracle": {
+     "mean_success_rate": 0.3864077669902913,
+     "n_eval_per_seed": 103,
+     "per_seed": [
+      0.4174757281553398,
+      0.42718446601941745,
+      0.34951456310679613,
+      0.24271844660194175,
+      0.49514563106796117
+     ]
+    },
+    "rec-recovery": {
+     "mean_success_rate": 0.3650485436893204,
+     "n_eval_per_seed": 103,
+     "per_seed": [
+      0.36893203883495146,
+      0.23300970873786409,
+      0.2912621359223301,
+      0.36893203883495146,
+      0.5631067961165048
+     ]
+    }
+   },
+   "episodes": 103,
+   "retention_vs_canon": {
+    "b144-oracle": {
+     "diff_pp": -20.0,
+     "retained": true
+    },
+    "b144-recovery": {
+     "diff_pp": -13.01,
+     "retained": true
+    },
+    "rec-oracle": {
+     "diff_pp": -13.4,
+     "retained": true
+    },
+    "rec-recovery": {
+     "diff_pp": -11.26,
+     "retained": true
+    }
+   }
+  },
+  "g4_16_24": {
+   "cells": {
+    "b144-oracle": {
+     "mean_success_rate": 0.21600000000000003,
+     "n_eval_per_seed": 25,
+     "per_seed": [
+      0.2,
+      0.2,
+      0.2,
+      0.24,
+      0.24
+     ]
+    },
+    "b144-recovery": {
+     "mean_success_rate": 0.128,
+     "n_eval_per_seed": 25,
+     "per_seed": [
+      0.2,
+      0.12,
+      0.12,
+      0.08,
+      0.12
+     ]
+    },
+    "rec-oracle": {
+     "mean_success_rate": 0.184,
+     "n_eval_per_seed": 25,
+     "per_seed": [
+      0.12,
+      0.28,
+      0.12,
+      0.12,
+      0.28
+     ]
+    },
+    "rec-recovery": {
+     "mean_success_rate": 0.152,
+     "n_eval_per_seed": 25,
+     "per_seed": [
+      0.12,
+      0.12,
+      0.08,
+      0.12,
+      0.32
+     ]
+    }
+   },
+   "episodes": 25,
+   "retention_vs_canon": {
+    "b144-oracle": {
+     "diff_pp": -13.6,
+     "retained": true
+    },
+    "b144-recovery": {
+     "diff_pp": -4.8,
+     "retained": true
+    },
+    "rec-oracle": {
+     "diff_pp": -10.4,
+     "retained": true
+    },
+    "rec-recovery": {
+     "diff_pp": -7.2,
+     "retained": true
+    }
+   }
+  }
+ },
+ "canon_zero_shot": {
+  "g1_d0_8": {
+   "n": 600,
+   "success_rate": 0.9866666666666667
+  },
+  "g1_prime": {
+   "n": 632,
+   "success_rate": 0.9746835443037974
+  },
+  "g4_13_24": {
+   "n": 103,
+   "success_rate": 0.2524271844660194
+  },
+  "g4_16_24": {
+   "n": 25,
+   "success_rate": 0.08
+  }
+ },
+ "retention_predicate_pp": 2.0,
+ "ts": "20260924T175742"
+}

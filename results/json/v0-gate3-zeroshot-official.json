@@ -1,0 +1,100 @@
+{
+  "gate": "GATE-3 OFFICIAL (frozen 16:20:52) \u2014 zero-shot STRICT, COMBINED reserved cell",
+  "threshold": 0.8,
+  "cell": {
+    "canon_test_g2": 192,
+    "g2ext": 302,
+    "n_effective": 494,
+    "skipped_dedup_merged": 2,
+    "layouts": 102,
+    "skipped_episode_ids": [
+      "test_g2-1009-00116 (canon, steps 2-6)",
+      "test_g2-20260923-00143 (g2ext, steps 5-8)"
+    ]
+  },
+  "protocol": "B144 GATE-2 checkpoints unchanged; arms frozen from val; ONE read; mx.random.seed(20000+seed); no selection on test cells at any point",
+  "overall": {
+    "n": 2470,
+    "success_rate": 0.9935222672064777,
+    "premature_stop_rate": 0.0004048582995951417,
+    "timeout_rate": 0.006072874493927126,
+    "goal_reached_without_stop_rate": 0.0,
+    "invalid_rate": 0.004635842381359034,
+    "mean_length_success": 6.288508557457213,
+    "mean_regret_success": 0.022819885900570498,
+    "mean_truncated_cost": 6.668825910931174,
+    "mean_L_star": 6.283400809716599,
+    "hierarchical_bootstrap": {
+      "point": 0.9935222672064777,
+      "ci_low": 0.9859562164394878,
+      "ci_high": 0.9987809833401057,
+      "level": 0.95,
+      "n_seeds": 5,
+      "n_seed_layout_clusters": 510,
+      "n_episodes": 2470
+    }
+  },
+  "success_by_d_star_band": {
+    "3": {
+      "n": 230,
+      "success": 1.0
+    },
+    "4": {
+      "n": 545,
+      "success": 1.0
+    },
+    "5": {
+      "n": 740,
+      "success": 0.9986486486486487
+    },
+    "6": {
+      "n": 500,
+      "success": 1.0
+    },
+    "7": {
+      "n": 245,
+      "success": 0.9959183673469387
+    },
+    "8": {
+      "n": 135,
+      "success": 0.9185185185185185
+    },
+    "9": {
+      "n": 65,
+      "success": 0.9692307692307692
+    },
+    "10": {
+      "n": 10,
+      "success": 0.9
+    }
+  },
+  "per_seed": {
+    "0": {
+      "arm": "greedy",
+      "success": 0.9979757085020243,
+      "mx_random_seed": 20000
+    },
+    "1": {
+      "arm": "greedy",
+      "success": 0.9838056680161943,
+      "mx_random_seed": 20001
+    },
+    "2": {
+      "arm": "tau1.0",
+      "success": 0.9979757085020243,
+      "mx_random_seed": 20002
+    },
+    "3": {
+      "arm": "greedy",
+      "success": 0.9919028340080972,
+      "mx_random_seed": 20003
+    },
+    "4": {
+      "arm": "greedy",
+      "success": 0.9959514170040485,
+      "mx_random_seed": 20004
+    }
+  },
+  "PASS": true,
+  "pilot_disclosure_ref": "gate3-PILOT-premature.json (premature g2ext-only read, disclosed 7aa7fda)"
+}

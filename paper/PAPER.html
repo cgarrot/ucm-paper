@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>UCM — Technical Report v1.0</title>
+<style>
+:root { --ink:#1a1a2e; --muted:#6b7280; --blue:#2563eb; --green:#16a34a; --red:#dc2626; }
+@page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+html { font-size: 10.5pt; }
+body { font-family: "Charter", "Georgia", "Times New Roman", serif; color: var(--ink);
+       line-height: 1.5; max-width: 100%; margin: 0; }
+h1 { font-size: 20pt; line-height: 1.25; margin: 0 0 6pt 0; }
+h2 { font-size: 14pt; margin: 18pt 0 6pt 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 3pt;
+     page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 12pt 0 4pt 0; page-break-after: avoid; }
+p, li { text-align: justify; }
+code { font-family: "SF Mono", "Menlo", monospace; font-size: 8.8pt; background: #f3f4f6;
+       padding: 0.5pt 2.5pt; border-radius: 3px; }
+pre { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 4px; padding: 7pt 9pt;
+      font-size: 8.6pt; overflow-x: hidden; white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8pt 0; font-size: 8.8pt;
+        page-break-inside: avoid; }
+th, td { border: 1px solid #d1d5db; padding: 3pt 5pt; text-align: left; vertical-align: top; }
+th { background: #f3f4f6; }
+img { max-width: 100%; display: block; margin: 10pt auto; page-break-inside: avoid; }
+blockquote { border-left: 3px solid var(--blue); margin: 8pt 0; padding: 2pt 10pt;
+             color: #374151; background: #f8fafc; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 14pt 0; }
+a { color: var(--blue); text-decoration: none; }
+strong { color: #111827; }
+.cover { text-align: center; margin-bottom: 14pt; }
+.cover .meta { color: var(--muted); font-size: 9pt; }
+.cover hr { width: 40%; margin: 10pt auto; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="meta">UCM — Universal Control Model · technical report v1.0 · 2026-09-25 · private pre-publication</div>
+  <hr/>
+</div>
+
+<h1 id="a-compact-relational-controller-for-structured-execution-ucm-from-tinygraphkey-to-software-interaction">A Compact Relational Controller for Structured Execution: UCM, from TinyGraphKey to Software Interaction</h1>
+<p><strong>Technical report — version 1.0 · 2026-09-25</strong></p>
+<p><strong>Author:</strong> cgarrot · <strong>Status:</strong> pre-publication, private repository · <strong>Snapshot:</strong> commit <code>a47f7b7</code> of the working repository</p>
+<blockquote>
+<p><strong>Epistemic status.</strong> This paper is a <em>laboratory log with formal claims</em>, not a polished success story. Every quantitative claim below is tagged <strong>[ESTABLISHED]</strong> (pre-registered, sealed evaluation, independent audit), <strong>[EXPLORATORY]</strong> (measured but not confirmatory), or <strong>[NOT ESTABLISHED]</strong> (failed or inconclusive). Negative results and errata are reported at the same level of detail as positive ones. Section 11 documents the research-integrity machinery that produced this ledger.</p>
+</blockquote>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>We study whether a very small non-autoregressive policy operating on structured observations can reliably <em>execute</em> multi-step tasks — fast, cheaply, and with an explicit abstention channel — in worlds whose interfaces are fully specified and exactly solvable. We introduce <strong>TinyGraphKey (TGK)</strong>, a deterministic relational world with a lockable door and three goal predicates (<code>REACH</code>, <code>HAVE</code>, <code>AT</code>), and <strong>SIW</strong> (Synthetic Interaction World), a software-like world of views, forms, fields, selects, buttons and dialogs whose labels are deliberately uncorrelated with functional roles. Both worlds are re-expressed as instances of a <strong>generic verified DSL interpreter</strong>, together with an exact oracle and a generator, with step-by-step differential equivalence to the native engines (≥10 000 states per world) and mutation testing of the interpreter.</p>
+<p>The elected controller, <strong>GNN-B144</strong>, is a 3-round relational message-passing network with 694 513 parameters, trained by set-valued behavioural cloning over syntactically enumerated candidate actions. On held-out TGK layouts it reaches <strong>97.50 %</strong> closed-loop success (CI₉₅ [96.48 ; 98.50], 3 160 episodes, 5 seeds) and <strong>99.35 %</strong> zero-shot success on a reserved recombinatorial cell (CI [98.60 ; 99.88], 494 episodes), at <strong>~1 ms</strong> p95 per decision on CPU (16–38× margin under a 20 ms envelope). Ablations show the capacity is relational: without candidate structure, goal conditioning, or relations the same policy collapses to 0.0; a 1-hop Deep Sets variant fails at bit-exactly tied logits and is outscored by +62.2 pp on the layout-disjoint depth stratum.</p>
+<p>We then report a systematically honest sequence of negative and inconclusive results, each with instruments built to make it interpretable: (i) cross-world weight transfer from TGK to SIW <strong>was not demonstrated</strong> at budgets of 64–256 episodes — the target regime is ~97–99 % saturated, and the maximum detectable effect was bounded at <strong>≤ +0.73 pp</strong>, so the experiment is a non-demonstration, not a refutation; (ii) a recurrent refinement block (T = 32) <strong>failed</strong> to beat the one-pass model on deep plans (−7.7 pp vs a frozen +15.8 pp threshold), with retention tests passing; (iii) short in-context histories were <strong>not identifiable by construction</strong> in the executed design, and what was measured is a robustness effect (context <em>presence</em> distracts: −8.3 pp) rather than content reading; (iv) an initial <strong>+34 pp</strong> auxiliary-effect-head result did <strong>not replicate</strong> under a 12-seed controlled ablation (B−A = +5.6 pp, CI ∋ 0; a simple validity/termination target did better), leaving the question indeterminate at the executed power.</p>
+<p>The paper's fourth contribution is methodological: sealed canons, one-read instruments, pre-registered gate thresholds with kill rules, attribution controls that differ only in training <em>source</em>, atomic crash-safe publication, and an append-only erratum discipline. A product-line integration (simulated comprehension layer + executor) passes its internal criteria on held-out suites (44/44 and 32/32 execution, 40/40 abstention recall, 0/40 false refusals, 1.15 ms p95, ≥500× cheaper than a declared per-decision stub). We close with the three open scientific locks: strict inter-signature composition, depth beyond ~15 actions, and the real-software compiler (a first probe on four real pages covers only 5.86 % of actionable elements, dominated by hyperlinks).</p>
+<p><strong>Keywords:</strong> compact controllers · relational policies · behavioural cloning · pre-registration · interactive environments · software agents</p>
+<hr />
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Large generative models <em>understand</em> requests but are expensive and slow when used as the decision-maker for every step of a multi-step software task. The premise of this work is <strong>decomposition of labour</strong>: a large model understands, decomposes, and unblocks; a <em>small</em>, non-autoregressive controller executes the steps locally, at around one millisecond and a fraction of the cost per decision, and knows when to hand control back. We call the target artifact UCM — <em>Universal Control Model</em> — where "universal" is an ambition, not a result.</p>
+<p>This report covers the first four days of an intensive, pre-registered research program (423 commits, 2026-09-22 → 2026-09-25). The program asked a narrow question first: <em>can an explicit interface make a ~0.7 M-parameter policy learn reliable closed-loop control on new instances?</em> — and then widened in three directions: transfer to a second world (software-like), depth (iteration at decision time), and multi-world structure (context and auxiliary signals).</p>
+<h3 id="11-contributions">1.1 Contributions</h3>
+<ol>
+<li><strong>Two exact worlds behind one interface.</strong> TinyGraphKey (relational, lockable door, three predicates) and SIW (software-like widgets, four predicates, valid no-ops vs invalid actions) are specified normatively, generated procedurally, and solved by exact multi-source backward BFS oracles (§4).</li>
+<li><strong>A verified DSL layer.</strong> Both native engines are re-expressed as data programs interpreted by a generic, reset-only interpreter; differential tests prove state-by-state equality of candidates, validity, transitions and goals, and mutation tests prove the differential <em>detects</em> injected bugs (§5). This layer later serves as the generator for held-back task families.</li>
+<li><strong>A compact relational controller.</strong> The elected GNN-B144 (694 513 parameters) is trained by set-valued BC and elected on a frozen capacity/cost gate: +62.2 pp over a 1-hop model on the layout-disjoint depth stratum, no loss on the safety stratum, sustained cost 1.921× the 1-hop model under the official interleaved protocol (§6, §7, §8.1–8.2).</li>
+<li><strong>A pre-registered evidence ledger with honest negatives.</strong> Transfer to SIW was not demonstrated in a provably saturated regime (bounded ≤ +0.73 pp); recurrence was killed (−7.7 pp vs +15.8 pp); in-context history was shown non-identifiable as designed; a promising +34 pp auxiliary result did not replicate. Each negative comes with its instrument limitations quantified (§8.4–8.7).</li>
+<li><strong>A methodological contribution: the instrument is the result.</strong> Sealed canons, single-read evaluation, shared-initialization controls, robustness counters, atomic publication, append-only errata. We argue these are what make a four-day program of this scope auditable at all (§7, §11).</li>
+</ol>
+<h3 id="12-what-this-paper-does-not-claim">1.2 What this paper does <em>not</em> claim</h3>
+<p>UCM is <strong>not</strong> a competitor to generalist models, <strong>not</strong> a claim about general intelligence, and <strong>not</strong> a deployment-ready system. The worlds are simplified (symbolic observations, closed vocabularies, deterministic dynamics). TGK generalization is established; strict compositional transfer across held-back signatures is <strong>not</strong>; depth beyond ~15 actions is <strong>not</strong>; a real-software compiler is <strong>not</strong> built (first probe: 5.86 % element coverage). The product demo uses a simulated comprehension layer with measured stub latency, and we say so wherever its numbers appear.</p>
+<hr />
+<h2 id="2-positioning-and-related-work">2. Positioning and related work</h2>
+<p><strong>Compact non-autoregressive decision models became a category in 2026.</strong> TypeSafe's <em>System One Models</em> (Sept. 2026) formalize typed probabilistic decisions without text generation, and <code>cua-s1-forms</code> (706 048 parameters) scores form-field options one-pass with a byte-level Transformer trained entirely on synthetic episodes, with disjoint field-signature splits and a shuffled-context control. UCM shares the thesis (small, typed, one-pass, ~0.7 M parameters) but differs in kind: relational graph observations, goal-conditioned multi-step control with an exact oracle, and transfer between worlds. The convergence on practices — signature-disjoint splits, shuffled controls — is independent validation of the evaluation discipline.</p>
+<p><strong>Relational policies for planning.</strong> Distilling Q<em> from an exact planner into a relational GNN is published (DFKI/Sarre 2026), including the documented trap that vanilla Q</em>-regression does not separate optimal from non-optimal actions without a margin regularizer; their Q policy is one forward pass and 3–18× cheaper than V+successors. Self-improving search↔learning loops with relational heuristics reach size generalization in planning (RWTH/Geffner 2026). UCM's one-pass candidate scorer is closest to the former, but trained with a set-valued log-likelihood over candidates rather than Q-regression, and evaluated on procedurally generated world <em>families</em> rather than fixed PDDL domains.</p>
+<p><strong>Meta-learning in randomized worlds.</strong> AnyMDP (NeurIPS 2025) meta-trains in-context RL in randomized MDPs; RACES (2026) composes verifiable environments by typed signatures for LLM reasoning. UCM's P2 phase attempted a typed-genre analogue for control but — importantly — its in-context arm turned out <strong>non-identifiable by construction</strong>, a design failure we document rather than paper over (§8.7).</p>
+<p><strong>Evaluation integrity.</strong> 2026 has an active literature on agent-benchmark validity (construct-validity audits, automated benchmark auditing, preregistration for AI-agent experiments, infinite agentic loops as a first-class failure). UCM's machinery — frozen protocols before sealed reads, raw-per-episode publication before aggregation, negative-result retention — belongs to this conversation.</p>
+<hr />
+<h2 id="3-claim-levels-and-falsification-protocol">3. Claim levels and falsification protocol</h2>
+<p>Following the project spec, conclusions are graded:</p>
+<ul>
+<li><strong>R0</strong> — pipeline correct, no generalization result.</li>
+<li><strong>R1</strong> — generalization to new instances of one family.</li>
+<li><strong>R2</strong> — transfer to explicitly tested dynamics/families.</li>
+<li><strong>R3</strong> — external replication or independently built families.</li>
+</ul>
+<p>The V0 result is <strong>R1</strong> with a controlled composition cell; TGK→SIW transfer is <strong>R2-attempted, not demonstrated</strong>; the recurrent and context results are falsification outcomes, not claim levels. Every threshold was frozen <strong>before</strong> the corresponding measurement, and any threshold movement is an erratum (§11). The operative rule, learned the hard way in this program: <strong>a frozen decision only exists if it is mechanically checkable</strong> — "4/4 gates passed" turned out to be an artifact of in-sample selection, one seed and an asymmetric cost protocol, and the ambiguity was resolved toward the <em>harder</em> bar.</p>
+<hr />
+<h2 id="4-environments">4. Environments</h2>
+<p><img alt="Figure 1: UCM in the target stack" src="figures/fig1-stack.svg" /></p>
+<h3 id="41-tinygraphkey-tgk">4.1 TinyGraphKey (TGK)</h3>
+<p>A layout is a connected undirected room graph (4–8 rooms at train; up to 64 supported), exactly one door edge with <code>locked ∈ {true,false}</code>, one agent, and two transportable objects (a key and a parcel) with a static key→door relation. The observation contains the full topology, positions, possession, door endpoints and state, and the key-door relation. Goals are <code>REACH(room)</code>, <code>HAVE(object)</code>, <code>AT(object, room)</code>. Actions are <code>MOVE(r)</code>, <code>PICK(o)</code>, <code>DROP(o)</code>, <code>UNLOCK(d)</code>, <code>STOP</code>; <strong>every decision costs one step, including invalid actions, which are paid no-ops</strong>; horizon 64; success requires STOP with the native predicate true, verified by an independent evaluator. The candidate list is syntactic and goal-blind: <code>K = R + 6</code>.</p>
+<p>The exact oracle enumerates all physical states (<code>2·(R²+2R)</code>) and runs multi-source backward BFS from all goal states, yielding <code>d*</code> (physical distance), <code>L* = d* + 1</code>, and the optimal-action set. The oracle is used for supervision and evaluation only; never as policy input.</p>
+<h3 id="42-siw-synthetic-interaction-world">4.2 SIW — Synthetic Interaction World</h3>
+<p>SIW mirrors software structure without text, pixels, or real content: 2–5 navigable views; widgets <code>button | field | select | option | form | dialog</code>; forms with 2–4 fields and at most one select, exactly one submit button; selects with 2–4 options; labels drawn from a closed ~60-word vocabulary with alias pairs and <strong>randomly assigned independently of role</strong> (a submit button may be labelled "cancel"). Isomorphism is defined on widgets and the FSM — never on labels. Goals are <code>VIEW(view)</code>, <code>SET(field)</code>, <code>CHOOSE(option)</code>, <code>SUBMITTED(form)</code>. Actions are <code>NAVIGATE</code>, <code>CLICK</code>, <code>TYPE</code>, <code>SELECT</code>, <code>STOP</code>; <code>K = V + B + F + O + 1</code> (target 30–60 via distractors); horizon 64.</p>
+<p>A deliberate semantic feature: SIW distinguishes <strong>paying invalid actions</strong> (navigate non-adjacent, click invisible, type a filled field) from <strong>costly valid no-ops</strong> (click a decorative button; submit an incomplete form; confirm without a dialog). Both are trained and reported separately. <code>TYPE</code> is unary and goal-blind — discovered by smoke test to be necessary for <code>SUBMITTED</code> solvability: <em>any goal-conditioned validity rule must be checked against the solvability of all predicates before freezing</em>. The exact oracle enumerates the full FSM (<code>views × filled ⊆ fields × chosen × dialog × submitted ⊆ forms</code>), with valid no-ops as self-loops that are never optimal, and a differential test against the environment.</p>
+<p><img alt="Figure 2: TinyGraphKey and SIW side by side" src="figures/fig2-worlds.svg" /></p>
+<h3 id="43-why-two-worlds">4.3 Why two worlds</h3>
+<p>TGK tests relational control under resource constraints (key, door, carrying). SIW tests the same <em>interface contract</em> against software-like structure: many candidates, arguments, validation order, navigation, arbitrary labels, and two distinct non-productive action classes. If one small policy core handles both, the interface — not the domain — is doing the work. The interface contract (<code>observe / candidates / execute / goal_satisfied</code>, with <code>policy_input</code> separated from <code>supervision</code> and <code>provenance</code>) is frozen: no forbidden fields (<code>d*</code>, reward, plan, next observation, timestep) may enter the policy input.</p>
+<hr />
+<h2 id="5-the-verified-dsl-layer">5. The verified DSL layer</h2>
+<p>Both worlds are re-expressed as <strong>data programs</strong> interpreted by a generic interpreter (<code>ucm/dsl/core.py</code>): JSON expression trees with no <code>eval</code>, immutable canonical state, and <strong>reset-only construction</strong> (no state injection). The interpreter supports guards, conditional effects, effect groups (false <code>when</code> ⇒ valid no-op), set/dict fields, and a successor function shared by BFS and execution. It knows no world; TGK and SIW become two program instances with the same semantics.</p>
+<p>Correctness is established by two independent instruments:</p>
+<ol>
+<li><strong>Differential equivalence.</strong> For every state reachable from reset (≥10 000 states per world), compare DSL vs native: candidate list, per-candidate validity, canonical successor, and goal truth; then compare <code>d*</code> and the optimal-action sets per task (compared as actions, not indices). Result: equality on all covered states.</li>
+<li><strong>Mutation testing.</strong> Inject three semantic bugs into the interpreter (<code>not</code> ignored; set-add no-op; equality inverted). Each mutation must produce at least one divergence; all three are detected (one requires SIW because set-add does not occur in TGK).</li>
+</ol>
+<p>A third invariant, learned from a regression, is centralized: the terminal record <code>{STOP}</code> at <code>d* = 0</code> is emitted by a shared walker and guarded by a fail-closed assertion that raises (not an <code>assert</code> statement, which <code>-O</code> strips). The DSL then becomes the <em>generator</em> for held-back task families and the source of auxiliary effect labels in P2.</p>
+<p><img alt="Figure 3: Verified DSL — dual implementation and differential harness" src="figures/fig3-dsl.svg" /></p>
+<hr />
+<h2 id="6-model-family">6. Model family</h2>
+<p><img alt="Figure 4: Tensor contract and architecture" src="figures/fig4-architecture.svg" /></p>
+<h3 id="61-tensor-contract">6.1 Tensor contract</h3>
+<p>Entities become typed one-hot nodes; relations become typed, sense-tagged edges localized to node indices; the goal is a predicate one-hot plus two entity-reference slots (object, room); candidates are <code>(type, arg1, arg2)</code> index tuples, padded with a mask. Capacities: <code>N_CAP = 64</code>, <code>K_CAP = 32</code> (96 in SIW), <code>MIN_S2CAP = 4</code> incident slots. Raw ids and labels are never embedded; entity/relation/candidate order is randomized coherently at train and test, and supervision/provenance cannot alter tensors (anti-leak tests). STOP is a first-class action with null arguments.</p>
+<h3 id="62-model-a-deep-sets-1-hop-366-337-parameters">6.2 Model A — Deep Sets (1-hop), 366 337 parameters</h3>
+<p>Node encoder + one-hop incident-relation pooling, local update, masked global mean context, goal vector, and a shared candidate scorer producing one logit per candidate. This is the deliberately weak baseline. Its failure is informative: on a symmetric pair with identical <em>signatures</em>, it produces <strong>bit-exactly equal logits (0.410357 == 0.410357)</strong> — a 1-hop encoder cannot separate what it cannot distinguish in one step. GATE-1 overfit stalled at 96.58 % against a 99 % bar.</p>
+<h3 id="63-model-b-relational-gnn-and-the-width-election">6.3 Model B — relational GNN, and the width election</h3>
+<p>Model B replaces one-hop pooling with <strong>three message-passing rounds</strong> (distinct edge-type/sense embeddings, residual + LayerNorm per round; hidden width <code>d</code>). The elected configuration is <code>d = 144</code> (<strong>B144, 694 513 parameters</strong>). Widths 160 and 192 form the capacity/cost frontier: they improve the depth stratum marginally (91.2 %, 89.5 %) but fail the cost gate (2.035×, &gt;2.31×). The election used four pre-registered criteria on a frozen diagnostic (performance on <code>d* ≥ 3 ∪ ties</code>, safety on <code>d* ≤ 2</code>, sustained cost ≤ 2×, tie separability), decided <strong>before</strong> the official runs, then promoted on a layout-disjoint validation stratum: <strong>+62.2 pp</strong> (88.1 % vs 25.9 %, CI [54.6 ; 68.9]) with the safe stratum improving from 84.1 % to 100 %.</p>
+<h3 id="64-training-objective">6.4 Training objective</h3>
+<p>Set-valued behavioural cloning over the candidate set:</p>
+<p>$$\mathcal{L} = -\log \sum_{a \in A^*} \mathrm{softmax}_a(\text{logits})$$</p>
+<p>Only padding is masked out of the denominator; physically invalid candidates remain in the softmax; STOP is trained like any action. Optimizer everywhere: AdamW, lr 3e-4, weight decay 1e-4, grad-clip 1.0, FP32, batch 64 (32 in P2 cells); checkpoint = best validation, or <em>final at fixed budget</em> for adaptation runs (no target selection).</p>
+<h3 id="65-siw-adaptation-and-the-recurrent-civ-block">6.5 SIW adaptation, and the recurrent CIV block</h3>
+<p>The SIW model re-shapes only vocabulary-dependent modules (node encoder, goal head, edge embeddings — <strong>698 401 parameters</strong>) while the action scorer transfers with the action count. A recurrent variant (CIV) wraps the base with <strong>one shared message block + GRUCell iterated T = 32 times</strong> (272 448 extra parameters, constant in T; effective iteration count mechanically instrumented), with the base frozen and its SHA verified before/after. This tests "compute, not size" against the one-pass model at equal data budget.</p>
+<h3 id="66-p2-structured-context-and-an-auxiliary-effect-head">6.6 P2: structured context and an auxiliary effect head</h3>
+<p>The P2 model extends the node vocabulary with context entities (observed action→effect pairs linked to canonical targets) and adds an <strong>auxiliary effect-prediction head</strong> (7 classes: none, moved, carried/dropped object, door unlocked) trained jointly with λ = 0.5. The head never touches the policy logits by construction, which is what makes the ablation clean: policy logits are identical with or without it. The head was later promoted — and then demoted — by the evidence in §8.7.</p>
+<hr />
+<h2 id="7-experimental-methodology">7. Experimental methodology</h2>
+<p><img alt="Figure 5: Gate chain and sealing" src="figures/fig5-gates.svg" /></p>
+<h3 id="71-gates-with-pre-registered-kill-rules">7.1 Gates with pre-registered kill rules</h3>
+<p>The V0 program ran a chain of gates, each with thresholds frozen before measurement and each able to stop the iteration:</p>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Question</th>
+<th>Frozen threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GATE-0</td>
+<td>data canon correct, sealed, reproducible</td>
+<td>byte-identical across machines</td>
+</tr>
+<tr>
+<td>GATE-1</td>
+<td>capacity to fit (in-sample)</td>
+<td>non-trivial optimal-action rate ≥ 0.99</td>
+</tr>
+<tr>
+<td>GATE-5</td>
+<td>architecture election on a diagnostic</td>
+<td>+5 pts on depth stratum, ≤ 2 pts loss on safe stratum, cost ≤ 2×, tie separability</td>
+</tr>
+<tr>
+<td>GATE-2</td>
+<td>closed-loop generalization on new instances</td>
+<td>success ≥ 95 %, CI-low ≥ 90 %, per-goal ≥ 85 %</td>
+</tr>
+<tr>
+<td>GATE-3</td>
+<td>zero-shot composition on a reserved cell</td>
+<td>success ≥ 80 %</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>interface controls and failure taxonomy</td>
+<td>controls must collapse; taxonomy pre-specified</td>
+</tr>
+<tr>
+<td>GATE-4</td>
+<td>baselines off-distribution</td>
+<td>comparisons reported, no selection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-sealing-and-one-read">7.2 Sealing and one-read</h3>
+<p>Dataset generation produces a canonical split manifest; evaluation canons are read through a <strong>sealed one-read registry</strong> (single <code>open</code>, realpath-keyed, intent logged <em>before</em> the open), and freeze manifests bind the code files, input SHAs, budget plan and seeds — code drift aborts before any read. Adaptation budgets are <strong>episode-level</strong> (k complete episodes with their terminal STOP, prefix-nested and hash-published), and the confirmatory run used a freeze built specifically for it (v10), executed once by four workers (120 cells = 4 arms × 10 seeds × 3 budgets), with all raw per-episode rows persisted <strong>before</strong> aggregation.</p>
+<h3 id="73-attribution-controls">7.3 Attribution controls</h3>
+<p>Transfer runs compare four arms that differ <strong>only in the source of supervision</strong>: (i) <code>scratch</code> (random init), (ii) <code>pretrained-TGK</code> (canonical B144 loaded), (iii) <code>control-validity</code> (supervision replaced by a uniform draw among physically valid actions — removes decisional information but keeps validity structure), (iv) <code>control-null</code> (uniform over all candidates — validity-blind). All arms share the same nested data slice, the same seed-matched fresh initialization before weight loading, identical optimizer/updates/batch/checkpoint policy, and no selection on target performance. Interpretation contract, fixed in advance: if the validity control matches pretrained, the gain is optimization/exposure; if it matches scratch, the gain is decisional information; overlapping CIs mean <strong>attribution is not established</strong>.</p>
+<h3 id="74-statistics">7.4 Statistics</h3>
+<p>Primary statistics are paired and hierarchical where the design demands it (seeds as blocks; layout/task clusters where applicable); bootstrap CIs are 95 %; confirmatory thresholds are one-sided. When a protocol's variance assumption was found unverifiable (a 10.9 pp SD that could not be derived from published differences), the project <strong>revoked it and re-derived</strong> the power analysis from the visible n−1 estimate (12.61 pp), accepting the lower nominal power (≈75 % at 10 seeds for 10 pp) rather than keeping a convenient number.</p>
+<h3 id="75-artifact-discipline">7.5 Artifact discipline</h3>
+<p>Every run writes an immutable artifact (config, metrics, final state, checkpoint) with failure to overwrite; final publications use crash-safe atomic bundles and hardlink pointers; interaction logs are SHA-256-chained; journals are append-only with refusal of invalid tails. Results of record are recomputed from raw rows by a second party (auditor) before being cited. This machinery caught real problems (see §11).</p>
+<h2 id="8-results">8. Results</h2>
+<p><img alt="Figure 6: Results overview — depth curve, capacity/cost frontier, arm curves" src="figures/fig6-results.svg" /></p>
+<h3 id="81-v0-tgk-generalization-and-composition-established">8.1 V0 — TGK generalization and composition <strong>[ESTABLISHED]</strong></h3>
+<p><strong>GATE-2 (generalization).</strong> B144, 5 seeds, one sealed read per seed, arms frozen from validation: <strong>success 97.50 %</strong> on 3 160 held-out episodes (630 layout clusters), CI₉₅ <strong>[96.48 ; 98.50]</strong>, vs the frozen ≥95 % / CI-low ≥90 % bar. Per goal: REACH <strong>98.76 %</strong> (n = 1 050), HAVE <strong>99.72 %</strong> (n = 1 060), AT <strong>94.00 %</strong> (n = 1 050) — the only sub-95 % predicate. Mean regret on successes 0.056, invalid actions 9.96 % of steps (they are paid but not fatal), premature STOP 0.03 %. Checkpoint selection used validation only; test was read once.</p>
+<p><strong>GATE-3 (composition, zero-shot strict).</strong> A reserved cell — <code>AT(key, junction)</code> — significant never appears in training or validation. The GATE-2 checkpoints, unchanged and arms frozen, reach <strong>99.35 %</strong> over 494 episodes × 5 seed-reads = 2 470 episodes on 102 layouts, CI <strong>[98.60 ; 99.88]</strong>, vs the frozen ≥80 % bar; invalid rate 0.46 %, regret 0.023. Success is 100 % up to <code>d* = 6</code>, 99.6 % at 7, 91.9 % at 8, 96.9 % at 9, 90 % at 10. Two episodes were skipped by documented duplicate-merge dedup (disclosed in the artifact), and a premature pilot read of the extension cell was disclosed as an incident rather than hidden.</p>
+<h3 id="82-controls-baselines-failure-mechanics-and-the-depth-wall-established-descriptive">8.2 Controls, baselines, failure mechanics, and the depth wall <strong>[ESTABLISHED / descriptive]</strong></h3>
+<p><strong>Interface controls (M3).</strong> Remove the goal (tags and binding): success <strong>0.0</strong> (with 28 % "goal reached without STOP" — the policy moves plausibly but cannot terminate). Candidates zeroed: <strong>0.0</strong> (it always STOPs). Relations removed: <strong>0.0</strong>. Counterfactual goal swap: <strong>0.960</strong>. Coherent permutation of entities/relations/candidates: outcomes identical in <strong>200/200</strong> episode-permutations. The capacity lives in the goal-conditioned relational interface, not in incidental structure.</p>
+<p><strong>Off-distribution baselines (GATE-4).</strong> On <code>test_g1</code>, model <strong>97.5 %</strong> vs a goal-blind local heuristic (R1–R6: STOP if satisfied, pick goal object, drop at goal room, unlock when possible, random valid move) <strong>82.6 %</strong>, random-valid <strong>60.6 %</strong>, random-syntactic <strong>4.6 %</strong> — a +14.9 pp margin over the heuristic, with the heuristic never performing an invalid action.</p>
+<p><strong>Failure taxonomy (pre-specified before inspection).</strong> Of 3 160 episodes, 83 failed (the official count is 79 after a stochastic-replay reconciliation; see Appendix B). Categorization: <strong>46 absorbing loops (55 %)</strong>, <strong>36 repeated invalid actions (43 %)</strong>, 1 other; zero forgotten-STOP, wrong-target, or binding failures. All AT failures occur at <code>d* ≥ 6</code>, with mean length 63 (timeouts) against <code>L* = 9.9</code>: the model is not confused about <em>what</em> to do — it loses the thread of a long route.</p>
+<p><strong>The depth wall.</strong> Per-depth success on G3 (326 episodes, overall 94.5 %) and G4 (103 episodes, overall <strong>36.9 %</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>d*</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>≥18</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>100</td>
+<td>100</td>
+<td>98.5</td>
+<td>92.7</td>
+<td>93.8</td>
+<td>95.7</td>
+<td>100</td>
+<td>84.6</td>
+<td>62.5</td>
+<td>40.0</td>
+<td>25.0</td>
+<td>46.3</td>
+<td>54.5</td>
+<td>40.0</td>
+<td>0</td>
+<td>9.1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>n</td>
+<td>69</td>
+<td>56</td>
+<td>68</td>
+<td>41</td>
+<td>32</td>
+<td>23</td>
+<td>7</td>
+<td>13</td>
+<td>8</td>
+<td>5</td>
+<td>4</td>
+<td>41</td>
+<td>22</td>
+<td>15</td>
+<td>8</td>
+<td>11</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Success is essentially perfect at shallow depth and collapses beyond ~12–15 actions, consistent with a fixed 3-round receptive field plus greedy decoding. This is a <strong>mechanistic</strong> limit: the model lacks the effective lookahead, and neither width (B160/B192) nor more data fixed it (see S2b, §8.6).</p>
+<h3 id="83-cost-and-latency-established">8.3 Cost and latency <strong>[ESTABLISHED]</strong></h3>
+<p>Runtime budget: ≈4 h 50 of a 24 h accelerator envelope; official train + evaluation 86.3 min; peak RSS 749 MB (training), 67.6 MB (batch-1 inference). Batch-1 latency p95 is <strong>0.52–0.66 ms</strong> on quiet CPU cells; under the <em>official interleaved-sustained</em> protocol (both arms <code>mx.compile</code>d, alternating blocks, median of blocks 2–6) B144 costs <strong>1.921×</strong> the 1-hop model (IQR 0.309, corroborated 1.913) — inside the pre-registered ≤2× gate. B160 costs <strong>2.035×</strong> (IQR 0.017, 5/5 blocks &gt;2.00) and fails; B192 exceeds 2× on three independent measurements (3.05 / 2.31 / ~2.15). The pre-committed stopping rule was honoured: the iteration ended with a published frontier (A / B144 / B160 / B192) rather than a third width. <em>Process erratum:</em> two incompatible cost statistics had been frozen (#11 best-device, #12 interleaved); they were reconciled before the official run by declaring the interleaved-sustained protocol official because the spec demands the sustained regime, with quiet-cell numbers kept as diagnostics.</p>
+<h3 id="84-v1-exploratory-transfer-to-siw-exploratory">8.4 V1 — exploratory transfer to SIW <strong>[EXPLORATORY]</strong></h3>
+<p>The first transfer campaign (3 arms × 5 seeds × k ∈ {0,100,500,2000,10000} unique state-goal couples, 600 sealed test episodes, 2 000 updates) reported at the primary point k<em> = 500: pretrained − scratch = </em><em>+12.57 pp</em><em>, paired CI [2.56 ; 22.35], and control − scratch = </em><em>+13.37 pp</em><em> [3.77 ; 22.76], while control − pretrained = </em><em>+0.81 pp</em><em> [−13.32 ; 13.88] — i.e. the validity-informed control matched pretraining, and </em><em>no decisional attribution was established</em><em>. Area under the learning curve (log k): scratch 0.199 / pretrained 0.253 / control 0.287. Three instrument violations were disclosed after the fact (the "one read" invariant was not held — 11 opens; a provenance hash was duplicated across budgets; raw per-episode rows and checkpoints were not persisted), and the cell was </em><em>reclassified EXPLORATORY</em>*. It motivated the V1-bis redesign: episode-level trajectories with terminal STOP, four arms, ten seeds, freeze manifests, and single-read Stage-B evaluation.</p>
+<h3 id="85-v1-bis-confirmatory-transfer-and-the-value-of-a-saturated-regime-not-established-bounded">8.5 V1-bis — confirmatory transfer, and the value of a saturated regime <strong>[NOT ESTABLISHED, bounded]</strong></h3>
+<p>The confirmatory design froze: 4 arms (scratch / pretrained-TGK / control-validity / control-null), 10 seeds, episode budgets k = 64 / 128 / 256, 6 000 sealed test episodes per cell, identical optimizer and checkpoint policy, shared seed-matched initialization, and one read of the sealed test — 120 cells, 72 000 raw per-episode rows persisted before aggregation, executed once in 3 h 37.</p>
+<table>
+<thead>
+<tr>
+<th>Arm (mean success by k)</th>
+<th>64</th>
+<th>128</th>
+<th>256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scratch</td>
+<td>97.10 %</td>
+<td>98.18 %</td>
+<td>99.18 %</td>
+</tr>
+<tr>
+<td>pretrained-TGK</td>
+<td><strong>97.90 %</strong></td>
+<td>98.08 %</td>
+<td>99.10 %</td>
+</tr>
+<tr>
+<td>control-validity</td>
+<td>96.22 %</td>
+<td>96.98 %</td>
+<td>98.95 %</td>
+</tr>
+<tr>
+<td>control-null</td>
+<td>96.37 %</td>
+<td>98.17 %</td>
+<td>99.34 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>pretrained − scratch</th>
+<th>CI₉₅</th>
+<th>verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64</td>
+<td>+0.80 pp</td>
+<td>[0.25 ; 1.97]</td>
+<td>FAIL (point &lt; 5 pp)</td>
+</tr>
+<tr>
+<td>128</td>
+<td>−0.10 pp</td>
+<td>[−1.12 ; 2.40]</td>
+<td>FAIL</td>
+</tr>
+<tr>
+<td><strong>256 (primary)</strong></td>
+<td><strong>−0.08 pp</strong></td>
+<td><strong>[−0.78 ; 2.08]</strong></td>
+<td><strong>FAIL</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Two facts make this a <strong>non-demonstration rather than a refutation</strong>. First, the regime is nearly saturated: the largest margin available to <em>any</em> arm was 2.90 / 1.82 / 0.82 pp at k = 64 / 128 / 256, so the frozen 5 pp bar was unreachable by construction; the corrected 95th-percentile bound on any possible effect at k = 256 is <strong>≤ +0.73 pp</strong>. Second, the instrument was repaired: <strong><code>goal_reached_without_stop = 0 / 72 000</code></strong> episodes, against 29–44 % in V1 — the R<em> repair (physically reachable trajectories with a terminal STOP at <code>d* = 0</code>) eliminated the termination pathology, which is the most direct construct-validity demonstration in the project. The k = 64 secondary point is at least suggestive — +0.8 pp with one-sided p ≈ 0.028 (Bonferroni ×3 ≈ 0.085), a </em><em>−28 % relative failure rate</em><em> (126 vs 174 failures / 6 000), inverting sign at larger budgets. Descriptives for future designs: real difficulty is ~6 % of the test (a tail of 38 episodes; VIEW at <code>d* ≥ 3</code>, CHOOSE at <code>d* ≥ 4</code>, SET at <code>d* = 4</code>, SUBMITTED at <code>d* = 7</code>), 90 % of timeouts are absorbing loops, and SIW-small is </em><em>solved by the oracle (~100 %)</em>* — so it cannot support transfer claims at any budget without changing the family or the budget regime.</p>
+<h3 id="86-s2b-recurrence-on-deep-plans-not-established-kill">8.6 S2b — recurrence on deep plans <strong>[NOT ESTABLISHED / KILL]</strong></h3>
+<p>A 2×2 factorial crossed model (one-pass B144 | recurrent CIV T=32) with data source (exact oracle | recovery: deviate one non-optimal action then re-solve, f = 0.3), 5 paired seeds, 2 000 updates, equal data volume, on the deep G4 stratum <code>d* ∈ [13,15]</code> (n = 78). Frozen predicate: CIV − B144 ≥ <strong>+15.8 pp</strong> with CI-low &gt; 0.</p>
+<table>
+<thead>
+<tr>
+<th>Per-seed success (%)</th>
+<th>s100</th>
+<th>s101</th>
+<th>s102</th>
+<th>s103</th>
+<th>s104</th>
+<th>mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B144-oracle</td>
+<td>55.1</td>
+<td>47.4</td>
+<td>47.4</td>
+<td>61.5</td>
+<td>52.6</td>
+<td><strong>52.8</strong></td>
+</tr>
+<tr>
+<td>CIV(T=32)-oracle</td>
+<td>51.3</td>
+<td>47.4</td>
+<td>42.3</td>
+<td>28.2</td>
+<td>56.4</td>
+<td><strong>45.1</strong></td>
+</tr>
+<tr>
+<td>difference (pp)</td>
+<td>−3.8</td>
+<td>0.0</td>
+<td>−5.1</td>
+<td>−33.3</td>
+<td>+3.8</td>
+<td><strong>−7.7</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: KILL.</strong> The recurrent block did not beat the one-pass model at equal data budget. Three audit obligations were published with the result: (1) the test was <strong>conservative</strong> — CIV trained only the refine block over a frozen canonical base while B144 adapted everything, so the KILL applies to "refine without an identity path over a frozen head", not to any light iteration; (2) the shallow retention check was not executed in the run and was later completed as an annex — retention at <code>d* ≤ 8</code> is <strong>97.9–99.4 %</strong>, within the ≤2 pp criterion everywhere; (3) deep-band context: B144-oracle 45.2 % and 21.6 % on [13,24] and [16,24], CIV-oracle 38.6 % / 18.4 %, canonical zero-shot 25.2 % / 8.0 %. The data-source effect (oracle &gt; recovery, +6.4 pp mean) did not reach significance (one-sided p = 0.094, n = 5) and was <strong>not</strong> promoted. Prospectively: seed variance was 5.9 pp on this stratum, giving a real MDE of ≈18.5 pp — above the frozen 15.8 pp threshold, i.e. the frozen threshold was <em>below</em> the design's actual detectable effect. The verdict is unchanged (FAIL is even clearer), and the lesson entered the rulebook: <strong>measure inter-seed SD at the real base before freezing a threshold; never lower a frozen threshold — increase n before the freeze.</strong></p>
+<p>Runtime profile of the recurrent variant, for the record: p95 14.08 ms per decision (model-only, conservative gate measure; PASS under 20 ms), ~10–12× the per-update wall of the one-pass model, RSS 9.7 GB vs 1.4 GB.</p>
+<h3 id="87-p2-structured-context-and-the-auxiliary-effect-head-not-established-one-real-robustness-effect">8.7 P2 — structured context and the auxiliary effect head <strong>[NOT ESTABLISHED; one real robustness effect]</strong></h3>
+<p>P2 asked whether a fresh model can exploit a short structured context (observed action→effect pairs attached as graph entities) on held-back TGK families (<code>DROP-AT</code>, <code>DROP-HAVE</code>, <code>d* ∈ [2,12]</code>), with an auxiliary effect-prediction head trained jointly. Arms: D0 (no context), D1-mixed (30 % of episodes with correct context), D1-shuffled (same volume, permuted targets). An equal-information oracle gate had to clear ≥30 % before any training.</p>
+<p><strong>The in-context question was not identifiable by construction.</strong> TGK semantics are constant across episodes, the constructed context linked canonical targets, and the history came from <em>another</em> episode's optimal plan: the context carried no inferable information about the current task. The pre-registered oracle gate passed vacuously (it measured "solvable without the observed UNLOCK"). What the run <em>did</em> measure is worth keeping: on DROP-HAVE, D1-mixed ≤ D0 in 8/8 seeds (<strong>−18.8 pp</strong>, p = 0.031 pre-specified; post-hoc one/two-sided p = 0.055/0.11, Holm-killed — so the effect is real in sign and fragile in inference), i.e. <strong>the model is distracted by the presence of irrelevant context edges</strong>. DROP-AT showed 0.0 pp, but the family's effective ceiling was 91.7 % (one episode fails for all 24 runs) against a 10.2 pp Δ_min — the window was unreachable, another dimensioning failure. A discriminant addendum (no training) showed D1-mixed weights scoring <strong>55.2 % without context vs 46.9 % with it</strong> (5/8 paired seeds), while shuffled weights ignore context in both conditions (27–28 %): reliable evidence for <strong>presence sensitivity</strong>, zero evidence for <strong>content reading</strong>. The earlier "the model reads the context" formulation was withdrawn by erratum.</p>
+<p><strong>The +34 pp effect-head story did not replicate.</strong> A suggestive initial contrast (native 0.3125 vs run4-without-context D0 0.65625) motivated a controlled 12-seed × 4-arm ablation at 2 000 updates: A = imitation only, B = correct effect labels, C = shuffled effect labels, D = <strong>simple</strong> validity/termination labels, all with the same auxiliary-head machinery and a provably untouched policy path.</p>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th>Closed-loop success</th>
+<th>Auxiliary convergence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A (imitation, no head)</td>
+<td>35.4 %</td>
+<td>—</td>
+</tr>
+<tr>
+<td>B (effect head, correct)</td>
+<td>41.0 %</td>
+<td>effect loss → 0.096</td>
+</tr>
+<tr>
+<td>C (effect head, shuffled)</td>
+<td>29.9 %</td>
+<td>effect loss → 0.129</td>
+</tr>
+<tr>
+<td><strong>D (simple target)</strong></td>
+<td><strong>52.8 %</strong></td>
+<td>0.096</td>
+</tr>
+</tbody>
+</table>
+<p>B − A = <strong>+5.6 pp, CI ∋ 0</strong>; B − C = +11.1 pp (content matters for <em>learning the head</em>); B − D = <strong>−11.8 pp</strong> (the simple target is <em>better</em>). The policy path is untouched by construction (identical logits), so the head is purely auxiliary. <strong>Verdict: INDETERMINATE</strong> — level 1 failed (CI covers 0) and level 2 failed (B &lt; D). The executed design also deviated from the frozen design (n_test = 12 per family instead of 800, 2 000 updates instead of 4 000), leaving per-seed rates spread 0.25–0.92; with the executed power, no honest conclusion is possible. The honest summary is: <em>an auxiliary signal of some kind may help (A → D = +17.4 pp for the simple target, not established statistically); specific effect targets add nothing over a simple validity/termination target at this budget; the initial +34 pp is not replicated.</em></p>
+<p><strong>Depth/signature probes (eval-only).</strong> H1 (depth vs signature): stratum B — AT with <code>d* ≤ 12</code> requiring the door — 80 % (20/25), so low-depth door traversal is solved; stratum A — AT at <code>d* ∈ [20,24]</code> <em>without</em> a door — sampled <strong>zero</strong> tasks: on the training layouts, extreme depth essentially always requires the door. The pre-registered discriminator was therefore <strong>structurally incomplete</strong> (rarity, not difficulty). H2 (goal→action-type shortcut): initial argmax == DROP in 8.33 % of fresh DROP-HAVE tasks, far below the 40 % threshold — the shortcut <strong>does not exist as pre-registered</strong>; yet zero-shot closed-loop success is <strong>58.3 %</strong> (7/12), meaning the model solves a held-back family without fine-tuning via a plan that does not begin with DROP. That is genuine zero-shot planning, and it reframes strict composition as the next lock rather than a total absence of capability.</p>
+<h3 id="88-s5-product-line-integration-internal-criteria-met-in-a-synthetic-demo">8.8 S5 — product-line integration <strong>[internal criteria met in a synthetic demo]</strong></h3>
+<p>The deployment-shaped test wires: (simulated) comprehension → structured requests → UCM executor, with an exact planner as the upper baseline and a declared per-decision cost model for the big-model alternative (JEV_MS = 1 200 ms/decision, an explicit stub). Final table on the held-out S5 distribution (fresh layouts <em>with dialogs</em>, 512 adaptation episodes, calibration v2, 6 000 updates):</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Result</th>
+<th>Frozen bar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execution success</td>
+<td><strong>44/44 = 100 %</strong></td>
+<td>≥ 97 %</td>
+</tr>
+<tr>
+<td>p95 per decision</td>
+<td><strong>1.146 ms</strong></td>
+<td>≤ 5 ms</td>
+</tr>
+<tr>
+<td>Cost ratio vs stub</td>
+<td><strong>1 120×</strong> (formula: 1 200 ms × 147 decisions / 157.5 ms measured UCM, same checkpoint)</td>
+<td>≥ 10×</td>
+</tr>
+<tr>
+<td>Abstention recall (impossible goals)</td>
+<td><strong>40/40 = 100 %</strong></td>
+<td>≥ 90 %</td>
+</tr>
+<tr>
+<td>False refusals (feasible controls)</td>
+<td><strong>0/40 = 0 %</strong></td>
+<td>≤ 5 %</td>
+</tr>
+</tbody>
+</table>
+<p>The abstention behaviour is learned, not positional: v2 calibration used 1:1 discriminant pairs on the <em>same layout</em> (a refused impossible task and a feasible one), half the refusals supervised from intermediate states, and the frozen-before-training result is perfect recall with zero false refusals on disjoint splits ("reachability is the signal, not the position"). The engineering history is instructive: after impossible goals were first generated by DSL constraints (closed dialog + target widget inside it, oracle-verified unreachable), abstention recall was <strong>0/24</strong>; a first remediation reached 40/40 recall but <strong>27/40 false escalations</strong>; the pre-registered v2 calibration then achieved 40/40 ∧ 0/40. The full-budget run then fixed execution: the lever was the <strong>training distribution</strong> (512 episodes of the deployment distribution), not the budget alone.</p>
+<p>The end-to-end demo (32 spoken-style requests in a forms sub-world, simulated comprehension layer with measured 0.026 ms/request stub latency, external voice layer <em>not exercised</em>) scores 32/32 with a 505.9×–581× ratio depending on the run. We restate the required formulation verbatim: <strong>"UCM satisfies our four internal criteria in a synthetic demonstration with simulated Jev; end-to-end validation with real voice and real Jev, and real economic benefit, remain to be established."</strong></p>
+<h3 id="89-real-software-compiler-probe-not-established">8.9 Real-software compiler probe <strong>[NOT ESTABLISHED]</strong></h3>
+<p>Four real public pages were fetched statically and compiled DOM→<code>policy_input</code> by a first probe. <strong>Completeness: 5.86 % (30/512 actionable elements).</strong> The decomposition is the point: real <em>forms</em> are covered 100 % of their own elements (fields and submit → TYPE/CLICK: 2/2 on the httpbin form); the denominator is dominated by hyperlinks (476/512 on a tutorial page) that UCM v1 has no pre-compiled LINK action for. Three concrete blockers were recorded: the closed P2 vocabulary (a <code>view</code> genre outside the TGK vocabulary), collate width (D_IN 21 vs 7), and duplicate DOM ids (<code>fname</code> twice). The pre-registered ≥90 % bar failed, triggering the project's <strong>switch rule</strong>: the in-context/D1 line is un-frozen and returns to the table as a candidate for the missing web layer, because links are <em>new signatures to learn</em>, not artifacts to compile. The web compiler will need its own vocabulary, tensorizer, and id de-duplication — precisely the layer that does not exist yet.</p>
+<hr />
+<h2 id="9-discussion">9. Discussion</h2>
+<h3 id="91-what-the-evidence-supports">9.1 What the evidence supports</h3>
+<p>Within its declared perimeter, the program establishes that a <strong>~0.7 M-parameter relational policy with an explicit interface</strong> can execute structured tasks in new instances of a relational world at near-perfect rates, recombine reserved compositions zero-shot, run in ~1 ms per decision, and expose a learned, calibrated abstention channel. It also establishes, at the same evidential level, that the <em>interface</em> is load-bearing: destroying candidate structure, goal conditioning, or relations collapses the policy to zero, and a one-hop encoder fails at bit-exactly tied logits where the relational model separates.</p>
+<h3 id="92-failure-mechanics-worth-naming">9.2 Failure mechanics worth naming</h3>
+<ol>
+<li><strong>Absorbing loops are the dominant failure mode</strong> (55 % of V0 failures; ~90 % of saturated-SIW timeouts) — agents that oscillate between two states forever. Frontier 2026 work recognizes infinite agentic loops as a first-class failure; UCM's data says the same for compact controllers, and it argues for termination-aware training signals.</li>
+<li><strong>Depth walls are computational, not parametric.</strong> The wall sits around 12–15 actions for 3 message rounds; more width did not move it; recurrence in its tested form did not either. The project's honest statement is now weaker than its first draft: fine-tuning on shallow deep-family data (d<em> 2–12) generalizes to d</em> 13–24 (25 % → 45 %); short <em>search</em> at decision time was <strong>not</strong> tested (the "beam" was broken, the greedy arm is the reactive policy — the §13.4 GO was retracted by erratum).</li>
+<li><strong>Ceilings are experiments too.</strong> The V1-bis non-demonstration and the DROP-AT unreachable window are both cases where the <em>headroom</em> was smaller than the <em>threshold</em>. Dimensioning must be enforced against measured pre-registration, not assumed from pilot SDs.</li>
+<li><strong>Attribution needs identical everything else.</strong> The validity-informed control matching pretraining in V1 is exactly why V1-bis added a null control and shared initialization — and why its conclusion is "not demonstrated" rather than "transfer works" or "transfer fails".</li>
+<li><strong>Presence vs content.</strong> Irrelevant graph structure measurably distracts a trained policy even when it carries no information (−8.3 pp), while content reading remains unproven. Robustness to context noise is a real (if unglamorous) finding.</li>
+<li><strong>Synthetic supervision can be construct-invalid.</strong> Propagating a terminal failure label to all prefixes, or supervising only initial states, makes success look broken; the R* repair proving it (0/72 000) is a template for diagnosing such bugs.</li>
+</ol>
+<h3 id="93-the-rulebook-method-lessons-that-generalize">9.3 The rulebook (method lessons that generalize)</h3>
+<ul>
+<li>A frozen decision exists only if it is <strong>mechanically checkable</strong>; ambiguous bars resolve toward the harder one.</li>
+<li>The <strong>verdict harness is code to audit</strong> (a sign inversion produced exactly inverted verdicts, twice).</li>
+<li>Measure inter-seed SD <strong>at the real base</strong> before freezing a threshold; never lower a frozen threshold — add seeds before the freeze.</li>
+<li>A source of gain can be an <strong>artifact of the regime</strong>: verify that the regime has headroom before claiming an effect.</li>
+<li>Every verdict line cites <strong>artifact + world + model</strong>; tests added after a freeze never cite the frozen design.</li>
+<li>Logs only count if they count <strong>everything</strong>; "one read" is an instrument invariant, not a slogan.</li>
+<li>Executed dimensioning ≠ frozen dimensioning; deviations are errata, not footnotes.</li>
+</ul>
+<hr />
+<h2 id="10-limitations-and-threats-to-validity">10. Limitations and threats to validity</h2>
+<ol>
+<li><strong>Worlds are simplified.</strong> Symbolic observations, closed vocabularies, deterministic dynamics, exact oracles. SIW is software-<em>like</em>, not software.</li>
+<li><strong>R1, not R3.</strong> TGK generalization is single-world; composition was verified on one reserved cell; no external replication yet.</li>
+<li><strong>One random-seed cluster per claim.</strong> 5–12 seeds per cell, and the P2 ablation's executed power was far below design.</li>
+<li><strong>Statistically fragile sub-results.</strong> The k = 64 transfer point (p ≈ 0.028 one-sided, ≈0.085 Bonferroni) and the P2 absence effects (post-hoc p = 0.055/0.11, Holm-killed) are suggestive, not established.</li>
+<li><strong>The product metrics use a declared stub</strong> (1 200 ms/decision) and a simulated comprehension layer; the ratio is a latency-ratio model, not a measured end-to-end cost.</li>
+<li><strong>The web probe is static and tiny</strong> (4 pages, 512 elements); the 5.86 % figure is a coverage diagnostic, not a benchmark.</li>
+<li><strong>Checkpoint reconciliation.</strong> Canonical V0 checkpoints used in later work were width-filtered at runtime (the s5–s9 artifacts are width 192, not 144, and were never loaded by any run); the incident is closed by shape verification, not re-execution.</li>
+<li><strong>Reporting is French-first internally.</strong> The archive (<code>archive/</code>) preserves the original documents; this paper is the English synthesis and may smooth translation nuances.</li>
+</ol>
+<hr />
+<h2 id="11-reproducibility-and-research-integrity">11. Reproducibility and research integrity</h2>
+<p>This program treats integrity machinery as a deliverable. Concretely:</p>
+<p><strong>Sealing.</strong> One-read registries; freeze manifests binding code files, input SHAs, budget plans and seeds (v4 → v10 revisions for the confirmatory run); byte-identical canon reproduction on three machines; raw per-episode rows published before aggregation (72 000 rows for V1-bis); independent recomputation by an auditor of record.</p>
+<p><strong>Append-only errata.</strong> Thirteen errata and five incidents are part of the record (Appendix B). Representative examples: a bootstrap definition held anti-conservative and superseded days before the run; a power SD revoked as underivable and re-derived; a failure-count discrepancy traced to a stochastic replay; an over-claim cycle where a "4/4" scoreboard was corrected to 3/4 (the 97 % execution line came from <em>another world and model</em>), then re-earned at 4/4 on the correct base; a checkpoint-width reconciliation closing an incident <em>without</em> re-execution because no run had ever loaded the artifacts.</p>
+<p><strong>Seven interceptions before contamination</strong> in V0 alone (distribution imbalance, test-split zeros, stale-generator seal, mapping harness, inverted-CI verdict harness ×2, unimplemented frozen decisions), at roughly one hour of total cost — an argument for cheap adversarial checking.</p>
+<p><strong>Publication mechanics.</strong> Crash-safe atomic bundle publication (O_EXCL temp → fsync → hardlink, never overwrite), append-only framed journals that refuse invalid tails rather than truncating, SHA-chained interaction logs that count every interaction or fail, incident reports for read-protocol violations.</p>
+<p><strong>Budget honesty.</strong> V0 consumed ≈4 h 50 of the 24 h envelope; wall-clock and CPU-cumulated figures are reported separately; profile contexts (quiet vs shared machine) are disclosed with the measurements.</p>
+<hr />
+<h2 id="12-conclusion-and-roadmap">12. Conclusion and roadmap</h2>
+<p>The first four days produced one solid capability and a map of its edges. <strong>Solid:</strong> a 694 513-parameter relational controller, elected by falsification on a capacity/cost frontier, generalizes to unseen relational worlds at 97.5 %, recombines reserved compositions zero-shot at 99.4 %, decides in ~1 ms, collapses to 0.0 when its interface is destroyed, and supports a calibrated abstention channel that passes its product-line bars in a synthetic demo. <strong>Edges, now measured:</strong> cross-world weight transfer is bounded by regime saturation (≤ +0.73 pp detectable); recurrence as implemented does not buy depth; in-context history as designed was not a real test; the effect-head gain was not replicated; strict inter-signature composition is at 0 % (one exploratory point); real-DOM compilation covers 5.86 %.</p>
+<p>Three locks remain, in priority order:</p>
+<ol>
+<li><strong>Strict composition.</strong> Build a pre-registered family where held-back signatures are known-optimal and measure whether held-back-signature competence emerges from within-band training. The H1/H2 probes already show the model plans zero-shot on a held-back family (58.3 %) without the goal→type shortcut.</li>
+<li><strong>Depth via search, not size.</strong> The reactive policy generalizes from shallow training to deep strata (25 % → 45 %); a correct short-search arm (fixed beam or a verified lookahead) is the untested hypothesis, and the retraction of the original §13.4 claim makes this a clean next experiment.</li>
+<li><strong>Real-software compilation.</strong> The 5.86 % probe identifies the gap exactly: hyperlinks need a LINK signature (learnable), and the compiler needs its own vocabulary, tensorizer and id de-duplication. The switch rule has re-opened the in-context line as a candidate — with the information-value gate this time (latent per-episode effects, ≥ 2× Δ_min).</li>
+</ol>
+<p>Product-side, the next milestone is the real stack: real voice transcripts and the real comprehension model replacing the stub, with the economic comparison measured rather than modelled.</p>
+<hr />
+<h2 id="appendix-a-hyperparameters-frozen-defaults">Appendix A — Hyperparameters (frozen defaults)</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optimizer</td>
+<td>AdamW, lr 3e-4, weight decay 1e-4, grad-clip 1.0, FP32</td>
+</tr>
+<tr>
+<td>Batch</td>
+<td>64 (V0/V1); 32 (P2 cells)</td>
+</tr>
+<tr>
+<td>V0 training</td>
+<td>≤ 10 epochs / 10 000 updates, validation every 500, best-val</td>
+</tr>
+<tr>
+<td>Adaptation</td>
+<td>2 000 updates, checkpoint <em>final at fixed budget</em> (no target selection)</td>
+</tr>
+<tr>
+<td>GNN-B144</td>
+<td>d = 144, 3 message rounds, 694 513 params</td>
+</tr>
+<tr>
+<td>Deep Sets A</td>
+<td>d = 128, 366 337 params</td>
+</tr>
+<tr>
+<td>SIW-adapted B144</td>
+<td>698 401 params</td>
+</tr>
+<tr>
+<td>CIV recurrent</td>
+<td>T = 32 shared iterations, 272 448 refine params (total 970 849)</td>
+</tr>
+<tr>
+<td>P2 model + head</td>
+<td>≈738 008 params, λ = 0.5, 7 effect classes</td>
+</tr>
+<tr>
+<td>Tensor caps</td>
+<td>N = 64, K = 32 (96 SIW), incident slots ≥ 4</td>
+</tr>
+<tr>
+<td>Budgets</td>
+<td>V1 k ∈ {0,100,500,2000,10000}; V1-bis k ∈ {64,128,256} episodes</td>
+</tr>
+<tr>
+<td>Seeds</td>
+<td>V0 5; V1-bis 10; S2b 5 (100–104); P2 8–12; S5 3</td>
+</tr>
+<tr>
+<td>Eval RNG</td>
+<td>10 000 / 20 000 / 30 000 / 40 000 + seed, seed-shared across arms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-b-errata-and-incidents-ledger-condensed">Appendix B — Errata and incidents ledger (condensed)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1–E3</td>
+<td>Protocol V1-bis</td>
+<td>Adaptation updates/batch fixed pre-run; bootstrap definition superseded (1-level, seeds as paired blocks); power SD revoked and re-derived (12.61 pp; ≈75 % power at 10 seeds for 10 pp)</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>GATE-2/M3 counts</td>
+<td>83 vs 79 failures = stochastic replay (different RNG harness); official 79/3160 = 97.50 %</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>Recurrent profile context</td>
+<td>Conservative model-only p95 14.08 ms is the gate measure; full-path 11.79 ms under lighter load; RSS 9.7 GB vs 1.4 GB</td>
+</tr>
+<tr>
+<td>E6</td>
+<td>Null-source record</td>
+<td>Label distribution/provenance corrected, append-only</td>
+</tr>
+<tr>
+<td>E7</td>
+<td>D9 append-only</td>
+<td>Journal semantics clarified (no truncation of invalid tails)</td>
+</tr>
+<tr>
+<td>E8</td>
+<td>Audit distribution ESS/κ</td>
+<td>Sampling-efficiency audit correction</td>
+</tr>
+<tr>
+<td>E9</td>
+<td>S2b scope</td>
+<td>KILL applies to "refine without identity path over a frozen head"; retention annex completed (≤2 pp pass); data-source effect not promoted (p = 0.094)</td>
+</tr>
+<tr>
+<td>E10</td>
+<td>P2-1 requalification</td>
+<td>In-context <strong>not tested</strong> (non-identifiable by construction); measured effect = presence distraction; discriminant addendum</td>
+</tr>
+<tr>
+<td>E11</td>
+<td>Cycle over-claims</td>
+<td>VISION line corrected (97 % was TGK, another model); §13.4 not tested (greedy ≠ search); "reads context" withdrawn; strict-composition factors not disentangled</td>
+</tr>
+<tr>
+<td>E12</td>
+<td>Report epistemic</td>
+<td>Intra-band GO pre-registered vs strict KILL exploratory; post-freeze tests never cite the frozen design</td>
+</tr>
+<tr>
+<td>E13</td>
+<td>P2 closed-loop ablation</td>
+<td>+34 pp not replicated; verdict INDETERMINATE; executed vs frozen dimensioning gap documented (n_test = 12 vs 800)</td>
+</tr>
+<tr>
+<td>I1</td>
+<td>Sealed-read incident</td>
+<td>V1 first campaign reclassified EXPLORATORY (11 opens, provenance hash bug, no raw/checkpoints)</td>
+</tr>
+<tr>
+<td>I2–I4</td>
+<td>Manifest reads v1–v3</td>
+<td>Read-protocol violations detected and closed with strict one-read instruments</td>
+</tr>
+<tr>
+<td>I5</td>
+<td>Checkpoint reconciliation</td>
+<td>s5–s9 are width 192; never loaded by any run (runtime shape filter); closed without re-execution</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-c-curated-artifacts-in-resultsjson">Appendix C — Curated artifacts in <code>results/json/</code></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v0-gate2-confirmation.json</code></td>
+<td>§8.1 generalization (97.50 %, CI, per-goal, per-seed)</td>
+</tr>
+<tr>
+<td><code>v0-gate3-zeroshot-official.json</code></td>
+<td>§8.1 composition (99.35 %, bands, dedup disclosure)</td>
+</tr>
+<tr>
+<td><code>v0-gate5-val-stratum.json</code>, <code>v0-gate5-arch-diagnostic.json</code>, <code>v0-cost-4cells.json</code></td>
+<td>§8.2–8.3 election, promotion, cost protocols</td>
+</tr>
+<tr>
+<td><code>v0-m3-controls.json</code>, <code>v0-m3-failures-baselines.json</code>, <code>v0-at-stratification.json</code></td>
+<td>§8.2 controls, taxonomy, baselines</td>
+</tr>
+<tr>
+<td><code>v1-exploratory-transfer.json</code>, <code>v1-null-label-distribution.json</code></td>
+<td>§8.4 exploratory transfer</td>
+</tr>
+<tr>
+<td><code>v1bis-stage-b-metrics.json</code>, <code>v1bis-verdict-k*.json</code>, <code>v1bis-raw-sample-200.jsonl</code>, <code>v1bis-freeze-v10.json</code></td>
+<td>§8.5 confirmatory non-demonstration, freeze, raw schema sample</td>
+</tr>
+<tr>
+<td><code>s2b-run3-s100..104.json</code>, <code>s2b-retention-annex.json</code></td>
+<td>§8.6 factorial and retention</td>
+</tr>
+<tr>
+<td><code>p2-q4-effect-head.json</code>, <code>p2-ablation-*.json</code>, <code>p2-h1-h2-probes.json</code></td>
+<td>§8.7 P2 results and probes</td>
+</tr>
+<tr>
+<td><code>s5-full-budget.json</code>, <code>s5-refusal-calibration-v2.json</code>, <code>s5-escalation-recall.json</code>, <code>s5-real-demo-simulated.json</code></td>
+<td>§8.8 product line</td>
+</tr>
+<tr>
+<td><code>web-compiler-probe.json</code></td>
+<td>§8.9 compiler probe</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-d-glossary">Appendix D — Glossary</h2>
+<ul>
+<li><strong>TGK / SIW</strong> — TinyGraphKey (relational world) / Synthetic Interaction World (software-like world).</li>
+<li><strong>Canon</strong> — the sealed dataset of transitions/episodes on which claims are made.</li>
+<li><strong>d*, L*</strong> — optimal physical distance (STOP excluded) and optimal episode length (<code>d* + 1</code>).</li>
+<li><strong>Paid no-op / valid no-op</strong> — legal action with no effect, distinct from an invalid action; both cost one step.</li>
+<li><strong>B144 / B160 / B192 / A</strong> — model variants; B144 is the elected one.</li>
+<li><strong>CIV</strong> — recurrent refinement block iterated T times over a frozen base.</li>
+<li><strong>R* schema</strong> — physically reachable episodes with terminal STOP at <code>d* = 0</code> (V1-bis training data contract).</li>
+<li><strong>One-read</strong> — instrument invariant: a sealed artifact is opened exactly once per campaign, logged before opening.</li>
+<li><strong>Stage-B</strong> — the locked final evaluation phase (one read, raw-first, verdicts recomputed).</li>
+<li><strong>Δ_min</strong> — pre-registered minimum detectable effect for a confirmatory comparison.</li>
+<li><strong>Jev</strong> — the (external) comprehension model in the target stack; in this paper it is always a labelled stub when quantified.</li>
+</ul>
+</body>
+</html>

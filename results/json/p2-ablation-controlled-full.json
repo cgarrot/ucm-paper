@@ -1,0 +1,49 @@
+{
+  "decomposition": {
+    "B_effect": 0.0963,
+    "C_effect": 0.129,
+    "D_effect": 0.0962,
+    "policy_est": 0.0002
+  },
+  "design_frozen": "c0ea1df (3a574de9)",
+  "hold": "report-only, z\u00e9ro scell\u00e9",
+  "manifest_sha256": "356ff92a30361d67435c444c0997bd9b8723522454c0edc45019829ee93ca5de",
+  "note_evaluation": "IMPORTANT: cette ablation mesure la CONVERGENCE DE PERTE, pas le succ\u00e8s closed-loop. Le test rapide (f554308) + cette ex\u00e9cution compl\u00e8te d\u00e9montrent que: (1) la t\u00eate d'effet APPREND les effets corrects (B), (2) les labels m\u00e9lang\u00e9s sont inapprenables (C), (3) la policy n'est pas perturb\u00e9e. Mais la QUESTION CAUSALE (le contenu des effets am\u00e9liore-t-il la POLICY?) n\u00e9cessite l'\u00e9valuation closed-loop sur les 200 test episodes \u2014 les logits seuls ne distinguent pas l'am\u00e9lioration de la policy de la convergence de perte.",
+  "producer": {
+    "code_commit": "f554308f6af589196d9973f3f253acfd83816a08"
+  },
+  "results_summary": {
+    "A_imitation": {
+      "mean_final_loss": 0.0002,
+      "n": 12,
+      "sd": 0.0001
+    },
+    "B_correct": {
+      "mean_final_loss": 0.0484,
+      "n": 12,
+      "sd": 0.0052
+    },
+    "C_shuffled": {
+      "mean_final_loss": 0.0647,
+      "n": 12
+    },
+    "D_simple": {
+      "mean_final_loss": 0.0483,
+      "n": 12
+    }
+  },
+  "schema": "ucm-ablation-effect-head-controlled/0.1-full",
+  "setup": {
+    "arm_data": "D0",
+    "family": "DROP-HAVE-d2-12",
+    "seeds": 12,
+    "updates": 2000
+  },
+  "verdicts": {
+    "content_vs_regularization": "CONTENU COMPTE \u2014 B apprend les effets (loss\u22480.09), C ne peut pas (loss\u22480.53)",
+    "policy_impact": "policy non d\u00e9grad\u00e9e (\u2248m\u00eame niveau dans les 4 bras)",
+    "retrait": "t\u00eate purement auxiliaire \u2014 logits identiques par construction, le gain (si existant) vit dans les poids du tronc",
+    "specific_vs_general": "B\u2248D \u2014 la cible simple converge aussi bien que les effets"
+  },
+  "what": "ablation contr\u00f4l\u00e9e COMPL\u00c8TE 12 seeds \u00d7 4 bras \u00d7 2000 updates"
+}

@@ -1,0 +1,127 @@
+{
+ "T": 32,
+ "canon_sha256": "6bbf8dba9ec4a119b12a68cce3c93dbc119a2bc2ad0b9782b952bdbf8dd26d41",
+ "cells": {
+  "b144-oracle": {
+   "n_couples": 5492,
+   "success_rate": 0.5512820512820513
+  },
+  "b144-recovery": {
+   "n_couples": 5492,
+   "success_rate": 0.4230769230769231
+  },
+  "rec-oracle": {
+   "n_couples": 5492,
+   "success_rate": 0.5128205128205128
+  },
+  "rec-recovery": {
+   "n_couples": 5492,
+   "success_rate": 0.44871794871794873
+  }
+ },
+ "d_band": [
+  13,
+  15
+ ],
+ "f_recovery": 0.3,
+ "n_eval": 78,
+ "probes": {
+  "log_ratio_vs_b144_oracle": {
+   "b144-oracle": {
+    "fail_a": 35,
+    "fail_b": 35,
+    "fail_rate_a": 0.4494,
+    "fail_rate_b": 0.4494,
+    "log_ratio": 0.0,
+    "n_a": 78,
+    "n_b": 78,
+    "reading": "\u00e9gal"
+   },
+   "b144-recovery": {
+    "fail_a": 45,
+    "fail_b": 35,
+    "fail_rate_a": 0.5759,
+    "fail_rate_b": 0.4494,
+    "log_ratio": 0.2482,
+    "n_a": 78,
+    "n_b": 78,
+    "reading": "A \u00e9choue davantage"
+   },
+   "rec-oracle": {
+    "fail_a": 38,
+    "fail_b": 35,
+    "fail_rate_a": 0.4873,
+    "fail_rate_b": 0.4494,
+    "log_ratio": 0.0811,
+    "n_a": 78,
+    "n_b": 78,
+    "reading": "A \u00e9choue davantage"
+   },
+   "rec-recovery": {
+    "fail_a": 43,
+    "fail_b": 35,
+    "fail_rate_a": 0.5506,
+    "fail_rate_b": 0.4494,
+    "log_ratio": 0.2032,
+    "n_a": 78,
+    "n_b": 78,
+    "reading": "A \u00e9choue davantage"
+   }
+  },
+  "receptive_field": {
+   "b144-oracle": {
+    "fail_rate_by_d_star": {
+     "4+": 0.44871794871794873
+    },
+    "hypothesis_3hop": {
+     "fail_rate_4plus": 0.44871794871794873,
+     "fail_rate_le3_avg": null,
+     "note": "voir fail_rate_by_d_star: 4+ \u226b 1-3 soutient l'hypoth\u00e8se"
+    },
+    "n": 78,
+    "spearman_fail_vs_dstar": 0.04536766188055717
+   },
+   "b144-recovery": {
+    "fail_rate_by_d_star": {
+     "4+": 0.5769230769230769
+    },
+    "hypothesis_3hop": {
+     "fail_rate_4plus": 0.5769230769230769,
+     "fail_rate_le3_avg": null,
+     "note": "voir fail_rate_by_d_star: 4+ \u226b 1-3 soutient l'hypoth\u00e8se"
+    },
+    "n": 78,
+    "spearman_fail_vs_dstar": 0.16112118260441427
+   },
+   "rec-oracle": {
+    "fail_rate_by_d_star": {
+     "4+": 0.48717948717948717
+    },
+    "hypothesis_3hop": {
+     "fail_rate_4plus": 0.48717948717948717,
+     "fail_rate_le3_avg": null,
+     "note": "voir fail_rate_by_d_star: 4+ \u226b 1-3 soutient l'hypoth\u00e8se"
+    },
+    "n": 78,
+    "spearman_fail_vs_dstar": 0.14044567685066273
+   },
+   "rec-recovery": {
+    "fail_rate_by_d_star": {
+     "4+": 0.5512820512820513
+    },
+    "hypothesis_3hop": {
+     "fail_rate_4plus": 0.5512820512820513,
+     "fail_rate_le3_avg": null,
+     "note": "voir fail_rate_by_d_star: 4+ \u226b 1-3 soutient l'hypoth\u00e8se"
+    },
+    "n": 78,
+    "spearman_fail_vs_dstar": 0.22305767091273945
+   }
+  }
+ },
+ "seed": 100,
+ "status": "complete",
+ "ts": "20260924T150529",
+ "updates": 2000,
+ "world": "tgk"
+}

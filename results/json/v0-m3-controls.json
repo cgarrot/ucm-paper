@@ -1,0 +1,59 @@
+{
+  "checkpoint": "artifacts/20260922-155707-gate2c-B144-s2",
+  "cell": "test_g1",
+  "n": 632,
+  "no_goal": {
+    "n": 632,
+    "success_rate": 0.0,
+    "premature_stop_rate": 0.011075949367088608,
+    "timeout_rate": 0.9889240506329114,
+    "goal_reached_without_stop_rate": 0.2800632911392405,
+    "invalid_rate": 0.0,
+    "mean_length_success": null,
+    "mean_regret_success": null,
+    "mean_truncated_cost": 65.0,
+    "mean_L_star": 4.919303797468355
+  },
+  "counterfactual": {
+    "n": 632,
+    "success_rate": 0.9604430379746836,
+    "premature_stop_rate": 0.0,
+    "timeout_rate": 0.03955696202531646,
+    "goal_reached_without_stop_rate": 0.0,
+    "invalid_rate": 0.14264112903225806,
+    "mean_length_success": 3.901153212520593,
+    "mean_regret_success": 0.013179571663920923,
+    "mean_truncated_cost": 6.318037974683544,
+    "mean_L_star": 3.9003164556962027
+  },
+  "candidates_only": {
+    "n": 632,
+    "success_rate": 0.0,
+    "premature_stop_rate": 1.0,
+    "timeout_rate": 0.0,
+    "goal_reached_without_stop_rate": 0.0,
+    "invalid_rate": 0.0,
+    "mean_length_success": null,
+    "mean_regret_success": null,
+    "mean_truncated_cost": 65.0,
+    "mean_L_star": 4.919303797468355
+  },
+  "no_relations": {
+    "n": 632,
+    "success_rate": 0.0,
+    "premature_stop_rate": 1.0,
+    "timeout_rate": 0.0,
+    "goal_reached_without_stop_rate": 0.0,
+    "invalid_rate": 0.0,
+    "mean_length_success": null,
+    "mean_regret_success": null,
+    "mean_truncated_cost": 65.0,
+    "mean_L_star": 4.919303797468355
+  },
+  "g5_permutation_control": {
+    "episodes": 10,
+    "perms_per_episode": 20,
+    "outcome_identical_rate": 1.0,
+    "n": 200
+  }
+}

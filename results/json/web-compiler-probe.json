@@ -1,0 +1,40 @@
+{
+ "go_completeness_ge_90": false,
+ "overall_completeness": 0.0586,
+ "pages": {
+  "example": {
+   "actionable": 1,
+   "completeness": 0.0,
+   "covered": 0,
+   "exec_tensorizes": "FAIL: could not broadcast input array from shape (2,21) into shape (2,7)",
+   "n_candidates": 0
+  },
+  "httpbin": {
+   "actionable": 5,
+   "completeness": 0.0,
+   "covered": 0,
+   "exec_tensorizes": "FAIL: could not broadcast input array from shape (2,21) into shape (2,7)",
+   "n_candidates": 0
+  },
+  "httpbin-post": {
+   "actionable": 2,
+   "completeness": 1.0,
+   "covered": 2,
+   "exec_tensorizes": "FAIL: could not broadcast input array from shape (5,21) into shape (5,7)",
+   "n_candidates": 2
+  },
+  "w3schools-forms": {
+   "actionable": 504,
+   "completeness": 0.0556,
+   "covered": 28,
+   "exec_tensorizes": "FAIL: duplicate entity 'fname'",
+   "n_candidates": 28
+  }
+ },
+ "source": "fetch statique de pages publiques reelles (compilateur DOM->policy_input; etiquette: pas via page-agent live)",
+ "totals": {
+  "actionable": 512,
+  "covered": 30
+ },
+ "ts": "20260925T152434"
+}

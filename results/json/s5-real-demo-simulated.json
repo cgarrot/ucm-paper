@@ -1,0 +1,34 @@
+{
+ "GO": true,
+ "checkpoint": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/s5-demo/s5-full-ckpt-20260925T121754.npz",
+ "cost_ratio": {
+  "denominator": "UCM mesur\u00e9 (\u03a3 latences moyennes/\u00e9pisode \u00d7 d\u00e9cisions), m\u00eame convention s5-full",
+  "jev_model_ms_per_decision": 1200.0,
+  "n_decisions": 121,
+  "ratio": 581.0
+ },
+ "go_ratio_ge_10": true,
+ "go_success_ge_85": true,
+ "layers_labels": {
+  "jev": "STUB d\u00e9terministe \u00e9tiquet\u00e9 \u2014 latence mesur\u00e9e 0.026 ms/requ\u00eate (pas d'API r\u00e9elle disponible)",
+  "ucm": "checkpoint s5-full (distribution S5 + refus calibr\u00e9)",
+  "voix": "transcripts texte \u2014 couche Muse EXTERNE non exerc\u00e9e"
+ },
+ "n": 32,
+ "pre_registered": {
+  "go_ratio": 10.0,
+  "go_success": 0.85,
+  "n_requests": 32
+ },
+ "success": 32,
+ "success_rate": 1.0,
+ "switchover": {
+  "failures": 0,
+  "frac_composition_depth": 0.0,
+  "verdict": "produit"
+ },
+ "taxonomy": {
+  "success": 32
+ },
+ "ts": "20260925T153605"
+}

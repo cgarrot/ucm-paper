@@ -1,0 +1,195 @@
+{
+  "gate": "GATE-2 CONFIRMATION (B144 primary, frozen protocol)",
+  "thresholds": {
+    "success": 0.95,
+    "ci_low": 0.9,
+    "per_goal": 0.85
+  },
+  "official_test_g1": {
+    "n": 3160,
+    "success_rate": 0.975,
+    "premature_stop_rate": 0.00031645569620253165,
+    "timeout_rate": 0.024683544303797468,
+    "goal_reached_without_stop_rate": 0.0,
+    "invalid_rate": 0.09957945328927606,
+    "mean_length_success": 4.861084063615709,
+    "mean_regret_success": 0.05582603050957481,
+    "mean_truncated_cost": 6.364556962025317,
+    "mean_L_star": 4.919303797468355,
+    "hierarchical_bootstrap": {
+      "point": 0.975,
+      "ci_low": 0.9647842639593909,
+      "ci_high": 0.9849503682356708,
+      "level": 0.95,
+      "n_seeds": 5,
+      "n_seed_layout_clusters": 630,
+      "n_episodes": 3160
+    }
+  },
+  "PASS_success": true,
+  "PASS_ci_low": true,
+  "per_goal_type": {
+    "REACH": {
+      "success": 0.9876190476190476,
+      "n": 1050
+    },
+    "HAVE": {
+      "success": 0.9971698113207547,
+      "n": 1060
+    },
+    "AT": {
+      "success": 0.94,
+      "n": 1050
+    }
+  },
+  "PASS_per_goal": true,
+  "chosen_arm_per_seed": {
+    "0": {
+      "arm": "greedy",
+      "val_greedy": 0.9865771812080537,
+      "tau_scores": {
+        "tau2.0": 0.9664429530201343,
+        "tau1.0": 0.9865771812080537,
+        "tau0.5": 0.9865771812080537
+      }
+    },
+    "1": {
+      "arm": "greedy",
+      "val_greedy": 0.9932885906040269,
+      "tau_scores": {
+        "tau2.0": 0.9731543624161074,
+        "tau1.0": 0.9932885906040269,
+        "tau0.5": 0.9932885906040269
+      }
+    },
+    "2": {
+      "arm": "tau1.0",
+      "val_greedy": 0.9798657718120806,
+      "tau_scores": {
+        "tau2.0": 0.9664429530201343,
+        "tau1.0": 0.9932885906040269,
+        "tau0.5": 0.9865771812080537
+      }
+    },
+    "3": {
+      "arm": "greedy",
+      "val_greedy": 0.9932885906040269,
+      "tau_scores": {
+        "tau2.0": 0.959731543624161,
+        "tau1.0": 0.9932885906040269,
+        "tau0.5": 0.9932885906040269
+      }
+    },
+    "4": {
+      "arm": "greedy",
+      "val_greedy": 0.9932885906040269,
+      "tau_scores": {
+        "tau2.0": 0.9530201342281879,
+        "tau1.0": 0.9932885906040269,
+        "tau0.5": 0.9932885906040269
+      }
+    }
+  },
+  "per_seed_test_g1": {
+    "0": {
+      "arm": "greedy",
+      "summary": {
+        "n": 632,
+        "success_rate": 0.9746835443037974,
+        "premature_stop_rate": 0.0,
+        "timeout_rate": 0.02531645569620253,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.09261108337493759,
+        "mean_length_success": 4.840909090909091,
+        "mean_regret_success": 0.025974025974025976,
+        "mean_truncated_cost": 6.363924050632911,
+        "mean_L_star": 4.919303797468355
+      },
+      "mx_random_seed": 20000
+    },
+    "1": {
+      "arm": "greedy",
+      "summary": {
+        "n": 632,
+        "success_rate": 0.9667721518987342,
+        "premature_stop_rate": 0.0,
+        "timeout_rate": 0.03322784810126582,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.11655722326454034,
+        "mean_length_success": 4.779050736497545,
+        "mean_regret_success": 0.03273322422258593,
+        "mean_truncated_cost": 6.780063291139241,
+        "mean_L_star": 4.919303797468355
+      },
+      "mx_random_seed": 20001
+    },
+    "2": {
+      "arm": "tau1.0",
+      "summary": {
+        "n": 632,
+        "success_rate": 0.9889240506329114,
+        "premature_stop_rate": 0.0015822784810126582,
+        "timeout_rate": 0.00949367088607595,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.06986531986531987,
+        "mean_length_success": 5.08,
+        "mean_regret_success": 0.2096,
+        "mean_truncated_cost": 5.743670886075949,
+        "mean_L_star": 4.919303797468355
+      },
+      "mx_random_seed": 20002
+    },
+    "3": {
+      "arm": "greedy",
+      "summary": {
+        "n": 632,
+        "success_rate": 0.9683544303797469,
+        "premature_stop_rate": 0.0,
+        "timeout_rate": 0.03164556962025317,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.13350785340314136,
+        "mean_length_success": 4.7745098039215685,
+        "mean_regret_success": 0.0032679738562091504,
+        "mean_truncated_cost": 6.680379746835443,
+        "mean_L_star": 4.919303797468355
+      },
+      "mx_random_seed": 20003
+    },
+    "4": {
+      "arm": "greedy",
+      "summary": {
+        "n": 632,
+        "success_rate": 0.9762658227848101,
+        "premature_stop_rate": 0.0,
+        "timeout_rate": 0.023734177215189875,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.07897409852717115,
+        "mean_length_success": 4.826580226904376,
+        "mean_regret_success": 0.004862236628849271,
+        "mean_truncated_cost": 6.254746835443038,
+        "mean_L_star": 4.919303797468355
+      },
+      "mx_random_seed": 20004
+    }
+  },
+  "rng_discipline": {
+    "training": "mx.random.seed(cfg.seed) in train()",
+    "val_selection": "mx.random.seed(10000+seed) per seed",
+    "official_g1_read": "mx.random.seed(20000+seed) per seed"
+  },
+  "val_selection_cost_episodes": {
+    "0": 596,
+    "1": 596,
+    "2": 596,
+    "3": 596,
+    "4": 596
+  },
+  "runs": {
+    "0": "artifacts/20260922-155520-gate2c-B144-s0",
+    "1": "artifacts/20260922-155614-gate2c-B144-s1",
+    "2": "artifacts/20260922-155707-gate2c-B144-s2",
+    "3": "artifacts/20260922-155757-gate2c-B144-s3",
+    "4": "artifacts/20260922-155847-gate2c-B144-s4"
+  },
+  "protocol_notes": "arms chosen on val ONLY; test_g1 read ONCE per seed with the chosen arm; no selection on test cells at any point"
+}

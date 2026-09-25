@@ -1,0 +1,53 @@
+{
+  "cells": {
+    "A-cpu": {
+      "p95_ms_reps": [
+        0.376,
+        0.378,
+        0.381,
+        0.417,
+        0.432
+      ],
+      "median_p95_ms": 0.381,
+      "min_p95_ms": 0.376
+    },
+    "B-cpu": {
+      "p95_ms_reps": [
+        0.963,
+        1.001,
+        1.162,
+        1.214,
+        1.473
+      ],
+      "median_p95_ms": 1.162,
+      "min_p95_ms": 0.963
+    },
+    "A-gpu": {
+      "p95_ms_reps": [
+        0.778,
+        0.802,
+        0.891,
+        0.942,
+        0.947
+      ],
+      "median_p95_ms": 0.891,
+      "min_p95_ms": 0.778
+    },
+    "B-gpu": {
+      "p95_ms_reps": [
+        0.978,
+        1.076,
+        1.175,
+        1.256,
+        1.343
+      ],
+      "median_p95_ms": 1.175,
+      "min_p95_ms": 0.978
+    }
+  },
+  "best_A_ms": 0.381,
+  "best_B_ms": 1.162,
+  "ratio": 3.0498687664041992,
+  "PASS": false,
+  "protocol": "frozen 13:27 completion: best stable device per arm, both compiled, 5 reps, median p95, warm-up 300+50/rep"
+}

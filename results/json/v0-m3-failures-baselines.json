@@ -1,0 +1,5635 @@
+{
+  "failure_categorization": {
+    "categories_pre_specified": [
+      "action_invalide_repetee",
+      "boucle",
+      "oubli_stop",
+      "mauvaise_cible",
+      "detour_inutile",
+      "binding_representation",
+      "autre"
+    ],
+    "counts": {
+      "boucle": 46,
+      "action_invalide_repetee": 36,
+      "autre": 1
+    },
+    "total_failures": 83,
+    "total_episodes": 3160,
+    "note": "taxonomy fixed before inspection (lead 16:01); decision tree order applied"
+  },
+  "failures_20_inspected": [
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00018",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 7,
+      "goal": {
+        "args": {
+          "room": "v1"
+        },
+        "predicate": "REACH"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00033",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 6,
+      "goal": {
+        "args": {
+          "room": "v3"
+        },
+        "predicate": "REACH"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00140",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v3"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "DROP",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00144",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 6,
+      "goal": {
+        "args": {
+          "room": "v2"
+        },
+        "predicate": "REACH"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00167",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 61,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v2"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00179",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 11,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v1"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00186",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 6,
+      "goal": {
+        "args": {
+          "room": "v4"
+        },
+        "predicate": "REACH"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00197",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 61,
+      "d_star": 6,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v0"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00221",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v6"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00236",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v6"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00266",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 63,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v4"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00290",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 63,
+      "d_star": 6,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v2"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00410",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 62,
+      "d_star": 10,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v5"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00414",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 5,
+      "goal": {
+        "args": {
+          "room": "v5"
+        },
+        "predicate": "REACH"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v4"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00422",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 61,
+      "d_star": 7,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v2"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v6"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "episode": "test_g1-1009-00587",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 12,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v3"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v0"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "episode": "test_g1-1009-00020",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 12,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v2"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "episode": "test_g1-1009-00101",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v2"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v1"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "episode": "test_g1-1009-00130",
+      "category": "boucle",
+      "outcome": "premature_stop",
+      "n_invalid": 0,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel"
+        },
+        "predicate": "HAVE"
+      },
+      "actions": [
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v2"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v5"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "episode": "test_g1-1009-00134",
+      "category": "action_invalide_repetee",
+      "outcome": "premature_stop",
+      "n_invalid": 62,
+      "d_star": 9,
+      "goal": {
+        "args": {
+          "object": "parcel",
+          "room": "v1"
+        },
+        "predicate": "AT"
+      },
+      "actions": [
+        {
+          "action": "PICK",
+          "arg": "parcel"
+        },
+        {
+          "action": "MOVE",
+          "arg": "v3"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        },
+        {
+          "action": "PICK",
+          "arg": "key"
+        }
+      ]
+    }
+  ],
+  "test_g3": {
+    "n_episodes": 326,
+    "d_star_hist": {
+      "2": 69,
+      "3": 56,
+      "4": 68,
+      "5": 41,
+      "6": 32,
+      "7": 23,
+      "8": 7,
+      "9": 13,
+      "10": 8,
+      "11": 5,
+      "12": 4
+    },
+    "success_overall": 0.9447852760736196,
+    "success_by_d_star_band": {
+      "2": {
+        "n": 69,
+        "success": 1.0
+      },
+      "3": {
+        "n": 56,
+        "success": 1.0
+      },
+      "4": {
+        "n": 68,
+        "success": 0.9852941176470589
+      },
+      "5": {
+        "n": 41,
+        "success": 0.926829268292683
+      },
+      "6": {
+        "n": 32,
+        "success": 0.9375
+      },
+      "7": {
+        "n": 23,
+        "success": 0.9565217391304348
+      },
+      "8": {
+        "n": 7,
+        "success": 1.0
+      },
+      "9": {
+        "n": 13,
+        "success": 0.8461538461538461
+      },
+      "10": {
+        "n": 8,
+        "success": 0.625
+      },
+      "11": {
+        "n": 5,
+        "success": 0.4
+      },
+      "12": {
+        "n": 4,
+        "success": 0.25
+      }
+    }
+  },
+  "test_g4": {
+    "n_episodes": 103,
+    "d_star_hist": {
+      "13": 41,
+      "14": 22,
+      "15": 15,
+      "16": 8,
+      "17": 11,
+      "18": 3,
+      "19": 1,
+      "20": 1,
+      "21": 1
+    },
+    "success_overall": 0.36893203883495146,
+    "success_by_d_star_band": {
+      "13": {
+        "n": 41,
+        "success": 0.4634146341463415
+      },
+      "14": {
+        "n": 22,
+        "success": 0.5454545454545454
+      },
+      "15": {
+        "n": 15,
+        "success": 0.4
+      },
+      "16": {
+        "n": 8,
+        "success": 0.0
+      },
+      "17": {
+        "n": 11,
+        "success": 0.09090909090909091
+      },
+      "18": {
+        "n": 3,
+        "success": 0.0
+      },
+      "19": {
+        "n": 1,
+        "success": 0.0
+      },
+      "20": {
+        "n": 1,
+        "success": 0.0
+      },
+      "21": {
+        "n": 1,
+        "success": 0.0
+      }
+    }
+  },
+  "gate4_baselines_test_g1": {
+    "model_B144_official": 0.975,
+    "baselines": {
+      "local_heuristic_R1_R6": {
+        "n": 632,
+        "success_rate": 0.8259493670886076,
+        "premature_stop_rate": 0.014240506329113924,
+        "timeout_rate": 0.15981012658227847,
+        "goal_reached_without_stop_rate": 0.0,
+        "invalid_rate": 0.0,
+        "mean_length_success": 11.00191570881226,
+        "mean_regret_success": 6.67816091954023,
+        "mean_truncated_cost": 20.400316455696203,
+        "mean_L_star": 4.919303797468355
+      },
+      "random_valid": {
+        "n": 632,
+        "success_rate": 0.6060126582278481,
+        "premature_stop_rate": 0.0,
+        "timeout_rate": 0.3939873417721519,
+        "goal_reached_without_stop_rate": 0.10126582278481013,
+        "invalid_rate": 0.0,
+        "mean_length_success": 25.06788511749347,
+        "mean_regret_success": 21.013054830287206,
+        "mean_truncated_cost": 40.800632911392405,
+        "mean_L_star": 4.919303797468355
+      },
+      "random_syntactic": {
+        "n": 632,
+        "success_rate": 0.04588607594936709,
+        "premature_stop_rate": 0.9541139240506329,
+        "timeout_rate": 0.0,
+        "goal_reached_without_stop_rate": 0.028481012658227847,
+        "invalid_rate": 0.7136137244050913,
+        "mean_length_success": 20.03448275862069,
+        "mean_regret_success": 16.551724137931036,
+        "mean_truncated_cost": 62.936708860759495,
+        "mean_L_star": 4.919303797468355
+      }
+    },
+    "heuristic_protocol": "R1 STOP if satisfied; R2 PICK goal obj (HAVE); R3 DROP at goal room (AT); R4 DROP non-goal carried; R5 UNLOCK if key+locked+adjacent; R6 random valid MOVE. No distances, no oracle, 1-hop only."
+  }
+}

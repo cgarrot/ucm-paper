@@ -1,0 +1,180 @@
+{
+ "autres": [],
+ "details": [
+  {
+   "episode_id": "impossible-20261001-000",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-001",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-002",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-003",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-004",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-005",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-006",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-007",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-008",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-009",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-010",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-011",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-012",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-013",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-014",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-015",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-016",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-017",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-018",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-019",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-020",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-021",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-022",
+   "escalated": false,
+   "goal_type": "SUBMITTED_dialog_submit",
+   "length": 64,
+   "outcome": "timeout"
+  },
+  {
+   "episode_id": "impossible-20261001-023",
+   "escalated": false,
+   "goal_type": "SET_dialog_field",
+   "length": 64,
+   "outcome": "timeout"
+  }
+ ],
+ "escalation_recall": 0.0,
+ "go4_recall_ge_90": false,
+ "n_episodes": 24,
+ "refus_stop_premature": 0,
+ "refusal_definition_frozen_before_measure": "STOP pr\u00e9matur\u00e9 (STOP sans but satisfait) \u2014 VISION \u00a72; alternative marge-softmax \u00e9cart\u00e9e (pas de calibration)",
+ "timeouts": 24,
+ "ts": "20260925T075648"
+}

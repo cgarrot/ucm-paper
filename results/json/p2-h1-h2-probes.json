@@ -1,0 +1,21 @@
+{
+ "h1": {
+  "A_at_20_24_no_door": {
+   "n": 0,
+   "success": 0.0
+  },
+  "B_at_le12_long_door": {
+   "n": 25,
+   "success": 0.8
+  }
+ },
+ "h1_pre_registered": "A: AT d*20-24 sans porte (\u2209UNLOCK) | B: AT d*\u226412 avec porte obligatoire (\u2208UNLOCK); sonde d\u00e9partage profondeur/travers\u00e9e, pas de seuil",
+ "h2": {
+  "closed_loop_success_0shot": 0.5833,
+  "drop_type_match_initial": 0.0833,
+  "n": 12,
+  "shortcut_ge_40pct": false
+ },
+ "h2_pre_registered": "type-match initial argmax==DROP \u2265 40% (2\u00d7 chance) \u21d2 raccourci but\u2192type existe",
+ "ts": "20260925T113315"
+}

@@ -1,0 +1,24 @@
+# Config initiale V0a — valeurs par défaut spec §8.2/§6.1
+env:
+  rooms_train: [4, 8]
+  horizon: 64
+  d_star_train: [2, 12]
+data:
+  diagnostic_episodes: 100
+  pilot_episodes: [1000, 5000]
+  splits: {train: 200, val: 50, test_min: 100}
+model:
+  arch: deepsets_local
+  d: 128
+train:
+  optimizer: adamw
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  batch: 64
+  grad_clip: 1.0
+  precision: fp32
+  max_epochs: 10
+  max_updates: 10000
+eval:
+  seeds_confirm: 5
+  bootstrap: paired_hierarchical_95

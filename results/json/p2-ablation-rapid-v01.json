@@ -1,0 +1,328 @@
+{
+  "hold": "report-only",
+  "manifest_sha256": "00da1b464f37c9d6abfaeeed52dac7f97620952e3eaefcf59d62138805ceba20",
+  "producer": {
+    "code_commit": "cf07718a7946ec85321b783dfb365a45b781be2c"
+  },
+  "results": {
+    "A_imitation": [
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 2.2201929092407227,
+              "step": 1
+            },
+            {
+              "loss": 0.23758430778980255,
+              "step": 100
+            },
+            {
+              "loss": 0.03121965005993843,
+              "step": 200
+            },
+            {
+              "loss": 0.011260123923420906,
+              "step": 300
+            },
+            {
+              "loss": 0.007741134613752365,
+              "step": 400
+            },
+            {
+              "loss": 0.002464279532432556,
+              "step": 500
+            }
+          ],
+          "loss_first": 2.2201929092407227,
+          "loss_last": 0.002464279532432556,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 11.7
+        },
+        "seed": 0,
+        "wall_s": 14.1
+      },
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 2.2944834232330322,
+              "step": 1
+            },
+            {
+              "loss": 0.6950416564941406,
+              "step": 100
+            },
+            {
+              "loss": 0.24411341547966003,
+              "step": 200
+            },
+            {
+              "loss": 0.015814274549484253,
+              "step": 300
+            },
+            {
+              "loss": 0.005610674619674683,
+              "step": 400
+            },
+            {
+              "loss": 0.0030746757984161377,
+              "step": 500
+            }
+          ],
+          "loss_first": 2.2944834232330322,
+          "loss_last": 0.0030746757984161377,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 11.6
+        },
+        "seed": 1,
+        "wall_s": 14.1
+      }
+    ],
+    "B_correct": [
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.274204730987549,
+              "step": 1
+            },
+            {
+              "loss": 0.24553674459457397,
+              "step": 100
+            },
+            {
+              "loss": 0.08242534101009369,
+              "step": 200
+            },
+            {
+              "loss": 0.06381483376026154,
+              "step": 300
+            },
+            {
+              "loss": 0.06131702661514282,
+              "step": 400
+            },
+            {
+              "loss": 0.048749472945928574,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.274204730987549,
+          "loss_last": 0.048749472945928574,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.5
+        },
+        "seed": 0,
+        "wall_s": 14.9
+      },
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.2368640899658203,
+              "step": 1
+            },
+            {
+              "loss": 0.7176918983459473,
+              "step": 100
+            },
+            {
+              "loss": 0.10816134512424469,
+              "step": 200
+            },
+            {
+              "loss": 0.057335544377565384,
+              "step": 300
+            },
+            {
+              "loss": 0.05052561312913895,
+              "step": 400
+            },
+            {
+              "loss": 0.048945747315883636,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.2368640899658203,
+          "loss_last": 0.048945747315883636,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.5
+        },
+        "seed": 1,
+        "wall_s": 14.9
+      }
+    ],
+    "C_shuffled": [
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.2679855823516846,
+              "step": 1
+            },
+            {
+              "loss": 0.3977320194244385,
+              "step": 100
+            },
+            {
+              "loss": 0.39668816328048706,
+              "step": 200
+            },
+            {
+              "loss": 0.3179711699485779,
+              "step": 300
+            },
+            {
+              "loss": 0.28406426310539246,
+              "step": 400
+            },
+            {
+              "loss": 0.28079938888549805,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.2679855823516846,
+          "loss_last": 0.28079938888549805,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.5
+        },
+        "seed": 0,
+        "wall_s": 15.0
+      },
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.236085891723633,
+              "step": 1
+            },
+            {
+              "loss": 0.996825098991394,
+              "step": 100
+            },
+            {
+              "loss": 0.4204518795013428,
+              "step": 200
+            },
+            {
+              "loss": 0.3016408383846283,
+              "step": 300
+            },
+            {
+              "loss": 0.2407016158103943,
+              "step": 400
+            },
+            {
+              "loss": 0.25291362404823303,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.236085891723633,
+          "loss_last": 0.25291362404823303,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.4
+        },
+        "seed": 1,
+        "wall_s": 14.9
+      }
+    ],
+    "D_simple": [
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.263123035430908,
+              "step": 1
+            },
+            {
+              "loss": 0.25308188796043396,
+              "step": 100
+            },
+            {
+              "loss": 0.09995809197425842,
+              "step": 200
+            },
+            {
+              "loss": 0.06904181838035583,
+              "step": 300
+            },
+            {
+              "loss": 0.062196940183639526,
+              "step": 400
+            },
+            {
+              "loss": 0.04908688738942146,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.263123035430908,
+          "loss_last": 0.04908688738942146,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.4
+        },
+        "seed": 0,
+        "wall_s": 14.9
+      },
+      {
+        "info": {
+          "loss_curve": [
+            {
+              "loss": 3.2331655025482178,
+              "step": 1
+            },
+            {
+              "loss": 0.718464732170105,
+              "step": 100
+            },
+            {
+              "loss": 0.18264764547348022,
+              "step": 200
+            },
+            {
+              "loss": 0.06940969824790955,
+              "step": 300
+            },
+            {
+              "loss": 0.05513042211532593,
+              "step": 400
+            },
+            {
+              "loss": 0.05061228573322296,
+              "step": 500
+            }
+          ],
+          "loss_first": 3.2331655025482178,
+          "loss_last": 0.05061228573322296,
+          "n_records": 176,
+          "n_skipped_batches": 0,
+          "updates": 500,
+          "wall_s": 12.4
+        },
+        "seed": 1,
+        "wall_s": 14.9
+      }
+    ]
+  },
+  "schema": "ucm-ablation-controlled/0.1-rapid",
+  "setup": {
+    "note": "version rapide \u2014 le design v02 demande 12 seeds \u00d7 2000 updates",
+    "seeds": 2,
+    "updates": 500
+  },
+  "what": "ablation contr\u00f4l\u00e9e RAPIDE (2 seeds \u00d7 500 updates) \u2014 premiers chiffres"
+}

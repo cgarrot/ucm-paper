@@ -1,0 +1,52 @@
+{
+  "corrections": {
+    "B_minus_A": {
+      "ci_low_pp": -9.7,
+      "note": "CI couvre 0 \u2014 niveau 1 \u00c9CHOUE",
+      "point_pp": 5.6
+    },
+    "D_minus_A": {
+      "note": "POST-HOC \u2014 D n'\u00e9tait PAS le primaire pr\u00e9enregistr\u00e9; Holm tue tout apr\u00e8s comparaisons multiples",
+      "p_bilateral": 0.508,
+      "p_unilateral": 0.254,
+      "point_pp": 17.4
+    },
+    "bimodalite": {
+      "A_imitation": "7/12 seeds < 30%",
+      "B_correct": "8/12 seeds < 30% (effondr\u00e9s)",
+      "D_simple": "4/12 seeds < 30%",
+      "note": "distribution bimodale \u2014 certains seeds apprennent, d'autres non"
+    },
+    "deviation_design": "v01 a d\u00e9vi\u00e9 du design gel\u00e9: 1 famille (DROP-HAVE) / 12 t\u00e2ches test / 2000 updates vs 4 familles / 200 tests / 4000 updates exig\u00e9s",
+    "plus_34pp": "N'EST PAS R\u00c9PLIQU\u00c9 \u2014 le +34pp original (p=0.008) \u00e9tait sur une configuration diff\u00e9rente (4 familles, 200 tests, 4000 updates)"
+  },
+  "hold": "erratum, v01 jamais r\u00e9\u00e9dit\u00e9",
+  "manifest_sha256": "666282b9f3e2603a8b1ea821d6bcfb7447cf3ee5b84b3f6ed0ad209be21162b9",
+  "reproducibility": {
+    "cells_committed": "48 fichiers artifacts/ablation-controlled/cell-*.json (committ\u00e9s ce4d2f0)",
+    "ckpts": "NON COMMITT\u00c9S \u2014 les mod\u00e8les MLX ont \u00e9t\u00e9 r\u00e9-entra\u00een\u00e9s \u00e0 la vol\u00e9e, pas sauvegard\u00e9s en npz",
+    "closed_loop_committed": "artifacts/dev-ablation-closed-loop-v01.json (5d584d2)",
+    "note": "pour la reproductibilit\u00e9 stricte: les 48 cell JSON + le script suffisent pour re-g\u00e9n\u00e9rer (d\u00e9terministe par seed)",
+    "producer_commit": "5d584d2",
+    "raws_per_episode": "NON COMMITT\u00c9S \u2014 l'\u00e9val closed-loop a produit des raws en m\u00e9moire non persist\u00e9s"
+  },
+  "schema": "ucm-ablation-closed-loop-erratum/0.1",
+  "v02_confirmation_plan": {
+    "bras": "A/B/D (C retir\u00e9 \u2014 D>C de 22.9pp rend C non informatif)",
+    "budget": "~4h (4 familles \u00d7 200 test \u00d7 12 seeds \u00d7 3 bras \u00d7 4000 updates)",
+    "familles": "4 (DROP-HAVE + 3 autres structures)",
+    "garde_fous": [
+      "non-r\u00e9gression V0 \u22641pp",
+      "G1' \u22642pp",
+      "S5 re-mesur\u00e9",
+      "logits t\u00eate-retir\u00e9e",
+      "p95"
+    ],
+    "primaire": "D\u2212A pr\u00e9enregistr\u00e9 (la cible simple surpasse)",
+    "seeds": "12",
+    "test": "200 \u00e9pisodes/famille",
+    "train": "\u2265200 \u00e9pisodes/famille",
+    "updates": "4000"
+  },
+  "what": "erratum + corrections de formulation + stats correctes (lead 15:23)"
+}

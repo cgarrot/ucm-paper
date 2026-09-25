@@ -1,0 +1,20 @@
+{
+  "snapshot_of": "working repository (private)",
+  "commit": "a47f7b7c36daa87a33fb3aa12506799d27024187",
+  "commit_date": "2026-09-25T15:41:15+02:00",
+  "commit_subject": "S5 R\u00c9EL LANC\u00c9 ... (see working repo)",
+  "copied_at": "2026-09-25",
+  "files": 156,
+  "python_files": 150,
+  "python_loc": 35000,
+  "tests": 560,
+  "tree_sha256": "52ca4fab8e66b24195f88b03dabcc83526b3d009cd53c86d5c0d4fa09436ed44",
+  "excluded": [
+    "artifacts/",
+    "reports/",
+    ".goals/",
+    ".mesh/",
+    ".pi/",
+    "docs/ (original French; see ../archive)"
+  ]
+}

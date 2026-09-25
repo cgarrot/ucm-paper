@@ -1,0 +1,27 @@
+# Décision V1 — HOLD de la confirmation initial-only, préparation de V1-bis
+
+**Décision lead, 2026-09-23. Statut : décision de direction, PAS protocole V1-bis figé.**
+La confirmation V6 initialement prévue à k=500 **ne sera pas exécutée comme test confirmatoire d'un transfert de politique SIW multi-étapes**. Aucun seed test2 (20261003/20261004), aucune génération/scellage/ouverture test2 et aucun nouveau gate avant un protocole V1-bis versionné, committé et approuvé indépendamment. Tagi-2 a confirmé que ces seeds restent inutilisés et qu'aucune cellule test2 n'a été créée. Les scellés et résultats historiques restent intacts.
+
+## Motif et portée des preuves
+
+Sources non scellées : `docs/AUDIT-CONSTRUCT-VALIDITY-V1.md` (audit indépendant tagi-5, commit `c4f149a`), revue stratégique tagi-review transmise par tagi-ask, `docs/REPORT-V1-EXPLORATORY.md` et `artifacts/v1/transfer-report.json` (SHA-256 `587d13b1cb49ab6db4d5a0d0ec9827165b82279c1edacc44606ea255c852c553`). **Aucun fichier test scellé n'a été rouvert pour cette décision.**
+
+1. **Support structurel.** `ucm/env/siw.py::sample_task` initialise `filled=∅`, `chosen={}`, `submitted=∅`. Les couples d'adaptation du générateur sont tirés de ces états initiaux. Les décisions de rollout après une action passent par des états non représentés dans la supervision d'adaptation. Le signal supervisé sur les caractéristiques post-action absentes est nul ; cela ne signifie pas que les poids demeurent constants (AdamW peut les faire évoluer).
+2. **Décomposition report-only à k=500.** Le succès scratch/pré-entraîné/contrôle est `0,288667 / 0,414333 / 0,422333`. `goal_ever = success + goal_reached_without_stop` est `0,729000 / 0,726333 / 0,710667` : le gain de succès pré-entraîné−scratch `+0,125667` coexiste avec une baisse `−0,128333` des buts atteints sans STOP. **La différence agrégée porte sur la terminaison, sans preuve du mécanisme causal par épisode** (pas de données brutes). Le contrôle source tire un label parmi les actions physiquement valides et enseigne donc de la validité/terminaison : ce n'est pas un contrôle « sans information » pur.
+3. **Sensibilité statistique.** Sur les cinq différences par seed publiées, la permutation exacte des signes donne `p=3/32≈0,094` unilatéral (`6/32` bilatéral), et l'IC t(4) approximatif `[−3,09 ; +28,22]` points. C'est une **analyse post-hoc**, pas le remplacement rétroactif de l'IC bootstrap pré-enregistré `[+2,56 ; +22,35]` auto-rapporté, lequel n'est pas recalculable sans brut. Les deux doivent rester visibles ; aucun résultat exploratoire n'est promu en gate.
+
+Les hypothèses supplémentaires (prior du slot STOP transféré, « loterie » d'initialisation, invariance bit à bit du modèle ré-entraîné, pourcentages DEV hors support) sont des pistes testables, **pas des attributions causales déjà prouvées**. Les expériences d'architecture P1/P2/P3 de la revue sont des pistes de recherche distinctes, non des conséquences obligatoires de la présente décision.
+
+## Arbitrage
+
+**Option B retenue : V1-bis prospectif à support corrigé.** Archiver V6 initial-only comme instrument technique réutilisable (lecture unique, raw, checkpoints, hashes), mais **ne pas l'employer tel quel pour confirmer le transfert multi-étapes**. Conserver M-V1b strictement exploratoire. La formulation honnête du statut V1 est : **« transfert de politique multi-étapes non testé valablement dans cette cellule (support d'adaptation initial-only) »**, ni positif ni négatif.
+
+Avant de concevoir la nouvelle cellule test :
+- Sur **fixtures DEV disjointes uniquement**, produire des couples sur des trajectoires oracle/états atteignables post-action, avec inventaire de couverture par profondeur, prédicat et signatures de features ; démontrer aussi les cas STOP correct et prématuré. La répartition et le budget k* seront décidés par un pilote DEV pré-déclaré, jamais par le test scellé historique ou futur.
+- Pré-enregistrer le succès fermé (STOP vérifié) comme primaire, et publier côte à côte `goal_ever`, STOP correct/prématuré, timeout et invalidité par seed/prédicat. Prévoir une inférence appariée au niveau seed avec puissance justifiée (cible ≥10 seeds à confirmer par calcul de puissance), test exact et IC, sans substituer un test post-hoc à l'ancien critère.
+- Déclarer séparément scratch, B144, contrôle source **validité-informé** et contrôle null/syntaxique ; préciser précisément ce que chaque bras peut apprendre et garder la même tranche cible informative là où l'attribution source est testée.
+- Réutiliser les protections instrumentales validées (pré-intention fsync, un FD avec SHA complet, garde inter-processus, raw/checkpoints et publication atomique), mais les **auditer sur le nouveau contrat writer→runner DEV**, sur commit propre, avant scellement.
+- Faire approuver un **nouveau document V1-bis** avec distribution, pools iso-disjoints, seeds neufs ou explicitement maintenus, budget, statistique et règles de décision **avant** toute génération de cellule test. La présente décision ne fixe **ni** ces paramètres **ni** un résultat attendu.
+
+**Blocage opérationnel :** aucune promotion de `docs/CONFIRMATION-PRIMARY-MV1b.md` draft, aucun usage des seeds 20261003/20261004, aucune génération/scellage/ouverture test2, ni run confirmatoire tant que l'audit de construit et le nouveau protocole n'ont pas reçu un vert indépendant explicite. Un profil CPU/GPU de V6 initial-only n'est pas un prérequis à ce nouvel arbitrage.

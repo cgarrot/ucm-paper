@@ -1,0 +1,429 @@
+{
+  "arms": {
+    "control_null": {
+      "checkpoints": [
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 400,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-151843-v1-null-s0/checkpoint.npz",
+          "role": "control",
+          "seed": 0,
+          "sha256": "66035743055bdb96a9bef675208f56c72bd5f26a3cb495d64534171c6289a3fe",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-151932-v1-null-s1/checkpoint.npz",
+          "role": "control",
+          "seed": 1,
+          "sha256": "bd56a6ea6d77785b2a69e8b3faa217bdcd18d6150f445e6cdaefc7bb63745c60",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 400,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152022-v1-null-s2/checkpoint.npz",
+          "role": "control",
+          "seed": 2,
+          "sha256": "c7e4f10aaf5562758e232a990c03653b4644a835fb369d34603ff6f278e274eb",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152109-v1-null-s3/checkpoint.npz",
+          "role": "control",
+          "seed": 3,
+          "sha256": "f998bb5fefcf4c2c444f6090c11295226eb075a79aa0b7c628c4ceffa42f0b1e",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152155-v1-null-s4/checkpoint.npz",
+          "role": "control",
+          "seed": 4,
+          "sha256": "9bba3e19bf86e0edf948dd7ca95ba4d5f0e2a5fbfadda07d7c536dfc7399825a",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152244-v1-null-s5/checkpoint.npz",
+          "role": "control",
+          "seed": 5,
+          "sha256": "2b5879982ef77b1ce2371e62860fb15bb8a58e107de45e125f099ff424eb49a8",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152330-v1-null-s6/checkpoint.npz",
+          "role": "control",
+          "seed": 6,
+          "sha256": "c0e20d44121260dfeb0439c900fedc7fd0d280000a5b32378b90d4064655b17c",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152418-v1-null-s7/checkpoint.npz",
+          "role": "control",
+          "seed": 7,
+          "sha256": "e1e75b335b86637f07e1408cd0929c3cad44d6bebff63ed11714e0aa4e47e429",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152508-v1-null-s8/checkpoint.npz",
+          "role": "control",
+          "seed": 8,
+          "sha256": "89e846100cdc6321e795d4ecaab8a4ab1d03e0b3242dd8d5850de14ac1fe8275",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-152602-v1-null-s9/checkpoint.npz",
+          "role": "control",
+          "seed": 9,
+          "sha256": "4b0145199ff5ad6c8c5babe1016446fc763dae0b1b61495291713778d9b914a4",
+          "source_run_updates_run": 730
+        }
+      ],
+      "note": "uniform among ALL candidates (lead 14:53 ruling)"
+    },
+    "control_validity": {
+      "checkpoints": [
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 800,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-190340-v1-control-s0/checkpoint.npz",
+          "role": "control",
+          "seed": 0,
+          "sha256": "8b26ef98ded5911bd0a9ccb5b4af7c8171b8cc52604788da6fb253ff6da96a40",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 400,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-190420-v1-control-s1/checkpoint.npz",
+          "role": "control",
+          "seed": 1,
+          "sha256": "94d4ff396b3ce94fe3d7f88e68cc23be2d2672bd56a46a387ce9d0881d4a56a2",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 850,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-190503-v1-control-s2/checkpoint.npz",
+          "role": "control",
+          "seed": 2,
+          "sha256": "d8c7e5e4ddad79709cf7246932b24f1020680638184470a508d5fd333e0644dd",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-190549-v1-control-s3/checkpoint.npz",
+          "role": "control",
+          "seed": 3,
+          "sha256": "e8b833ecdfa8faf015efd3b7e453f1520dc04805752a9434047f122d398c5f67",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-190629-v1-control-s4/checkpoint.npz",
+          "role": "control",
+          "seed": 4,
+          "sha256": "01803237236f40f883c3c48f7e35d80d972740bf59f1d63b63d7fbbb45e71f61",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145924-v1-control-s5/checkpoint.npz",
+          "role": "control",
+          "seed": 5,
+          "sha256": "032dbca714c1c6575b201da028488a7e17ac46606e3315c5e50acf44276cde30",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-150012-v1-control-s6/checkpoint.npz",
+          "role": "control",
+          "seed": 6,
+          "sha256": "3286341f6b4b36d68e2280c71eeab53a89956d40df6b7805c8d91e712aa6d67b",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-150101-v1-control-s7/checkpoint.npz",
+          "role": "control",
+          "seed": 7,
+          "sha256": "4896718320d6d04a918b2b7506d2a99dec762c4b6f97073776b537db475a4411",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 200,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-150151-v1-control-s8/checkpoint.npz",
+          "role": "control",
+          "seed": 8,
+          "sha256": "acd108ed4660308cf9604240adf518d00c124d5afed5bb94b3df0068a131ea26",
+          "source_run_updates_run": 730
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 400,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-150240-v1-control-s9/checkpoint.npz",
+          "role": "control",
+          "seed": 9,
+          "sha256": "86fde5a623e062934912a90b2d5410e00eac47fda1a0df18e958b3512c12dd4b",
+          "source_run_updates_run": 730
+        }
+      ],
+      "note": "reuses v1-control (uniform among valid)"
+    },
+    "pretrained_TGK": {
+      "checkpoints": [
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 800,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-155520-gate2c-B144-s0/checkpoint.npz",
+          "role": "canon",
+          "seed": 0,
+          "sha256": "7c2525a3077310b169c23b2cfd7e25f9bdff924e190622e7784a78e222eba79f",
+          "source_run_updates_run": 860
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 400,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-155614-gate2c-B144-s1/checkpoint.npz",
+          "role": "canon",
+          "seed": 1,
+          "sha256": "1a1611a6369279467271e7033ccc6753ab34d2e42f17d229ec298d30547e0946",
+          "source_run_updates_run": 860
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-155707-gate2c-B144-s2/checkpoint.npz",
+          "role": "canon",
+          "seed": 2,
+          "sha256": "2285cf782ebfe56c219781e423281c686613e05d4f464f85b8a4ea5ad593020c",
+          "source_run_updates_run": 860
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 600,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-155757-gate2c-B144-s3/checkpoint.npz",
+          "role": "canon",
+          "seed": 3,
+          "sha256": "2932e75a6b6af09ccc079c33739f45bc04df37332f22d00e045775b618eb911f",
+          "source_run_updates_run": 860
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 800,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260922-155847-gate2c-B144-s4/checkpoint.npz",
+          "role": "canon",
+          "seed": 4,
+          "sha256": "e0f89525296982af76bb9c12cc226efdad8089f22120f1115699a78874cba159",
+          "source_run_updates_run": 860
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 500,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145341-gate2c-B144-s5/checkpoint.npz",
+          "role": "canon",
+          "seed": 5,
+          "sha256": "2d29b0f5abc6ed2c726fa2eb37eb932dbf746bf080871b202a62d18bca1d9658",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 800,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145444-gate2c-B144-s6/checkpoint.npz",
+          "role": "canon",
+          "seed": 6,
+          "sha256": "b05cd245db760ba71c74db6866a3df76d4e2c76dbcf6ba89186325dce06ef989",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 850,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145551-gate2c-B144-s7/checkpoint.npz",
+          "role": "canon",
+          "seed": 7,
+          "sha256": "35c5df2832d9479bf87c6ac688437543aa13e0cabe73569bd108861ad25fa251",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 700,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145653-gate2c-B144-s8/checkpoint.npz",
+          "role": "canon",
+          "seed": 8,
+          "sha256": "6be93a6d07e38ed0e9412c4eaea6a65f2ced137cfccbb86534cd654691fb9198",
+          "source_run_updates_run": 850
+        },
+        {
+          "checkpoint_policy": "best_validation",
+          "loaded_checkpoint_update": 800,
+          "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/20260923-145755-gate2c-B144-s9/checkpoint.npz",
+          "role": "canon",
+          "seed": 9,
+          "sha256": "20264969db85bbebe962c86d49b22503b30efd0f05a4e1510151124fe4a5df50",
+          "source_run_updates_run": 850
+        }
+      ]
+    },
+    "scratch": {
+      "init": "fresh"
+    }
+  },
+  "asymmetry_declaration": "canon s0-s4 were gated on test_g1 (one-read consumed in V0); canon s5-s9 validated on VALIDATION split only; test_g1 NEVER re-opened; checkpoint_policy identical (best_validation)",
+  "code": {
+    "ucm/data/generate.py": "12fb883156fce95b982f09094b5dd53f7e4a2115d06a729caae083acc6c87e1b",
+    "ucm/data/interactions_merge.py": "8d6fb99d1339d85ef399287af35d0cbc1f5f2f3f451767b3a5491dc1b5f76dc1",
+    "ucm/data/rstar_order.py": "b7246faa8a8ef5adcfc1ca352e171fd24509470c1a063f5fd5facb81ed946050",
+    "ucm/data/schema.py": "8be061f73c0b87c34e380b2f8acea4b345d3af91fc87887eda157eca5c8d9edf",
+    "ucm/data/siw_pipeline.py": "25b8a91a83007d12d5acedd96f5b910ba8b1a5f9c0f578591c4c32d12d77df9c",
+    "ucm/data/test2_generation.py": "40e64f3427c6b6f161d02dceaf9413e70d2c82aa2f8044ecb662aed5596d8187",
+    "ucm/data/verdict_v1bis.py": "b4216fb0b1b0e426cc81fe90c0d1760ca3cc2dc86abe7998a2e320e7388c9748",
+    "ucm/env/oracle.py": "769786d00c5a93cf1b4c25caaee75a6dc7faca6bb248d6594881dcc5c0567b98",
+    "ucm/env/siw.py": "8996c0ea7032f71f5ec29912dc683f99050cbc4f075702381ea01e8635a60d39",
+    "ucm/env/siw_oracle.py": "f9c400908a58eb4a3fa1743c88487223bc1972b9d9bcdf85d792e6f2ffc058c7",
+    "ucm/env/tinygraph.py": "2cb1e1ad972214d4c2b104138fc9bc1d1a48f6ed93c6646d98880d3dc6a5e2e6",
+    "ucm/eval/baselines.py": "9c360ee62556c173af4f265e0722d621a6c6f0b15bd79f32c59897b8777d01f9",
+    "ucm/eval/metrics.py": "11c2ef1a5233bfbfb1235e10780f2614c81da8f69a053db85f7c676013faf4a3",
+    "ucm/eval/rollout.py": "5f017cd6d026ad0b3a6fc62dd6493afc452ee102a8b38715acecb7727d6e8787",
+    "ucm/model/deepsets_a.py": "bb3f90b8a56229d14800e917245e8bb56e9e031ed057161fd903b1aa6d1c9aa3",
+    "ucm/model/fixtures.py": "34c252c4fd8a8c5333a2115b0c3d201f3e4ac6be0c9d2ce85d5ece0dfb0655bb",
+    "ucm/model/gnn_b.py": "807f936bc93699d9fc61e86c3e05c4001f899f835e949f814551bbff8e51b2cd",
+    "ucm/model/loss.py": "fcc645fe0c08ee06cea5e2377d20ebbce064e19c1b82365ba301c1923e2896be",
+    "ucm/model/siw_model.py": "d68099a1f641844c8d2578938ed4e1e9f59f81e2cbe6e5727b3e86aad56af8c2",
+    "ucm/model/tensorize.py": "6b0dc610b58fa34dc8c20b9267bcebd6567d7dc3283e72531af24d5af3926df2",
+    "ucm/model/train.py": "21ac89e236568366aa5ddb6de501c5fa7005af5abfed0f5aac6e887152c22f4b",
+    "ucm/v1/atomic_publish.py": "96b311f0d79cb021b80ccab77ed5a12212ce1da23b0ac7f48cd1df9fd2061269",
+    "ucm/v1/control_source.py": "2bebc73fc5a81ce6a509fcb6e5132d041e1ffc219d4cc49e6dbf59e48751556c",
+    "ucm/v1/data_adapter.py": "1e1a63abeac5f0a968b9752e2b121c2d7d3cfdf0ce89be055cb1482367cf8ec5",
+    "ucm/v1/episode_budget.py": "4a249d356fed177988f5aa19c05e2f3971c286df8fae2e0efb01e9508c99031b",
+    "ucm/v1/freeze_v1bis.py": "7240f76e0ff9e8727b5a7953fed77c68b11e317f6c267b4c911393438a1eed93",
+    "ucm/v1/policy_siw.py": "220ed424ed0d470756ae9c7deccc39d4e721831a3e4bba12b016504f4a30ae79",
+    "ucm/v1/runner.py": "73f91ce0b7f77d926d772597143584d3b5b35a66d8aa0f0e3cc20bcfd5e014c1",
+    "ucm/v1/runner_official.py": "b43faf48acb664e4e6190a6f6792d132a960958965512ede3ee02644ee404630",
+    "ucm/v1/runner_parallel.py": "396d15039d93cdeae6cf074607c71bcd93488ea27105695057913c639088e860",
+    "ucm/v1/runner_v1bis.py": "1a5a66f267fc0700e98f25457447213f0dba64b090554cd8216f09e74acefff0",
+    "ucm/v1/seal_test2.py": "94b77940771b6e6ee7587e0b5e243c873e9904ee2c5098ad4236a161dfb55172",
+    "ucm/v1/sealed_reader.py": "a6dd0e6d0eb06fec11134beb65ef913f5140eb218227e86ac9aa068b69f4c0ea",
+    "ucm/v1/tensorize_siw.py": "12aef9920e40cf3a795a8117d0ec4336a22724a082f46777a2fbae7a5630dfcf",
+    "ucm/v1/transfer.py": "cb10bb2c0ddc4e63e22c78a0d3c69b8eba96f5762a2597fb9ff9af97233589cd"
+  },
+  "inputs": {
+    "couples_files": [
+      {
+        "gen_seed": 20261030,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261030.jsonl",
+        "sha256": "a761186dcd02e57700651fcf7613f22885f658b005ea833f18ec33e07d4c4176",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261040,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261040.jsonl",
+        "sha256": "1082075607ab84b6156167d2922e25adb782a51b290a4ae5a7540a72064ca2fc",
+        "status": "replacement_of_20261031"
+      },
+      {
+        "gen_seed": 20261032,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261032.jsonl",
+        "sha256": "806c7d0168172daec0ae327a8f77ae32e8b8e660ea4d43f8b6fcf1d73dce28d9",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261033,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261033.jsonl",
+        "sha256": "f4a7731a5459a437619462e9f53ef4c3414c839787e3092cadbf8528886fe545",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261034,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261034.jsonl",
+        "sha256": "fc68107c586cf1be91bae60640927dfc59dbff736a08c6cf76dda3f00c0aca53",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261035,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261035.jsonl",
+        "sha256": "9ed1a23cfe6a5ef9a791da770fe71c2efe4cc2f2089643206ceb418e8be82654",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261036,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261036.jsonl",
+        "sha256": "fd156a55b9e77d110276df672caa6a7c6b42e29cf80df9cb9262872a9612eae1",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261037,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261037.jsonl",
+        "sha256": "0bef8c742e88d9ef1d4442646cf225b223249d4d6e5aaf9d233f972ec5008d75",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261038,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261038.jsonl",
+        "sha256": "61f4e451a5fee992f2831ad4b63fb80d391f18cda7cd2141e853d6ac36da18cc",
+        "status": "original"
+      },
+      {
+        "gen_seed": 20261039,
+        "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen/v1bis-gen-20261039.jsonl",
+        "sha256": "7e59c39a08e0e279f4b114b5e6123e32993cd38c81c7e91a2d6b10d28c9a778a",
+        "status": "original"
+      }
+    ],
+    "eval_config": {
+      "note": "hash test2 published before run",
+      "stage": "B-placeholder"
+    },
+    "store": {
+      "path": "/Users/cgarrot/zob/try-to-make-vision-of-agi-v1/artifacts/v1bis-gen-store-v02.json",
+      "sha256": "1b13292d029fe5090e0b7a1c5fc53318948b1965b8dbfce028e247848d02d5e9"
+    }
+  },
+  "protocol": {
+    "batch": 64,
+    "eval_seed": 50000,
+    "k_plan": [
+      64,
+      128,
+      256
+    ],
+    "k_plan_exec_order": [
+      64,
+      128,
+      256
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "updates": 2000
+  },
+  "version": 2
+}
